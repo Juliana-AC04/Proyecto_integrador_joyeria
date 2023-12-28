@@ -72,3 +72,53 @@ ul li a {
     margin-right: 1rem;
     margin-left: 1rem;
 }
+section{
+    background-color:#093931;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.textSectionOne{
+margin-top: 170px;
+margin-left: 8rem;
+width: 537px;
+color: #F5D38E;
+font-family: Cormorant Garamond;
+font-size: 72px;
+font-weight: 400;
+line-height: 94ºpx; /* 130.556% */
+
+}
+
+button{
+border-radius: 26px;
+border: 1px solid #FFF;
+background: rgba(0, 0, 0, 0.00);
+display: inline-flex;
+padding: 12px 59px;
+justify-content: center;
+align-items: center;
+color: #FFF;
+margin-left: 8rem;
+margin-top: 2rem;
+}
+
+.imgTwo{
+    margin-top: 77px;
+
+}
+.necklaceWoman{
+    width: 407px;
+    height: 543px;
+    margin-bottom: 10rem;
+   
+
+}
+.rings{
+    position: relative;
+    width: 241px;
+    height: 321px;
+    top: -210px;
+    left: -69px;
+    z-index: 1;
+}
