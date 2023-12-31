@@ -1,49 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Orbitron&family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color:#093931;
+    background-color: #093931;
 }
-.navbar{
+
+.navbar {
     display: flex;
     align-items: center;
 }
+
 .container {
     position: relative;
     width: 500px;
     height: 300px;
     width: 276px;
-    height: 320px;    overflow: hidden; 
+    height: 320px;
+    overflow: hidden;
 }
-h3{
+
+h3 {
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 30px;
     font-weight: 400;
-    line-height: 46px; 
+    line-height: 46px;
 }
-ul{
+
+ul {
     display: flex;
     font-family: Manrope;
     font-size: 14px;
     font-weight: 700;
-    line-height: 22px; 
+    line-height: 22px;
 }
-li{
+
+li {
     display: flex;
     height: 43px;
     padding: 10.5px 18.63px;
     justify-content: center;
     align-items: center;
 }
-li a:hover{
+
+li a:hover {
     color: #F2C66D;
 }
 
@@ -51,56 +60,60 @@ ul li a {
     text-decoration: none;
     color: white;
 }
-.login{
+
+.login {
     margin-right: 1rem;
     margin-left: 1rem;
 }
 
 /* main section */
 
-main{
-    background-color:#093931;
+main {
+    background-color: #093931;
     display: flex;
     justify-content: space-evenly;
 }
 
-.textSectionOne{
-margin-top: 170px;
-margin-left: 8rem;
-width: 537px;
-color: #F5D38E;
-font-family: Cormorant Garamond;
-font-size: 72px;
-font-weight: 400;
-line-height: 94ºpx; /* 130.556% */
+.textSectionOne {
+    margin-top: 170px;
+    margin-left: 8rem;
+    width: 537px;
+    color: #F5D38E;
+    font-family: Cormorant Garamond;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 94ºpx;
+    /* 130.556% */
 
 }
 
-.buttonMain{
-border-radius: 26px;
-border: 1px solid #FFF;
-background: rgba(0, 0, 0, 0.00);
-display: inline-flex;
-padding: 12px 59px;
-justify-content: center;
-align-items: center;
-color: #FFF;
-margin-left: 8rem;
-margin-top: 2rem;
+.buttonMain {
+    border-radius: 26px;
+    border: 1px solid #FFF;
+    background: rgba(0, 0, 0, 0.00);
+    display: inline-flex;
+    padding: 12px 59px;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    margin-left: 8rem;
+    margin-top: 2rem;
 }
 
-.imgTwo{
+.imgTwo {
     margin-top: 77px;
 
 }
-.necklaceWoman{
+
+.necklaceWoman {
     width: 407px;
     height: 543px;
     margin-bottom: 10rem;
-   
+
 
 }
-.rings{
+
+.rings {
     position: relative;
     width: 241px;
     height: 321px;
@@ -122,74 +135,83 @@ article {
 
 .containerFirst,
 .containerSecond,
-.containerThird{
+.containerThird {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.delivery , 
+
+.delivery,
 .lovemessage,
-.locklandscape{
+.locklandscape {
     width: 62px;
     height: 62px;
     margin-bottom: 18px;
 
 }
+
 h6 {
     color: #171A1F;
     text-align: center;
     font-family: Cormorant Garamond;
     font-size: 18px;
     font-weight: 600;
-    line-height: 28px; /* 155.556% */
+    line-height: 28px;
+    /* 155.556% */
 }
 
-p{
+p {
     width: 278px;
     color: #9095A0;
     text-align: center;
     font-family: Manrope;
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px; /* 162.5% */
- } 
+    line-height: 26px;
+    /* 162.5% */
+}
 
- /* section */
- section{
+/* section */
+section {
     margin-top: 60px;
     margin-bottom: 48px;
     display: flex;
     justify-content: center;
- }
- .containerSection{
+}
+
+.containerSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
- }
- .featuredProducts{
+
+}
+
+.featuredProducts {
     color: #0D554A;
     width: 264px;
     font-family: Cormorant Garamond;
     font-size: 40px;
     font-weight: 600;
-    line-height: 56px; /* 140% */
+    line-height: 56px;
+    /* 140% */
     margin-bottom: 12px;
     margin-right: 48px;
- }
-.sectionParagraph{
+}
+
+.sectionParagraph {
     color: #9095A0;
     font-family: Manrope;
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px; /* 162.5% */
+    line-height: 26px;
+    /* 162.5% */
     margin-bottom: 24px;
     text-align: left;
     margin-right: 48px;
 
 }
 
-.sectionButton{
+.sectionButton {
     border-radius: 26px;
     border: 1px solid #0D554A;
     display: inline-flex;
@@ -200,37 +222,137 @@ p{
     margin-right: 112px;
 
 }
-.carousel{
+
+.carousel {
     display: flex;
-   
+
 }
-.carouselSection{
+
+.carouselSection {
     margin: 24px;
-   border-radius: 8px;
-   background: #FFF;
-   box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
 }
+
 .radiance,
 .exquisite,
 .glamour,
-.Delights{
-  border-radius: 8px 8px 0 0;
-  
+.Delights {
+    border-radius: 8px 8px 0 0;
+
 
 }
 
-.figcaptionSection{
-color: #171A1F;
-font-family: Cormorant Garamond;
-font-size: 24px;
-font-weight: 700;
-line-height: 36px; /* 150% */
+.figcaptionSection {
+    color: #171A1F;
+    font-family: Cormorant Garamond;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    /* 150% */
 }
-.sectionPrice{
-color: #171A1F;
-font-family: Manrope;
-font-size: 16px;
-font-weight: 400;
-line-height: 26px; /* 162.5% */
-text-align: left;
+
+.sectionPrice {
+    color: #171A1F;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    /* 162.5% */
+    text-align: left;
 }
+
+/* Estilos galllery "Our collections" */
+
+.gallerySection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+}
+
+.galleryTitle {
+    color: #0D554A;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+    margin-top: 48px;
+    margin-bottom: 46px;
+}
+
+.galleryItems {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columnItem1,
+.columnItem3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    position: relative;
+}
+.item{
+    position: relative;
+}
+.item img {
+    width: 360px;
+    height: 360px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin: 20px;
+    display: block;
+    
+}
+
+.itemTitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; 
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 288px;
+
+
+}
+
+/* Estilos del botón de la galería */
+.gallerybutton {
+    display: flex;
+    justify-content: center;
+}
+
+.gallerybutton button {
+
+    padding: 12px 59px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    border: 1px solid #0D554A;
+    background: rgba(0, 0, 0, 0.00);
+    text-align: center;
+
+    /* Tipografía */
+    color: #0D554A;
+    font-family: Manrope;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
