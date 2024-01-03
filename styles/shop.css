@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Orbitron&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #093931;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  width: 276px;
+  height: 320px;
+  overflow: hidden;
+}
+.login,
+.shopping {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+}
+h3 {
+  color: #f5d38e;
+  font-family: Cormorant Garamond;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 46px;
+}
+ul {
+  display: flex;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+}
+li {
+  display: flex;
+  height: 43px;
+  padding: 10.5px 18.63px;
+  justify-content: center;
+  align-items: center;
+}
+li .navbarMenu:hover {
+  color: #f2c66d;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  background-color: #093931;
+  padding-bottom: 147px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  padding-top: 146px;
+  padding-bottom: 24px;
+  color: #f5d38e;
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 82px; /* 132.258% */
+}
+/* main */
+.searchBar {
+  display: flex;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid #f8f9fa;
+  background: #fff;
+  width: 757px;
+}
+button {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+button img {
+  width: 24px;
+  height: 24px;
+}
+input {
+  border: none;
+  padding: 10px;
+  width: 200px;
+  outline: none;
+  background-color: #fff;
+}
+/* section */
+.SectionMenu {
+  padding-top: 72px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerMenu {
+  display: flex;
+  width: 148.6px;
+  height: 38px;
+  padding: 8px 47.3px 8px 0px;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.headerMenu .bodyMenu .list {
+  color: #0d554a;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+.bodyMenu:hover .list {
+  border-radius: 19px;
+  background: #0d554a;
+  color: #ffffff;
+  display: flex;
+  width: 170px;
+  height: 20px;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.dropdown {
+  position: relative;
+}
+.SectionMenu .list,
+.separator {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.separator {
+  width: 1px;
+  height: 19px;
+  flex-shrink: 0;
+  background: #9aefe2;
+  margin: 0 5px;
+}
+.dropdownPrice {
+  color: #171a1f;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.listDropdown {
+  color: #171a1f;
+}
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+/* article */
+.listImage {
+    margin: 132px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px; /* Espacio entre las figuras */
+  }
+
+  .articleImg {
+    width: calc((100% - 72px - (3 * 24px)) / 4); /* Ajuste para 4 elementos por fila */
+    margin-bottom: 24px;
+  }
+  
+.figcaptionArticle{
+    color: #171A1F;
+    font-family: Cormorant Garamond;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px; /* 150% */
+    
+}
+.articlePrice{
+    color: #171A1F;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    text-align: left;
+}
+
+
+article {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.containerFirst,
+.containerSecond,
+.containerThird{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.delivery , 
+.lovemessage,
+.locklandscape{
+    width: 62px;
+    height: 62px;
+    margin-bottom: 18px;
+
+}
+h6 {
+    color: #171A1F;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+}
+
+p{
+    width: 278px;
+    color: #9095A0;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+ } 
+
+ 
