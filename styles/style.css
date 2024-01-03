@@ -22,6 +22,12 @@ nav{
     width: 276px;
     height: 320px;    overflow: hidden; 
 }
+.login, 
+.shopping{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
 h3{
     color: #F5D38E;
     font-family: Cormorant Garamond;
@@ -35,25 +41,26 @@ ul{
     font-size: 14px;
     font-weight: 700;
     line-height: 22px; 
+    
 }
 li{
+    
     display: flex;
     height: 43px;
     padding: 10.5px 18.63px;
     justify-content: center;
     align-items: center;
+    
 }
 li a:hover{
     color: #F2C66D;
+    
 }
 
 ul li a {
     text-decoration: none;
     color: white;
-}
-.login{
-    margin-right: 1rem;
-    margin-left: 1rem;
+    
 }
 
 /* main section */
@@ -80,44 +87,44 @@ line-height: 94ºpx; /* 130.556% */
 border-radius: 26px;
 border: 1px solid #FFF;
 background: rgba(0, 0, 0, 0.00);
-display: inline-flex;
 padding: 12px 59px;
 justify-content: center;
 align-items: center;
 color: #FFF;
 margin-left: 8rem;
 margin-top: 2rem;
-}
-
-.imgTwo{
-    margin-top: 77px;
 
 }
+
 .necklaceWoman{
     width: 407px;
     height: 543px;
     margin-bottom: 10rem;
-   
-
 }
-.rings{
+.imgTwo {
+    margin-top: 5%; /* Cambiado a porcentaje para mayor flexibilidad */
     position: relative;
+  }
+  .rings {
+    position: relative;
+    top: -35%;
+    right: 15%;
+    z-index: 1;
     width: 241px;
     height: 321px;
-    top: -210px;
-    left: -69px;
-    z-index: 1;
+  }
+  .iconButton {
+    position: absolute;
+    top: 36%;
+    left: 62%;
+    z-index: 2;
 }
-
-
 /* article */
-
 article {
     display: flex;
     justify-content: space-evenly;
     margin-top: 24px;
     margin-bottom: 24px;
-
 }
 
 .containerFirst,
@@ -188,7 +195,6 @@ p{
     margin-right: 48px;
 
 }
-
 .sectionButton{
     border-radius: 26px;
     border: 1px solid #0D554A;
@@ -234,3 +240,14 @@ font-weight: 400;
 line-height: 26px; /* 162.5% */
 text-align: left;
 }
+
+@media screen and (max-width: 768px) {
+    .imgTwo {
+      margin-top: 10%;
+    }
+  
+    .rings {
+      top: -10%;
+      right: 10%;
+    }
+  }
