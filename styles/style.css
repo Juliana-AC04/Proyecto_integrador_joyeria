@@ -74,6 +74,19 @@ main {
     justify-content: space-evenly;
 }
 
+.backgroundMain{
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+}
+
+.backgroundMain img{
+    width: 100%;
+    display: block;
+    
+}
 .textSectionOne {
     margin-top: 170px;
     margin-left: 8rem;
@@ -102,6 +115,7 @@ main {
 
 .imgTwo {
     margin-top: 77px;
+    z-index: 2;
 
 }
 
@@ -109,6 +123,7 @@ main {
     width: 407px;
     height: 543px;
     margin-bottom: 10rem;
+  
 }
 
 .rings {
@@ -117,7 +132,8 @@ main {
     height: 321px;
     top: -210px;
     left: -79px;
-    z-index: 2;
+
+
 }
 
 /* article */
@@ -169,7 +185,7 @@ p {
 }
 
 /* section */
-section {
+.section {
     margin-top: 60px;
     margin-bottom: 48px;
     display: flex;
@@ -266,7 +282,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    margin-bottom: 84px;
 
 }
 
@@ -364,6 +380,8 @@ section {
     flex-wrap: wrap;
     background: #FAFAFB;
     width: 100%;
+    margin-bottom: 72px;
+    height: 564px;
 
 }
 
@@ -382,7 +400,7 @@ section {
     width: 100%;
     height: 100%;
     border-radius: 8px;
-    margin-bottom: 72px;
+    
 }
 
 .storyImage {
