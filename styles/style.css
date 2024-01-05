@@ -109,7 +109,7 @@ main {
     border-radius: 26px;
     border: 1px solid #FFF;
     background: rgba(0, 0, 0, 0.00);
-        padding: 12px 59px;
+    padding: 12px 59px;
     justify-content: center;
     align-items: center;
     color: #FFF;
@@ -279,13 +279,15 @@ p {
     text-align: left;
 }
 
-/* Estilos galllery "Our collections" */
+/* Estilos gallery "Our collections" */
 
 .gallerySection {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 84px;
+    margin-left:132px;
+    margin-right:132px;
 
 }
 
@@ -303,7 +305,7 @@ p {
 
 .galleryItems {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -345,8 +347,6 @@ p {
     left: 0;
     width: 100%;
     margin-top: 288px;
-
-
 }
 
 /* Estilos del botón de la galería */
@@ -376,68 +376,15 @@ p {
 
 /* Estilos de sección "Our story" */
 .story {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     background: #FAFAFB;
     width: 100%;
-    margin-bottom: 72px;
     height: 564px;
-
 }
 
 .story h2 {
-    color: #0D554A;
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 56px;
-    margin: 2%;
-}
-
-.story{
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    
-}
-
-.storyImage {
-    position: relative;
-    flex-wrap: wrap;
-}
-
-.buttonPlayStory {
-    display: flex;
-     width: 31px;
-  height: 31px;
-    padding: 10px;
-    border-radius: 26px;
-    background: #FFF;
-    align-items: center;
-    flex-shrink: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-/* Estilos galllery "Our collections" */
-
-.gallerySection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 84px;
-
-}
-
-.galleryTitle {
     color: #0D554A;
     text-align: center;
     font-family: Cormorant Garamond;
@@ -446,117 +393,14 @@ p {
     font-weight: 600;
     line-height: 56px;
     margin-top: 48px;
-    margin-bottom: 46px;
-}
-
-.galleryItems {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.columnItem1,
-.columnItem3 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3%;
-    position: relative;
-}
-
-.item {
-    position: relative;
-}
-
-.item img {
-    width: 360px;
-    height: 360px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    margin: 20px;
-    display: block;
-
-}
-
-.itemTitle {
-    color: #FFF;
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 288px;
-
-
-}
-
-/* Estilos del botón de la galería */
-.gallerybutton {
-    display: flex;
-    justify-content: center;
-}
-
-.gallerybutton button {
-
-    padding: 12px 59px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 26px;
-    border: 1px solid #0D554A;
-    background: rgba(0, 0, 0, 0.00);
-    text-align: center;
-
-    /* Tipografía */
-    color: #0D554A;
-    font-family: Manrope;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.75rem;
-}
-
-/* Estilos de sección "Our story" */
-.story {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    background: #FAFAFB;
-    width: 100%;
-    margin-bottom: 72px;
-    height: 564px;
-
-}
-
-.story h2 {
-    color: #0D554A;
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 56px;
-    margin: 2%;
-}
-
-.story{
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    
 }
 
 .storyImage {
     position: relative;
-    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left:132px;
+    margin-right:132px;
+    
 }
 
 .buttonPlayStory {
