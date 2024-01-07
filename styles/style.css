@@ -27,13 +27,15 @@ nav {
     height: 320px;
     overflow: hidden;
 }
-.login, 
-.shopping{
+
+.login,
+.shopping {
     width: 20px;
     height: 20px;
     padding: 10px;
 }
-h3{
+
+h3 {
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 30px;
@@ -46,29 +48,29 @@ ul {
     font-family: Manrope;
     font-size: 14px;
     font-weight: 700;
-    line-height: 22px; 
-    
+    line-height: 22px;
+
 }
 
 li {
-    
+
     display: flex;
     height: 43px;
     padding: 10.5px 18.63px;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 li a:hover {
     color: #F2C66D;
-    
+
 }
 
 ul li a {
     text-decoration: none;
     color: white;
-    
+
 }
 
 /* main section */
@@ -79,19 +81,20 @@ main {
     justify-content: space-evenly;
 }
 
-.backgroundMain{
+.backgroundMain {
     position: absolute;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
 }
 
-.backgroundMain img{
+.backgroundMain img {
     width: 100%;
     display: block;
-    
+
 }
+
 .textSectionOne {
     margin-top: 170px;
     margin-left: 8rem;
@@ -100,7 +103,7 @@ main {
     font-family: Cormorant Garamond;
     font-size: 72px;
     font-weight: 400;
-    line-height: 94ºpx;
+    line-height: 94px;
     /* 130.556% */
 
 }
@@ -118,36 +121,41 @@ main {
 
 }
 
-.necklaceWoman{
+.necklaceWoman {
     width: 407px;
     height: 543px;
     margin-bottom: 10rem;
 }
+
 .imgTwo {
-    margin-top: 5%; /* Cambiado a porcentaje para mayor flexibilidad */
+    margin-top: 5%;
+    /* Cambiado a porcentaje para mayor flexibilidad */
     position: relative;
     z-index: 2;
-  }
-  .rings {
+}
+
+.rings {
     position: relative;
     top: -35%;
     right: 15%;
     z-index: 1;
     width: 241px;
     height: 321px;
-  }
-  .iconButton {
+}
+
+.iconButton {
     position: absolute;
     top: 36%;
     left: 62%;
     z-index: 2;
 }
+
 /* article */
 article {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .containerFirst,
@@ -156,6 +164,7 @@ article {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 36px;
 }
 
 .delivery,
@@ -167,7 +176,7 @@ article {
 
 }
 
-h6 {
+.containerTitle{
     color: #171A1F;
     text-align: center;
     font-family: Cormorant Garamond;
@@ -177,7 +186,7 @@ h6 {
     /* 155.556% */
 }
 
-p {
+.containerText{
     width: 278px;
     color: #9095A0;
     text-align: center;
@@ -188,96 +197,7 @@ p {
     /* 162.5% */
 }
 
-/* section */
-.section {
-    margin-top: 60px;
-    margin-bottom: 48px;
-    display: flex;
-    justify-content: center;
-}
 
-.containerSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.featuredProducts {
-    color: #0D554A;
-    width: 264px;
-    font-family: Cormorant Garamond;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 56px;
-    /* 140% */
-    margin-bottom: 12px;
-    margin-right: 48px;
-}
-
-.sectionParagraph {
-    color: #9095A0;
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    /* 162.5% */
-    margin-bottom: 24px;
-    text-align: left;
-    margin-right: 48px;
-
-}
-.sectionButton {
-    border-radius: 26px;
-    border: 1px solid #0D554A;
-    display: inline-flex;
-    padding: 12px 59px;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.00);
-    margin-right: 112px;
-
-}
-
-.carousel {
-    display: flex;
-
-}
-
-.carouselSection {
-    margin: 24px;
-    border-radius: 8px;
-    background: #FFF;
-    box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
-}
-
-.radiance,
-.exquisite,
-.glamour,
-.Delights {
-    border-radius: 8px 8px 0 0;
-
-
-}
-
-.figcaptionSection {
-    color: #171A1F;
-    font-family: Cormorant Garamond;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    /* 150% */
-}
-
-.sectionPrice {
-    color: #171A1F;
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    /* 162.5% */
-    text-align: left;
-}
 
 /* Estilos gallery "Our collections" */
 
@@ -286,8 +206,7 @@ p {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 84px;
-    margin-left:132px;
-    margin-right:132px;
+
 
 }
 
@@ -305,9 +224,10 @@ p {
 
 .galleryItems {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .columnItem1,
@@ -374,6 +294,117 @@ p {
     line-height: 1.75rem;
 }
 
+
+/* Estilos del carrousel 1 Y 2 */
+.sectionCarousel {
+    display: flex;
+    flex-direction: row;
+    background: #FFF;
+}
+.sectionCarousel2{
+    display: flex;
+    flex-direction: row;
+    background: #FAFAFB;
+}
+.carouselInfo {
+    margin-top: 78px;
+    margin-left: 132px;
+    margin-right: 48px;
+}
+
+.carouselTitle {
+    color: #0D554A;
+    font-family: Cormorant Garamond;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+    /* 140% */
+    width: 264px;
+}
+
+.carouselText {
+    color: #424955;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 162.5% */
+    text-align: left;
+    margin-top: 12px;
+    width: 264px;
+}
+
+.carouselButton {
+    display: inline-flex;
+    padding: 12px 59px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    border: 1px solid #0D554A;
+    background: rgba(0, 0, 0, 0.00);
+
+    color: #0D554A;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+    text-align: left;
+    margin-top: 24px;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    
+}
+
+.carouselItem {
+    margin-right: 24px;
+    width: 276px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+}
+
+.carouselItem img{
+    border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.carouselItem figcaption {
+    color: #171A1F;
+    font-family: Cormorant Garamond;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    margin-left: 12px;
+    
+}
+
+.carouselItem p {
+    color: #171A1F;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 162.5% */
+    text-align: left;
+    margin-left: 12px;
+}
+
+
+
 /* Estilos de sección "Our story" */
 .story {
     display: flex;
@@ -381,7 +412,9 @@ p {
     align-items: center;
     background: #FAFAFB;
     width: 100%;
-    height: 564px;
+    min-height: 564px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .story h2 {
@@ -398,15 +431,15 @@ p {
 .storyImage {
     position: relative;
     margin-top: 20px;
-    margin-left:132px;
-    margin-right:132px;
-    
+    margin-left: 132px;
+    margin-right: 132px;
+
 }
 
 .buttonPlayStory {
     display: flex;
-     width: 31px;
-  height: 31px;
+    width: 31px;
+    height: 31px;
     padding: 10px;
     border-radius: 26px;
     background: #FFF;
@@ -419,13 +452,14 @@ p {
     z-index: 1;
 }
 
+
 @media screen and (max-width: 768px) {
     .imgTwo {
-      margin-top: 10%;
+        margin-top: 10%;
     }
-  
+
     .rings {
-      top: -10%;
-      right: 10%;
+        top: -10%;
+        right: 10%;
     }
-  }
+}
