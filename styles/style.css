@@ -363,7 +363,6 @@ article {
 .carousel {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     margin-top: 72px;
     margin-bottom: 72px;
 
@@ -825,3 +824,55 @@ Vista móvil */
     
 }
 
+/* Carruseles
+Vista móvil */
+@media screen and (max-width: 599px) {
+    .sectionCarousel {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .sectionCarousel2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .carouselInfo {
+        width: 100%;
+        height: auto;
+        margin-left: 15%;
+    }
+    
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin-left: 10%;
+    
+    }
+}
+/*vista tabletas */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .sectionCarousel {
+        width: 100%;
+    }
+    
+    .sectionCarousel2 {
+        width: 100%;
+    }
+    
+    .carouselInfo {
+        width: 100%;
+        height: auto;
+        margin-left: 15%;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin-left: 1%;
+    }
+}
