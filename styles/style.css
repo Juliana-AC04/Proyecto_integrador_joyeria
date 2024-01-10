@@ -204,6 +204,8 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 84px;
+
 
 }
 
@@ -211,21 +213,20 @@ article {
     color: #0D554A;
     text-align: center;
     font-family: Cormorant Garamond;
-    font-size: 2.5rem;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
-    line-height: 3.5rem;
-    /* 140% */
-    margin-top: 3rem;
+    line-height: 56px;
+    margin-top: 48px;
     margin-bottom: 46px;
 }
 
 .galleryItems {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
-    margin-left: 8.25rem;
-    margin-right: 8.25rem;
+    flex-wrap: wrap;
+
 }
 
 .columnItem1,
@@ -234,11 +235,6 @@ article {
     flex-direction: column;
     margin-top: 3%;
     position: relative;
-}
-
-.columnItem2 {
-    margin-left: 3rem;
-    margin-right: 3rem;
 }
 
 .item {
@@ -250,8 +246,8 @@ article {
     height: 360px;
     flex-shrink: 0;
     border-radius: 8px;
-    margin-bottom: 2.5rem;
-
+    margin: 20px;
+    display: block;
 
 }
 
@@ -274,11 +270,12 @@ article {
 
 /* Estilos del botón de la galería */
 .gallerybutton {
+    display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
 }
 
 .gallerybutton button {
+
     padding: 12px 59px;
     justify-content: center;
     align-items: center;
