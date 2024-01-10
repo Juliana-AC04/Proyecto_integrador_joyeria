@@ -791,6 +791,7 @@ Vista móvil */
     }
 
 }
+
 /*vista tabletas */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
     article {
@@ -798,7 +799,7 @@ Vista móvil */
         flex-direction: row;
         width: 100%;
     }
-    
+
     .containerFirst,
     .containerSecond,
     .containerThird {
@@ -807,18 +808,18 @@ Vista móvil */
         flex-direction: column;
         margin-top: 36px;
     }
-    
+
     .delivery,
     .lovemessage,
     .locklandscape {
         width: 90%;
         height: auto;
     }
- 
+
     .containerText {
         width: 50%;
     }
-    
+
 }
 
 /* Carruseles
@@ -829,37 +830,38 @@ Vista móvil */
         flex-direction: column;
         width: 100%;
     }
-    
+
     .sectionCarousel2 {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-    
+
     .carouselInfo {
         width: 100%;
         height: auto;
         margin-left: 15%;
     }
-    
+
     .carousel {
         display: flex;
         flex-direction: row;
         overflow: hidden;
         margin-left: 10%;
-    
+
     }
 }
+
 /*vista tabletas */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
     .sectionCarousel {
         width: 100%;
     }
-    
+
     .sectionCarousel2 {
         width: 100%;
     }
-    
+
     .carouselInfo {
         width: 100%;
         height: auto;
@@ -872,4 +874,57 @@ Vista móvil */
         overflow: hidden;
         margin-left: 1%;
     }
+}
+
+/* Sección "Our story"
+Vista móvil */
+@media screen and (max-width: 599px) {
+    .story {
+        width: 100%;
+
+    }
+
+    .storyImage {
+        width: 90%;
+        height: auto;
+    }
+
+    .bgImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonPlayStory {
+        border-radius: 80%;
+        padding: 1%;
+        width: 5%;
+        height: auto;
+    }
+
+}
+
+/*vista tabletas */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .story {
+        width: 100%;
+
+    }
+
+    .storyImage {
+        width: 90%;
+        height: auto;
+    }
+
+    .bgImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonPlayStory {
+        border-radius: 80%;
+        padding: 1%;
+        width: 5%;
+        height: auto;
+    }
+
 }
