@@ -198,15 +198,12 @@ article {
 }
 
 
-
 /* Estilos gallery "Our collections" */
 
 .gallerySection {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 84px;
-
 
 }
 
@@ -214,20 +211,21 @@ article {
     color: #0D554A;
     text-align: center;
     font-family: Cormorant Garamond;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 56px;
-    margin-top: 48px;
+    line-height: 3.5rem;
+    /* 140% */
+    margin-top: 3rem;
     margin-bottom: 46px;
 }
 
 .galleryItems {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
-
+    margin-left: 8.25rem;
+    margin-right: 8.25rem;
 }
 
 .columnItem1,
@@ -236,6 +234,11 @@ article {
     flex-direction: column;
     margin-top: 3%;
     position: relative;
+}
+
+.columnItem2 {
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .item {
@@ -247,8 +250,8 @@ article {
     height: 360px;
     flex-shrink: 0;
     border-radius: 8px;
-    margin: 20px;
-    display: block;
+    margin-bottom: 2.5rem;
+
 
 }
 
@@ -271,12 +274,11 @@ article {
 
 /* Estilos del botón de la galería */
 .gallerybutton {
-    display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .gallerybutton button {
-
     padding: 12px 59px;
     justify-content: center;
     align-items: center;
@@ -607,16 +609,6 @@ article {
     overflow: hidden
 } */
 
-@media screen and (max-width: 768px) {
-    .imgTwo {
-        margin-top: 10%;
-    }
-
-    .rings {
-        top: -10%;
-        right: 10%;
-    }
-}
 
 footer {
     background: #093931;
@@ -629,7 +621,7 @@ footer {
 }
 
 .darlingFooter {
-    
+
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 1.875rem;
@@ -767,3 +759,69 @@ footer {
 .mediaIcon {
     margin-right: 1rem;
 }
+
+
+
+/* Media queries */
+
+/* article
+Vista móvil */
+@media screen and (max-width: 599px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .containerFirst,
+    .containerSecond,
+    .containerThird {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .delivery,
+    .lovemessage,
+    .locklandscape {
+        width: 80%;
+        height: auto;
+    }
+
+    .containerText {
+        width: 70%;
+    }
+
+}
+/*vista tabletas */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    article {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .containerFirst,
+    .containerSecond,
+    .containerThird {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 36px;
+    }
+    
+    .delivery,
+    .lovemessage,
+    .locklandscape {
+        width: 90%;
+        height: auto;
+    }
+ 
+    .containerText {
+        width: 50%;
+    }
+    
+}
+
