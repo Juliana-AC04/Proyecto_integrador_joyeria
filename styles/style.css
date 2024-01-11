@@ -359,6 +359,7 @@ article {
     flex-direction: row;
     margin-top: 72px;
     margin-bottom: 72px;
+    overflow: hidden;
 
 }
 
@@ -477,7 +478,6 @@ article {
     font-style: normal;
     font-weight: 600;
     line-height: 4.25rem;
-    /* 141.667% */
 }
 
 .peopleText {
@@ -489,7 +489,6 @@ article {
     font-style: normal;
     font-weight: 400;
     line-height: 1.625rem;
-    /* 162.5% */
 }
 
 .card{
@@ -827,7 +826,6 @@ Vista móvil */
     .carousel {
         display: flex;
         flex-direction: row;
-        overflow: hidden;
         margin-left: 10%;
 
     }
@@ -852,10 +850,11 @@ Vista móvil */
     .carousel {
         display: flex;
         flex-direction: row;
-        overflow: hidden;
         margin-left: 1%;
     }
 }
+
+
 
 /* Sección "Our story"
 Vista móvil */
@@ -910,7 +909,3 @@ Vista móvil */
 
 }
 
-
-
-  
-  
