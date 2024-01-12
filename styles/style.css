@@ -909,3 +909,73 @@ Vista móvil */
 
 }
 
+
+/* Sección "From the people"
+Vista móvil */
+@media screen and (max-width: 599px) {
+    .peopleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        
+    }
+    
+    .peopleInfo {
+        width: 80%;
+        margin-bottom: 15%;
+    }
+    .peopleTitle {
+        width: 100%;
+    }
+
+    .peopleText {
+        width: 100%;
+    }
+    
+    .card{
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 10%;
+    }
+    
+    .peopleCard {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    
+    .peopleImg {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+    
+    .cardInfo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cardText {
+        width: 100%;
+    }
+    
+    .cardName {
+        margin-top: 1rem;
+    }
+    
+    .cardCountry {
+        margin-bottom: 1rem;
+    }
+    
+    .cardButtons {
+        margin-top: -5%;
+    }
+}
+
