@@ -455,18 +455,20 @@ article {
 
 /* Estilos de la sección "From the people" */
 .peopleContainer {
-    width: 100%;
+    background-color: #093931;
     height: auto;
     flex-shrink: 0;
-    background: #093931;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .peopleInfo {
-    width: 100%;
     margin-top: 11%;
-    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
 
 }
 
@@ -478,6 +480,7 @@ article {
     font-style: normal;
     font-weight: 600;
     line-height: 4.25rem;
+    width: 100%;
 }
 
 .peopleText {
@@ -489,19 +492,20 @@ article {
     font-style: normal;
     font-weight: 400;
     line-height: 1.625rem;
+    width: 100%;
 }
 
 .card{
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     margin-top: 4.5%;
-    margin-right: 8.25rem;
     margin-bottom: 4.69rem;
+    justify-content: center;
 }
 
 .peopleCard {
-    width: 43.5rem;
+    width: 100%;
     height: 23.4375rem;
     flex-shrink: 0;
     border-radius: 0.5rem;
@@ -525,6 +529,7 @@ article {
     margin-top: 3.75rem;
     margin-left: 2.25rem;
     margin-right: 2.25rem;
+    width: 100%;
 }
 
 .cardText {
@@ -534,8 +539,7 @@ article {
     font-style: normal;
     font-weight: 400;
     line-height: 1.625rem;
-    /* 162.5% */
-    width: 20.25rem;
+    width: 100%;
 }
 
 .cardName {
@@ -545,7 +549,6 @@ article {
     font-style: normal;
     font-weight: 700;
     line-height: 1.875rem;
-    /* 150% */
     margin-top: 1.13rem;
 }
 
@@ -556,14 +559,13 @@ article {
     font-style: normal;
     font-weight: 700;
     line-height: 1.875rem;
-    /* 150% */
     margin-bottom: 3.69rem;
 }
 
 .cardButtons {
+    width: 100%;
     display: inline-flex;
     justify-content: flex-end;
-    margin-right: 36px;
     margin-top: -4%;
 }
 
@@ -582,6 +584,9 @@ article {
 } 
 .buttonLeftPeople{
     margin-right: 16px;
+}
+.buttonRightPeople{
+    margin-right: 36px;
 }
 
 
@@ -923,7 +928,8 @@ Vista móvil */
     
     .peopleInfo {
         width: 80%;
-        margin-bottom: 15%;
+        margin-bottom: 5%;
+        margin-left: 15%;
     }
     .peopleTitle {
         width: 100%;
@@ -934,7 +940,7 @@ Vista móvil */
     }
     
     .card{
-        width: 100%;
+        width: 80%;
         margin-top: 1%;
         margin-bottom: 10%;
     }
@@ -944,8 +950,8 @@ Vista móvil */
         height: auto;
         display: flex;
         flex-direction: column;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     
     
@@ -960,10 +966,11 @@ Vista móvil */
     .cardInfo {
         display: flex;
         flex-direction: column;
+        margin: 20px;
     }
     
     .cardText {
-        width: 100%;
+        width: 90%;
     }
     
     .cardName {
@@ -976,6 +983,63 @@ Vista móvil */
     
     .cardButtons {
         margin-top: -5%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px){
+    .peopleContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .peopleInfo{
+        width: 100%;
+        margin-left: 15%;
+    }
+    .peopleText {
+        width: 100%;
+    }
+    
+    .card{
+        width: 100%;
+        margin-right: 5%;
+    }
+    
+    .peopleCard {
+        width: 90vw;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .peopleImg {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    
+    .cardInfo {
+        width: 100%;
+        margin: 3%;
+    }
+    
+    .cardText {
+        width: 100%;
+    }
+
+    .cardName{
+        margin-top: 2%;
+    }
+    .cardCountry{
+        margin-bottom: 3%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px){
+    .peopleContainer {
+        width: 100%;
+    }
+    .card{
+        width: 60%;
     }
 }
 
