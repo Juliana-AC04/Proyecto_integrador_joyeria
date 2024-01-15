@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-nav {
+.nav-header {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -28,15 +28,22 @@ nav {
   width: 20px;
   height: 20px;
   padding: 10px;
+  
 }
 h3 {
+  z-index: 2;
   color: #f5d38e;
   font-family: Cormorant Garamond;
   font-size: 30px;
   font-weight: 400;
   line-height: 46px;
 }
+h3 a{
+  text-decoration: none;
+  color: #f5d38e;
+}
 ul {
+  z-index: 2;
   display: flex;
   font-family: Manrope;
   font-size: 14px;
@@ -52,12 +59,14 @@ li {
 }
 li .navbarMenu:hover {
   color: #f2c66d;
+  border-bottom: 3px solid #F2C66D; 
 }
 ul li a {
   text-decoration: none;
   color: white;
 }
 
+/* main */
 main {
   background-color: #093931;
   padding-bottom: 147px;
@@ -75,7 +84,17 @@ h1 {
   font-weight: 400;
   line-height: 82px; /* 132.258% */
 }
-/* main */
+.backgroundMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+.backgroundMain img {
+  width: 100%;
+  display: block;
+  z-index: -1; 
+}
 .searchBar {
   display: flex;
   overflow: hidden;
@@ -83,6 +102,8 @@ h1 {
   border: 1px solid #f8f9fa;
   background: #fff;
   width: 757px;
+  z-index: 2;
+
 }
 button {
   background-color: #fff;
@@ -102,21 +123,26 @@ input {
   background-color: #fff;
 }
 /* section */
+
+
+.headerMenu.active .separator {
+  display: none; /* Oculta los separadores en pantallas pequeñas cuando el menú está activo */
+}
 .SectionMenu {
-  padding-top: 72px;
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
+  margin-top: 4rem;
+ 
 }
-
 .headerMenu {
   display: flex;
   width: 148.6px;
   height: 38px;
-  padding: 8px 47.3px 8px 0px;
+  padding: 0rem 33.5rem 0.43rem 0rem;
   align-items: flex-start;
   flex-shrink: 0;
 }
-
 .headerMenu .bodyMenu .list {
   color: #0d554a;
   font-family: Manrope;
@@ -126,20 +152,15 @@ input {
   line-height: 22px; /* 157.143% */
 }
 .bodyMenu:hover .list {
+  
   border-radius: 19px;
   background: #0d554a;
   color: #ffffff;
   display: flex;
-  width: 170px;
-  height: 20px;
-  padding: 8px 0px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
   justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
-.dropdown {
-  position: relative;
-}
+
 .SectionMenu .list,
 .separator {
   text-decoration: none;
@@ -153,13 +174,21 @@ input {
   background: #9aefe2;
   margin: 0 5px;
 }
-.dropdownPrice {
+.dropdown{
   color: #171a1f;
   font-family: Manrope;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 157.143% */
+  line-height: 22px; 
+}
+.dropdownPrice {
+  border-bottom: 2px solid #9095A0; 
+  text-decoration: none;
+  width: 103px;
+  height: 2rem;
+}
+.dropdown .dropdownPrice{
+  color: #171A1F; 
 }
 .dropdownMenu {
   position: absolute;
@@ -171,8 +200,12 @@ input {
 .listDropdown {
   color: #171a1f;
 }
+.listDropdown:hover {
+  color: #f2c66d
+}
 .dropdown:hover .dropdownMenu {
   display: block;
+  
 }
 
 /* article */
@@ -194,7 +227,7 @@ input {
     font-family: Cormorant Garamond;
     font-size: 24px;
     font-weight: 700;
-    line-height: 36px; /* 150% */
+    line-height: 36px; 
     
 }
 .articlePrice{
@@ -202,7 +235,7 @@ input {
     font-family: Manrope;
     font-size: 16px;
     font-weight: 400;
-    line-height: 26px; /* 162.5% */
+    line-height: 26px; 
     text-align: left;
 }
 
@@ -247,5 +280,105 @@ p{
     font-weight: 400;
     line-height: 26px; /* 162.5% */
  } 
+/* Media queries */
 
+/*Vista móvil */
+ @media screen and (max-width: 599px) {
+  .nav-header {
+    flex-direction: column;
+  }
+ .searchBar{
+  width: 25rem;
+ }
  
+
+.bodyMenu, .bodyDropdown {
+  text-align: center; /* Centra el texto en el contenedor */
+}
+.headerMenu{
+  margin-right: -37rem;
+    display: flex;
+    flex-direction: column;
+}
+.separator {
+  display: none; /* Oculta los separadores en pantallas pequeñas */
+}
+
+.dropdownMenu {
+  position: static; /* Cambia la posición para que aparezca debajo del elemento padre */
+}
+.dropdownPrice {
+  text-align: center;
+}
+
+.list, .listDropdown {
+  
+  display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+}
+.listImage{
+  margin-top: 20rem;
+ 
+}
+.articleImg{
+  width: 8rem;
+  flex-direction: column;
+  display: flex;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+}
+/*Vista tablet */
+ @media screen and (min-width: 600px) and (max-width: 1023px) {
+  .nav-header {
+    flex-direction: column;
+  }
+ .searchBar{
+  width: 25rem;
+ }
+ 
+
+.bodyMenu, .bodyDropdown {
+  text-align: center; /* Centra el texto en el contenedor */
+}
+.headerMenu{
+  margin-right: -37rem;
+    display: flex;
+    flex-direction: column;
+}
+.separator {
+  display: none; /* Oculta los separadores en pantallas pequeñas */
+}
+
+.dropdownMenu {
+  position: static; /* Cambia la posición para que aparezca debajo del elemento padre */
+}
+.dropdownPrice {
+  text-align: center;
+}
+
+.list, .listDropdown {
+  
+  display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+}
+.listImage{
+  margin-top: 20rem;
+ 
+}
+.articleImg{
+  width: 8rem;
+  flex-direction: column;
+  display: flex;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+ }
