@@ -598,18 +598,17 @@ footer {
     align-items: baseline;
     padding-left: 8.25rem;
     padding-right: 8.25rem;
+    justify-content: space-evenly;
 
 }
 
 .darlingFooter {
-
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 1.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.875rem;
-    /* 153.333% */
     margin-top: 3rem;
 }
 
@@ -622,16 +621,14 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem;
-
 }
 
 .itemsFooter {
-    margin-top: 3rem;
-
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .itemsFooter p {
-    margin-left: 12rem;
     margin-top: 0.75rem;
     color: #FFF;
     font-family: Manrope;
@@ -639,13 +636,10 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem;
-    /* 157.143% */
 }
 
 .secondItemsFooter {
-    margin-top: 3rem;
-    margin-left: 5rem;
-
+    margin-right: 2%;
 }
 
 .secondItemsFooter p {
@@ -656,7 +650,6 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem;
-    /* 157.143% */
 }
 
 .textItemFooter {
@@ -666,13 +659,6 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.875rem;
-    /* 150% */
-
-}
-
-.thirdItemsFooter {
-    margin-left: 16rem;
-
 }
 
 .textItemFooter2 {
@@ -682,7 +668,6 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem;
-    /* 166.667% */
 }
 
 
@@ -710,7 +695,6 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem;
-    /* 157.143% */
 }
 
 .buttonSubscribe {
@@ -719,6 +703,7 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 0rem 1.125rem 1.125rem 0rem;
+    border: 1px solid #F2C66D;
     background: #F2C66D;
     color: #6B4A09;
     font-family: Manrope;
@@ -726,7 +711,6 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: 1.375rem;
-    /* 157.143% */
 }
 
 .socialMedia {
@@ -1042,4 +1026,3 @@ Vista móvil */
         width: 60%;
     }
 }
-
