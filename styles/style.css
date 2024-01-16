@@ -596,20 +596,23 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    padding-left: 8.25rem;
-    padding-right: 8.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-content: space-evenly;
 
 }
 
 .darlingFooter {
+    margin-top: 3rem;
+}
+
+.darlingFooter h3{
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 1.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.875rem;
-    margin-top: 3rem;
 }
 
 .darlingFooter p {
@@ -623,12 +626,13 @@ footer {
     line-height: 1.375rem;
 }
 
-.itemsFooter {
-    margin-left: 2%;
-    margin-right: 2%;
+.secondItemsFooter{
+    display: flex;
+    flex-direction: row;
 }
 
-.itemsFooter p {
+.itemsFooter p,
+.itemsFooter2 p {
     margin-top: 0.75rem;
     color: #FFF;
     font-family: Manrope;
@@ -638,18 +642,8 @@ footer {
     line-height: 1.375rem;
 }
 
-.secondItemsFooter {
-    margin-right: 2%;
-}
-
-.secondItemsFooter p {
-    margin-top: 0.75rem;
-    color: #FFF;
-    font-family: Manrope;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.375rem;
+.itemsFooter{
+    margin-right: 100px;
 }
 
 .textItemFooter {
@@ -674,11 +668,12 @@ footer {
 .subscribe {
     margin-top: 1rem;
     display: flex;
-    flex-wrap: nowrap;
-    margin-right: 8.25rem;
+    flex-direction: row;
+    width: 100%;
 }
 
 .subscribeContent {
+
     display: inline-flex;
     padding: 0.4375rem 8.25rem 0.375rem 0.75rem;
     align-items: center;
@@ -717,7 +712,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin-top: 2.31rem;
-    margin-right: 8.25rem;
+    width: 100%;
     margin-bottom: 1.5rem;
 }
 
@@ -1025,4 +1020,78 @@ Vista móvil */
     .card{
         width: 60%;
     }
+}
+
+
+/* Footer */
+
+@media screen and (max-width:599px){
+    footer {
+    background: #093931;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.darlingFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.darlingFooter h3{
+    width: 100%;
+}
+
+.darlingFooter p {
+    margin-top: 3rem;
+    margin-bottom: 1.56rem;
+    width: 100%;
+}
+
+.secondItemsFooter{
+    width: 100%;
+}
+
+.itemsFooter p,
+.itemsFooter2 p{
+    width: 100%;
+}
+
+.thirdItemsFooter{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3rem;;
+}
+
+.subscribe {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.subscribeContent {
+    width: 70%;
+}
+
+.subscribeText {
+    width: 100%;
+}
+
+.buttonSubscribe {
+    width: 30%;
+}
+
+.socialMedia {
+    width: 100%;
+}
+
 }
