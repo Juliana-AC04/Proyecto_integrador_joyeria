@@ -1023,8 +1023,8 @@ Vista móvil */
 }
 
 
-/* Footer */
-
+/* Footer 
+Vista móvil*/
 @media screen and (max-width:599px){
     footer {
     background: #093931;
@@ -1092,6 +1092,19 @@ Vista móvil */
 
 .socialMedia {
     width: 100%;
+}
+
+}
+
+/*vista tabletas */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+
+.darlingFooter{
+margin-right: 10px;
+}
+
+.itemsFooter, .itemsFooter2{
+    margin-right: 10px;
 }
 
 }
