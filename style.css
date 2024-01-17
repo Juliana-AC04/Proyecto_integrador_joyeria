@@ -623,9 +623,7 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
-  .headerNav {
-    flex-direction: column;
-  }
+   
   .container {
     width: 100%;
     height: auto; /* Cambia la altura a automática para adaptarse al contenido */

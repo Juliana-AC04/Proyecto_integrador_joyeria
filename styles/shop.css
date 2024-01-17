@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-.nav-header {
+.navHeader {
   display: flex;
   align-items: center;
   justify-content: space-around;
