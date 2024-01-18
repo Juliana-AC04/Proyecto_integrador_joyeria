@@ -429,49 +429,53 @@ line-height: 28px;
 }
 
 /* section delivery */
-.sectionDelivery{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 24px;
-    margin-bottom: 24px;
-
+/* article */
+article {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
+
 .containerFirst,
 .containerSecond,
-.containerThird{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.containerThird {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
 }
-.delivery , 
+
+.delivery,
 .lovemessage,
-.locklandscape{
-    width: 62px;
-    height: 62px;
-    margin-bottom: 18px;
+.locklandscape {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 18px;
 
 }
- .deliverySection,
- .customer,
- .Payment
- {
-    color: #171A1F;
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px; /* 155.556% */
+
+.containerTitle {
+  color: #171A1F;
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  /* 155.556% */
 }
 
-.infoSection{
-    width: 278px;
-    color: #9095A0;
-    text-align: center;
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px; /* 162.5% */
- }   
+.containerText {
+  width: 278px;
+  color: #9095A0;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
+}
+
 
  /* section luxury */
 #section{
@@ -646,128 +650,137 @@ height: 20rem;
   margin-right: 16px;
 }
 
- /* footer */
- footer {
+
+
+ /* Estilos del footer */
+footer {
   background: #093931;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    padding-left: 8.25rem;
-    padding-right: 8.25rem;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-evenly;
+
 }
+
 .darlingFooter {
-  color: #f5d38e;
+  margin-top: 3rem;
+}
+
+.darlingFooter h3{
+  color: #F5D38E;
   font-family: Cormorant Garamond;
   font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.875rem;
-  margin-top: 3rem;
 }
+
 .darlingFooter p {
   margin-top: 5.81rem;
   margin-bottom: 1.56rem;
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
-.itemsFooter {
-  margin-top: 3rem;
+
+.secondItemsFooter{
+  display: flex;
+  flex-direction: row;
 }
-.itemsFooter p {
-  margin-left: 12rem;
+
+.itemsFooter p,
+.itemsFooter2 p {
   margin-top: 0.75rem;
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
-.secondItemsFooter {
-  margin-top: 3rem;
-  margin-left: 5rem;
+
+.itemsFooter{
+  margin-right: 100px;
 }
-.secondItemsFooter p {
-  margin-top: 0.75rem;
-  color: #fff;
-  font-family: Manrope;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.375rem;
-}
+
 .textItemFooter {
-  color: #fff;
+  color: #FFF;
   font-family: Cormorant Garamond;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
 }
-.thirdItemsFooter {
-  margin-left: 16rem;
-}
+
 .textItemFooter2 {
-  color: #fafafb;
+  color: #FAFAFB;
   font-family: Manrope;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
 }
+
+
 .subscribe {
   margin-top: 1rem;
   display: flex;
-  flex-wrap: nowrap;
-  margin-right: 8.25rem;
+  flex-direction: row;
+  width: 100%;
 }
+
 .subscribeContent {
+
   display: inline-flex;
   padding: 0.4375rem 8.25rem 0.375rem 0.75rem;
   align-items: center;
   gap: 0.375rem;
   border-radius: 1.125rem 0rem 0rem 1.125rem;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0);
+  border: 1px solid #FFF;
+  background: rgba(0, 0, 0, 0.00);
 }
+
 .subscribeText {
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
+
 .buttonSubscribe {
   display: inline-flex;
   padding: 0.4375rem 1.46875rem 0.4375rem 1.53125rem;
   justify-content: center;
   align-items: center;
   border-radius: 0rem 1.125rem 1.125rem 0rem;
-  background: #f2c66d;
-  color: #6b4a09;
+  border: 1px solid #F2C66D;
+  background: #F2C66D;
+  color: #6B4A09;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
+
 .socialMedia {
   display: flex;
   justify-content: flex-end;
   margin-top: 2.31rem;
-  margin-right: 8.25rem;
+  width: 100%;
   margin-bottom: 1.5rem;
 }
+
 .mediaIcon {
   margin-right: 1rem;
 }
-
 
 /* Media queries */
 
@@ -800,302 +813,21 @@ height: 20rem;
 .ringSize,
 .button {
   margin: 0 2rem 0 0;
-  
-}
-
- .articleLuxurydiv{
-  width: 31rem;
-    height: 45rem;
-    display: flex;
-    background: #FAFAFB;
-    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
-    align-items: center;
-
-
-}
-.descriptionArticle{
-  margin-right: 25rem;
-  
-}
-.headerArticle{
-  font-size: 2.5rem;
-    margin-left: 0.5rem;
-}
-.infoArticle{
-  width: 30rem;
-  font-size: 1rem;
-}
-.redRingImg{
-  width: 30rem;
-  height: 26rem;
-}
-.iconButtonArticle{
-  margin: -15.5rem 0 0 14rem;
-
-} 
-
-.sectionDelivery {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.finalLuxurySection{
-  font-size: 2rem;
-}
-
-#section{
-  margin-left: 2rem;
-}
-
-.carouselImg{
-  display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-.RadianceNecklaceImage,
-.ExquisiteEarringsImage,
-.GlamourNecklaceImage,
-.DelightsEarringsImage 
- {
-  width: 15rem;
-  height: 19rem;
-
-}
-.dreamyNecklace,
-.priceCarouselDreamy,
-.descriptionCarouselDreamy {
-  display: none;
-}
-.peopleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-
-.peopleInfo {
-  width: 80%;
-  margin-bottom: 15%;
-}
-.peopleTitle {
-  width: 100%;
-}
-
-.peopleText {
-  width: 100%;
-}
-
-.card {
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 10%;
-}
-
-.peopleCard {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.peopleImg {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-left-radius: 0;
-}
-
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.cardText {
-  width: 100%;
-}
-
-.cardName {
-  margin-top: 1rem;
-}
-
-.cardCountry {
-  margin-bottom: 1rem;
-}
-
-.cardButtons {
-  margin-top: -5%;
 }
 
 
 
 
 
-}
-/*Vista tablet */
-@media screen and (min-width: 600px) and (max-width: 1023px){
-  
-  .luxurySection {
-    margin: 2rem 1rem;
-    display: block;
-}
-
-.img{
-  width: 28rem;
-  height: 38rem;
-}
-
-.heart{
-  top: 15.5rem;
-  left: 32rem;
-}
-.LuxuryDivList{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 2rem 21rem 1rem 1rem;
-}
-
-.ringSize,
-.button {
-  margin: 0 2rem 0 0;
-  
-}
-
- .articleLuxurydiv{
-  width: 31rem;
-    height: 45rem;
-    display: flex;
-    background: #FAFAFB;
-    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
-    align-items: center;
 
 
-}
-.descriptionArticle{
-  margin-right: 25rem;
-  
-}
-.headerArticle{
-  font-size: 2.5rem;
-    margin-left: 0.5rem;
-}
-.infoArticle{
-  width: 30rem;
-  font-size: 1rem;
-}
-.redRingImg{
-  width: 30rem;
-  height: 26rem;
-}
-.iconButtonArticle{
-  margin: -15.5rem 0 0 14rem;
-
-} 
-
-.sectionDelivery {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.finalLuxurySection{
-  font-size: 2rem;
-}
-
-#section{
-  margin-left: 2rem;
-}
-
-.carouselImg{
-  display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-.RadianceNecklaceImage,
-.ExquisiteEarringsImage,
-.GlamourNecklaceImage,
-.DelightsEarringsImage 
- {
-  width: 15rem;
-  height: 19rem;
-
-}
-.dreamyNecklace,
-.priceCarouselDreamy,
-.descriptionCarouselDreamy {
-  display: none;
-}
-.peopleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
 
 
-.peopleInfo {
-  width: 80%;
-  margin-bottom: 15%;
-}
-.peopleTitle {
-  width: 100%;
-}
 
-.peopleText {
-  width: 100%;
-}
 
-.card {
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 10%;
-}
 
-.peopleCard {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  margin-left: 10%;
-  margin-right: 10%;
-}
 
-.peopleImg {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  border-bottom-left-radius: 0;
-}
 
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.cardText {
-  width: 100%;
-}
-
-.cardName {
-  margin-top: 1rem;
-}
-
-.cardCountry {
-  margin-bottom: 1rem;
-}
-
-.cardButtons {
-  margin-top: -5%;
-}
 
 
 }
