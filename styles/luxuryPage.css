@@ -432,49 +432,53 @@ line-height: 28px;
 }
 
 /* section delivery */
-.sectionDelivery{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 24px;
-    margin-bottom: 24px;
-
+/* article */
+article {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
+
 .containerFirst,
 .containerSecond,
-.containerThird{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.containerThird {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
 }
-.delivery , 
+
+.delivery,
 .lovemessage,
-.locklandscape{
-    width: 62px;
-    height: 62px;
-    margin-bottom: 18px;
+.locklandscape {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 18px;
 
 }
- .deliverySection,
- .customer,
- .Payment
- {
-    color: #171A1F;
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px; /* 155.556% */
+
+.containerTitle {
+  color: #171A1F;
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  /* 155.556% */
 }
 
-.infoSection{
-    width: 278px;
-    color: #9095A0;
-    text-align: center;
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px; /* 162.5% */
- }   
+.containerText {
+  width: 278px;
+  color: #9095A0;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
+}
+
 
  /* section luxury */
 #section{
@@ -649,128 +653,137 @@ height: 20rem;
   margin-right: 16px;
 }
 
- /* footer */
- footer {
+
+
+ /* Estilos del footer */
+footer {
   background: #093931;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    padding-left: 8.25rem;
-    padding-right: 8.25rem;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-evenly;
+
 }
+
 .darlingFooter {
-  color: #f5d38e;
+  margin-top: 3rem;
+}
+
+.darlingFooter h3{
+  color: #F5D38E;
   font-family: Cormorant Garamond;
   font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.875rem;
-  margin-top: 3rem;
 }
+
 .darlingFooter p {
   margin-top: 5.81rem;
   margin-bottom: 1.56rem;
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
-.itemsFooter {
-  margin-top: 3rem;
+
+.secondItemsFooter{
+  display: flex;
+  flex-direction: row;
 }
-.itemsFooter p {
-  margin-left: 12rem;
+
+.itemsFooter p,
+.itemsFooter2 p {
   margin-top: 0.75rem;
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
-.secondItemsFooter {
-  margin-top: 3rem;
-  margin-left: 5rem;
+
+.itemsFooter{
+  margin-right: 100px;
 }
-.secondItemsFooter p {
-  margin-top: 0.75rem;
-  color: #fff;
-  font-family: Manrope;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.375rem;
-}
+
 .textItemFooter {
-  color: #fff;
+  color: #FFF;
   font-family: Cormorant Garamond;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
 }
-.thirdItemsFooter {
-  margin-left: 16rem;
-}
+
 .textItemFooter2 {
-  color: #fafafb;
+  color: #FAFAFB;
   font-family: Manrope;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
 }
+
+
 .subscribe {
   margin-top: 1rem;
   display: flex;
-  flex-wrap: nowrap;
-  margin-right: 8.25rem;
+  flex-direction: row;
+  width: 100%;
 }
+
 .subscribeContent {
+
   display: inline-flex;
   padding: 0.4375rem 8.25rem 0.375rem 0.75rem;
   align-items: center;
   gap: 0.375rem;
   border-radius: 1.125rem 0rem 0rem 1.125rem;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0);
+  border: 1px solid #FFF;
+  background: rgba(0, 0, 0, 0.00);
 }
+
 .subscribeText {
-  color: #fff;
+  color: #FFF;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
+
 .buttonSubscribe {
   display: inline-flex;
   padding: 0.4375rem 1.46875rem 0.4375rem 1.53125rem;
   justify-content: center;
   align-items: center;
   border-radius: 0rem 1.125rem 1.125rem 0rem;
-  background: #f2c66d;
-  color: #6b4a09;
+  border: 1px solid #F2C66D;
+  background: #F2C66D;
+  color: #6B4A09;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.375rem;
 }
+
 .socialMedia {
   display: flex;
   justify-content: flex-end;
   margin-top: 2.31rem;
-  margin-right: 8.25rem;
+  width: 100%;
   margin-bottom: 1.5rem;
 }
+
 .mediaIcon {
   margin-right: 1rem;
 }
-
 
 /* Media queries */
 
@@ -804,20 +817,253 @@ height: 20rem;
 .button {
   margin: 0 2rem 0 0;
 }
+/* From the people  */
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 100%;
+  
+}
+
+.peopleInfo {
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 15%;
+}
+.peopleTitle {
+  width: 100%;
+}
+
+.peopleText {
+  width: 100%;
+}
+
+.card{
+  width: 80%;
+  margin-top: 1%;
+  margin-bottom: 10%;
+}
+
+.peopleCard {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 
+.peopleImg {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+}
 
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
 
+.cardText {
+  width: 90%;
+}
 
+.cardName {
+  margin-top: 1rem;
+}
 
+.cardCountry {
+  margin-bottom: 1rem;
+}
 
+.cardButtons {
+  margin-top: -5%;
+}
 
+/* Footer  */
+footer {
+background: #093931;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+padding-left: 1rem;
+padding-right: 1rem;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
 
+.darlingFooter {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
 
+.darlingFooter h3{
+width: 100%;
+}
 
+.darlingFooter p {
+margin-top: 3rem;
+margin-bottom: 1.56rem;
+width: 100%;
+}
 
+.secondItemsFooter{
+width: 100%;
+}
 
+.itemsFooter p,
+.itemsFooter2 p{
+width: 100%;
+}
 
+.thirdItemsFooter{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 3rem;;
+}
 
+.subscribe {
+margin-top: 1rem;
+display: flex;
+flex-direction: row;
+width: 100%;
+}
 
+.subscribeContent {
+width: 70%;
+}
+
+.subscribeText {
+width: 100%;
+}
+
+.buttonSubscribe {
+width: 30%;
+}
+
+.socialMedia {
+width: 100%;
+}
+
+ /* Article  */
+ article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.containerFirst,
+.containerSecond,
+.containerThird {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.delivery,
+.lovemessage,
+.locklandscape {
+  width: 80%;
+  height: auto;
+}
+
+.containerText {
+  width: 70%;
+}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* From the people  */
+  .peopleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.peopleInfo{
+    width: 100%;
+    margin-left: 15%;
+}
+.peopleText {
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    margin-right: 5%;
+}
+
+.peopleCard {
+    width: 90vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.peopleImg {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.cardInfo {
+    width: 100%;
+    margin: 3%;
+}
+
+.cardText {
+    width: 100%;
+}
+
+.cardName{
+    margin-top: 2%;
+}
+.cardCountry{
+    margin-bottom: 3%;
+}
+
+/* Footer */
+.darlingFooter{
+margin-right: 10px;
+}
+
+.itemsFooter, .itemsFooter2{
+margin-right: 10px;
+}
+
+/* article */
+article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.containerFirst,
+.containerSecond,
+.containerThird {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.delivery,
+.lovemessage,
+.locklandscape {
+  width: 90%;
+  height: auto;
+}
+
+.containerText {
+  width: 50%;
+}
 }
