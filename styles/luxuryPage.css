@@ -11,18 +11,11 @@
     background-color: #093931;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
   }
    .navbar {
     display: flex;
     align-items: center;
-  }
-  .container {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    width: 276px;
-    height: 320px;
-    overflow: hidden;
   }
   .login,
   .shopping {
@@ -31,7 +24,7 @@
     padding: 10px;
     
   }
-  h3 {
+  .darling {
     z-index: 2;
     color: #f5d38e;
     font-family: Cormorant Garamond;
@@ -39,11 +32,15 @@
     font-weight: 400;
     line-height: 46px;
   }
-  h3 a{
+  .darlingLink{
     text-decoration: none;
     color: #f5d38e;
   }
-  ul {
+  .darling .navbarMenu{
+    text-decoration: none;
+    color: #f5d38e;
+  }
+ .navbarList {
     z-index: 2;
     display: flex;
     font-family: Manrope;
@@ -51,18 +48,18 @@
     font-weight: 700;
     line-height: 22px;
   }
-  li {
+  .listNavbar {
     display: flex;
     height: 43px;
     padding: 10.5px 18.63px;
     justify-content: center;
     align-items: center;
   }
-  li .navbarMenu:hover {
+  .listNavbar .navbarMenu:hover {
     color: #f2c66d;
     border-bottom: 3px solid #F2C66D; 
   }
-  ul li a {
+  .navbarList .listNavbar .navbarMenu {
     text-decoration: none;
     color: white;
   }
@@ -803,21 +800,302 @@ height: 20rem;
 .ringSize,
 .button {
   margin: 0 2rem 0 0;
+  
+}
+
+ .articleLuxurydiv{
+  width: 31rem;
+    height: 45rem;
+    display: flex;
+    background: #FAFAFB;
+    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
+    align-items: center;
+
+
+}
+.descriptionArticle{
+  margin-right: 25rem;
+  
+}
+.headerArticle{
+  font-size: 2.5rem;
+    margin-left: 0.5rem;
+}
+.infoArticle{
+  width: 30rem;
+  font-size: 1rem;
+}
+.redRingImg{
+  width: 30rem;
+  height: 26rem;
+}
+.iconButtonArticle{
+  margin: -15.5rem 0 0 14rem;
+
+} 
+
+.sectionDelivery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.finalLuxurySection{
+  font-size: 2rem;
+}
+
+#section{
+  margin-left: 2rem;
+}
+
+.carouselImg{
+  display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.RadianceNecklaceImage,
+.ExquisiteEarringsImage,
+.GlamourNecklaceImage,
+.DelightsEarringsImage 
+ {
+  width: 15rem;
+  height: 19rem;
+
+}
+.dreamyNecklace,
+.priceCarouselDreamy,
+.descriptionCarouselDreamy {
+  display: none;
+}
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.peopleInfo {
+  width: 80%;
+  margin-bottom: 15%;
+}
+.peopleTitle {
+  width: 100%;
+}
+
+.peopleText {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 10%;
+}
+
+.peopleCard {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.peopleImg {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardText {
+  width: 100%;
+}
+
+.cardName {
+  margin-top: 1rem;
+}
+
+.cardCountry {
+  margin-bottom: 1rem;
+}
+
+.cardButtons {
+  margin-top: -5%;
 }
 
 
 
 
 
+}
+/*Vista tablet */
+@media screen and (min-width: 600px) and (max-width: 1023px){
+  
+  .luxurySection {
+    margin: 2rem 1rem;
+    display: block;
+}
+
+.img{
+  width: 28rem;
+  height: 38rem;
+}
+
+.heart{
+  top: 15.5rem;
+  left: 32rem;
+}
+.LuxuryDivList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 2rem 21rem 1rem 1rem;
+}
+
+.ringSize,
+.button {
+  margin: 0 2rem 0 0;
+  
+}
+
+ .articleLuxurydiv{
+  width: 31rem;
+    height: 45rem;
+    display: flex;
+    background: #FAFAFB;
+    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
+    align-items: center;
 
 
+}
+.descriptionArticle{
+  margin-right: 25rem;
+  
+}
+.headerArticle{
+  font-size: 2.5rem;
+    margin-left: 0.5rem;
+}
+.infoArticle{
+  width: 30rem;
+  font-size: 1rem;
+}
+.redRingImg{
+  width: 30rem;
+  height: 26rem;
+}
+.iconButtonArticle{
+  margin: -15.5rem 0 0 14rem;
+
+} 
+
+.sectionDelivery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.finalLuxurySection{
+  font-size: 2rem;
+}
+
+#section{
+  margin-left: 2rem;
+}
+
+.carouselImg{
+  display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.RadianceNecklaceImage,
+.ExquisiteEarringsImage,
+.GlamourNecklaceImage,
+.DelightsEarringsImage 
+ {
+  width: 15rem;
+  height: 19rem;
+
+}
+.dreamyNecklace,
+.priceCarouselDreamy,
+.descriptionCarouselDreamy {
+  display: none;
+}
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
 
 
+.peopleInfo {
+  width: 80%;
+  margin-bottom: 15%;
+}
+.peopleTitle {
+  width: 100%;
+}
 
+.peopleText {
+  width: 100%;
+}
 
+.card {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 10%;
+}
 
+.peopleCard {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
+.peopleImg {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+}
 
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardText {
+  width: 100%;
+}
+
+.cardName {
+  margin-top: 1rem;
+}
+
+.cardCountry {
+  margin-bottom: 1rem;
+}
+
+.cardButtons {
+  margin-top: -5%;
+}
 
 
 }
