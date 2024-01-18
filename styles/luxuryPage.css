@@ -478,66 +478,80 @@ article {
 
 
  /* section luxury */
-#section{
-   display: flex;
-    flex-direction: column;
-    margin-left: 14rem;
-}
- .RadianceNecklaceImage,
- .ExquisiteEarringsImage,
- .GlamourNecklaceImage,
- .DelightsEarringsImage{
-  border-radius: 0.5rem 0.5rem 0 0;
-  width: 17rem;
-height: 20rem;
-
-}
-.imgCarouselLuxury{
+ .sectionCarousel {
+  display: flex;
+  flex-direction: column;
   background: #FFF;
-  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
-  
 }
- .finalLuxurySection{
-  margin-top: 5rem;
+
+.carouselTitle {
   color: #0D554A;
-  font-family: Cormorant Garamond;
+  font-family: "Cormorant Garamond";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: 56px;
- }
- .carouselImg{
-    margin-top: 1rem;
-    display: flex;
-    gap: 2rem;
- }
+  margin-left: 10%;
+}
 
-.descriptionCarousel{
+
+.carouselInfo {
+  margin-top: 78px;
+  margin-left: 132px;
+  margin-right: 48px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  overflow: hidden;
+  margin-left: 10%;
+
+}
+
+.carouselItem {
+  margin-right: 24px;
+  width: 276px;
+  height: 410px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+}
+
+.carouselItem img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.carouselItem figcaption {
   color: #171A1F;
   font-family: Cormorant Garamond;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
-  
-  
+  margin-left: 12px;
+
 }
-.priceCarousel{
+
+.carouselItem p {
   color: #171A1F;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  text-align: left;
+  margin-left: 12px;
 }
-
-
-
 
 
 /* Estilos de la sección "From the people" */
 .peopleContainer {
-  margin-top: 10rem;
+  margin-top: 48px;
   width: 100%;
   height: auto;
   flex-shrink: 0;
@@ -814,20 +828,253 @@ footer {
 .button {
   margin: 0 2rem 0 0;
 }
+/* From the people  */
+.peopleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 100%;
+  
+}
+
+.peopleInfo {
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: 15%;
+}
+.peopleTitle {
+  width: 100%;
+}
+
+.peopleText {
+  width: 100%;
+}
+
+.card{
+  width: 80%;
+  margin-top: 1%;
+  margin-bottom: 10%;
+}
+
+.peopleCard {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 
+.peopleImg {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+}
 
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
 
+.cardText {
+  width: 90%;
+}
 
+.cardName {
+  margin-top: 1rem;
+}
 
+.cardCountry {
+  margin-bottom: 1rem;
+}
 
+.cardButtons {
+  margin-top: -5%;
+}
 
+/* Footer  */
+footer {
+background: #093931;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+padding-left: 1rem;
+padding-right: 1rem;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
 
+.darlingFooter {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
 
+.darlingFooter h3{
+width: 100%;
+}
 
+.darlingFooter p {
+margin-top: 3rem;
+margin-bottom: 1.56rem;
+width: 100%;
+}
 
+.secondItemsFooter{
+width: 100%;
+}
 
+.itemsFooter p,
+.itemsFooter2 p{
+width: 100%;
+}
 
+.thirdItemsFooter{
+display: flex;
+flex-direction: column;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 3rem;;
+}
 
+.subscribe {
+margin-top: 1rem;
+display: flex;
+flex-direction: row;
+width: 100%;
+}
 
+.subscribeContent {
+width: 70%;
+}
+
+.subscribeText {
+width: 100%;
+}
+
+.buttonSubscribe {
+width: 30%;
+}
+
+.socialMedia {
+width: 100%;
+}
+
+ /* Article  */
+  article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .containerFirst,
+    .containerSecond,
+    .containerThird {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .delivery,
+    .lovemessage,
+    .locklandscape {
+        width: 80%;
+        height: auto;
+    }
+
+    .containerText {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  /* From the people  */
+  .peopleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.peopleInfo{
+    width: 100%;
+    margin-left: 15%;
+}
+.peopleText {
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    margin-right: 5%;
+}
+
+.peopleCard {
+    width: 90vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.peopleImg {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.cardInfo {
+    width: 100%;
+    margin: 3%;
+}
+
+.cardText {
+    width: 100%;
+}
+
+.cardName{
+    margin-top: 2%;
+}
+.cardCountry{
+    margin-bottom: 3%;
+}
+
+/* Footer */
+.darlingFooter{
+margin-right: 10px;
+}
+
+.itemsFooter, .itemsFooter2{
+margin-right: 10px;
+}
+
+/* article */
+article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.containerFirst,
+.containerSecond,
+.containerThird {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.delivery,
+.lovemessage,
+.locklandscape {
+  width: 90%;
+  height: auto;
+}
+
+.containerText {
+  width: 50%;
+}
 }
