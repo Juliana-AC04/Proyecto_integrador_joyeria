@@ -481,66 +481,80 @@ article {
 
 
  /* section luxury */
-#section{
-   display: flex;
-    flex-direction: column;
-    margin-left: 14rem;
-}
- .RadianceNecklaceImage,
- .ExquisiteEarringsImage,
- .GlamourNecklaceImage,
- .DelightsEarringsImage{
-  border-radius: 0.5rem 0.5rem 0 0;
-  width: 17rem;
-height: 20rem;
-
-}
-.imgCarouselLuxury{
+ .sectionCarousel {
+  display: flex;
+  flex-direction: column;
   background: #FFF;
-  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
-  
 }
- .finalLuxurySection{
-  margin-top: 5rem;
+
+.carouselTitle {
   color: #0D554A;
-  font-family: Cormorant Garamond;
+  font-family: "Cormorant Garamond";
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: 56px;
- }
- .carouselImg{
-    margin-top: 1rem;
-    display: flex;
-    gap: 2rem;
- }
+  margin-left: 10%;
+}
 
-.descriptionCarousel{
+
+.carouselInfo {
+  margin-top: 78px;
+  margin-left: 132px;
+  margin-right: 48px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  overflow: hidden;
+  margin-left: 10%;
+
+}
+
+.carouselItem {
+  margin-right: 24px;
+  width: 276px;
+  height: 410px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+}
+
+.carouselItem img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.carouselItem figcaption {
   color: #171A1F;
   font-family: Cormorant Garamond;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
-  
-  
+  margin-left: 12px;
+
 }
-.priceCarousel{
+
+.carouselItem p {
   color: #171A1F;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  text-align: left;
+  margin-left: 12px;
 }
-
-
-
 
 
 /* Estilos de la sección "From the people" */
 .peopleContainer {
-  margin-top: 10rem;
+  margin-top: 48px;
   width: 100%;
   height: auto;
   flex-shrink: 0;
@@ -955,32 +969,32 @@ width: 100%;
 }
 
  /* Article  */
- article {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
+  article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
 
-.containerFirst,
-.containerSecond,
-.containerThird {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+    .containerFirst,
+    .containerSecond,
+    .containerThird {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
-.delivery,
-.lovemessage,
-.locklandscape {
-  width: 80%;
-  height: auto;
-}
+    .delivery,
+    .lovemessage,
+    .locklandscape {
+        width: 80%;
+        height: auto;
+    }
 
-.containerText {
-  width: 70%;
-}
+    .containerText {
+        width: 70%;
+    }
 
 }
 
