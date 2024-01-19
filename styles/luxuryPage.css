@@ -68,15 +68,14 @@
 
  /* div luxury */
   .LuxuryDivList{
-    margin:4.5rem 20rem 2rem;
     color: #0D554A;
     font-family: Cormorant Garamond;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 22px;
     display: flex;
     align-items: center;
+    margin: 2rem 5rem;
   }
 .home{
   margin-right: 1rem;
@@ -95,7 +94,8 @@
  /* luxurySection */
   .luxurySection{
   display: flex;
-  margin:1rem 20rem 2rem;
+  justify-content: space-evenly;
+  
 
   }
  
@@ -125,8 +125,7 @@
   }
   .heart{
     position: absolute;
-    top: 13.5rem;
-    left: 53rem;
+    margin: 2rem -4rem;
   }
 
   /*  luxury chartms*/
@@ -803,7 +802,7 @@ footer {
   
 
   .luxurySection {
-    margin: 2rem 1rem;
+    margin: 6rem 2rem;
     display: block;
 }
 
@@ -813,21 +812,73 @@ footer {
 }
 
 .heart{
-  top: 15.5rem;
-  left: 32rem;
+  top: 11.5rem;
+  left: 37rem;
 }
 .LuxuryDivList{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 2rem 21rem 1rem 1rem;
+   
+    margin: 2rem 0 -5rem 2rem;;
 }
 
-.ringSize,
-.button {
+.ringSize {
   margin: 0 2rem 0 0;
 }
+/* Article  */
+
+.articleLuxurydiv{
+  width: 32rem ;
+  height: 38rem ;
+  display: flex;
+  background: #FFF;
+  box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.descriptionArticle{
+  margin-right: 23rem;
+  font-size: 15px;
+  
+}
+.headerArticle{
+
+  font-size: 30px;
+  
+}
+.infoArticle{
+  width: 29rem;
+  font-size: 15px;
+
+}
+.redRingImg{
+  width: 30rem;
+  height: 20rem;
+}
+.iconButtonArticle{
+  margin: -13rem 15rem;
+}
+/* container delivery */
+.containerFirst,
+.containerSecond,
+.containerThird {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.delivery,
+.lovemessage,
+.locklandscape {
+    width: 80%;
+    height: auto;
+}
+
+.containerText {
+    width: 70%;
+}
+
 /* From the people  */
 .peopleContainer {
   display: flex;
@@ -965,37 +1016,68 @@ width: 30%;
 width: 100%;
 }
 
- /* Article  */
-  article {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-    }
+ 
 
-    .containerFirst,
-    .containerSecond,
-    .containerThird {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .delivery,
-    .lovemessage,
-    .locklandscape {
-        width: 80%;
-        height: auto;
-    }
-
-    .containerText {
-        width: 70%;
-    }
 
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
+  .luxurySection {
+    margin: 6rem 2rem;
+    display: block;
+}
+
+.img{
+  width: 28rem;
+  height: 38rem;
+}
+
+.heart{
+  top: 11.5rem;
+  left: 37rem;
+}
+.LuxuryDivList{
+   
+    margin: 2rem 0 -5rem 2rem;;
+}
+
+.ringSize {
+  margin: 0 2rem 0 0;
+}
+
+.articleLuxurydiv{
+  width: 34rem ;
+  height: 38rem ;
+  display: flex;
+  background: #FFF;
+  box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.descriptionArticle{
+  margin-right: 23rem;
+  font-size: 16px;
+  
+}
+.headerArticle{
+
+  font-size: 30px;
+  
+}
+.infoArticle{
+  width: 29rem;
+  font-size: 18px;
+
+}
+.redRingImg{
+  width: 30rem;
+  height: 20rem;
+}
+.iconButtonArticle{
+  margin: -13rem 15rem;
+}
   /* From the people  */
   .peopleContainer {
     width: 100%;

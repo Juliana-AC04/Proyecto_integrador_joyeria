@@ -13,18 +13,19 @@
   max-width: 100%;
   overflow: hidden;
 }
+.headerList .active a{
+    color: #f5d38e;
+    
+}
+.headerList .active{
+    border-bottom: 4px solid  #f5d38e;
+    border-radius: 0.1rem;
+}
 .navbar {
   display: flex;
   align-items: center;
 }
-.container {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  width: 276px;
-  height: 320px;
-  overflow: hidden;
-}
+
 .login,
 .shopping {
   width: 20px;
@@ -61,48 +62,23 @@ ul li a {
   color: white;
 }
 
-/* main section */
-.headerMain {
+/* Section section */
+.headerSection {
   background-color: #093931;
   display: flex;
   position: relative;
   z-index: 0;
+  height: 50rem;
 }
-.backgroundMain {
+.backgroundSection {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 14rem;
   top: 0;
   left: 0;
   z-index: -2;
-}
-.backgroundMain img {
-  width: 100%;
-  display: block;
-  z-index: -1;
-}
-
-.textMain {
-  color: #f5d38e;
-  width: 537px;
-  font-family: Cormorant Garamond;
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 94px;
-  margin: 11rem 0 0 8rem;
-}
-.buttonMain {
-  height: 3rem;
-  width: 12rem;
-  border-radius: 26px;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0);
-  z-index: 2;
-  cursor: pointer;
-  margin: 32rem 41rem 22rem -29rem;
-}
-.buttonMain .sectionMainButton {
+} 
+.buttonSection .sectionButton {
   text-decoration: none;
   color: #fff;
   font-family: Manrope;
@@ -110,6 +86,70 @@ ul li a {
   font-weight: 400;
   line-height: 28px;
 }
+.backgroundSection img {
+  width: 100%;
+  display: block;
+  z-index: -1;
+}
+.headerSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top:4.81rem ;
+  }
+.headerSection .section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16rem;
+   
+}
+
+.headerSection .section .textSection{
+    color: #f5d38e;
+  width: 537px;
+  font-family: Cormorant Garamond;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94px;
+
+}
+.headerSection .section .buttonSection{
+    height: 3rem;
+    width: 12rem;
+    border-radius: 26px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2;
+    margin-right: 21rem;
+    
+}
+.sectionItem{
+    position: relative;
+    width: 15.1rem;
+    height: 20.1rem;
+    top: 25%;
+    right: -25%;
+}
+
+.ringsImage{
+    width: 100%;
+    object-fit: cover;
+    margin-left: 90%;
+    margin-top: -26rem;
+    margin-bottom: 57%;
+}
+.iconButtonImage{
+    position: absolute;
+    top: -18rem;
+    left: 20rem;
+}
+.headerImage{
+    position: relative;
+}
+/*
 .necklaceWomanImage {
   margin-top: 6rem;
   margin-right: 10rem;
@@ -130,7 +170,7 @@ ul li a {
   margin: 23rem -10rem;
   position: absolute;
   z-index: 2;
-}
+} */
 /* article */
 article {
     display: flex;
@@ -707,29 +747,33 @@ footer {
 @media screen and (max-width: 599px) {
   .headerNav {
     flex-direction: column;
+ 
   }
-  .container {
-    width: 100%;
-    height: auto; /* Cambia la altura a automática para adaptarse al contenido */
+.header{
+    display: flex;
+    margin-top: -21rem;
+}
+  .headerSection .section .textSection{
+    
+    font-size: 4rem;
+    margin-top: 1rem;
   }
-
-  .tittle {
-    font-size: 50px;
-  }
-  .headerMain {
+  .headerSection {
     flex-direction: column;
     align-items: center;
-    height: 70rem;
+    height: 63rem;
   }
 
-  .textMain {
+  .textSection {
     margin: 4rem 0 0 5rem;
     font-size: 4rem;
   }
-  .buttonMain {
-    margin: 56rem;
+ 
+  .headerSection .section .buttonSection{
+    margin: 51rem;
     position: absolute;
-  }
+    
+}
   .necklaceWomanImage {
     width: 316px;
     height: 351px;
@@ -738,13 +782,13 @@ footer {
   .ringsImage {
     width: 194px;
     height: 243px;
-    margin: 9rem 0rem -20rem 30rem;
+    margin: 3rem 14rem -17rem 31rem;
   }
 
   .iconButtonImage {
     position: absolute;
     z-index: 2;
-    margin: 15rem 35rem;
+    margin: 27rem 15rem;
   }
 
   /* Article  */
@@ -963,54 +1007,51 @@ footer {
 
 /*vista tabletas */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .headerNav {
-    flex-direction: column;
-  }
-  .tittle {
-    font-size: 50px;
-  }
+    .headerNav {
+        flex-direction: column;
+     
+      }
+    .header{
+        display: flex;
+        margin-top: -20rem;
+    }
+      .headerSection .section .textSection{
 
-  .headerMain {
-    flex-direction: column;
-    align-items: center;
-    height: 114vh;
-  }
-
-  .backgroundMain {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
-  }
-  .backgroundMain img {
-    width: 100%;
-    display: block;
-    z-index: -1;
-  }
-  .textMain {
-    margin: 1rem;
-    font-size: 4rem;
-  }
-
-  .buttonMain {
-    margin: 31rem 11rem;
-  }
-  .necklaceWomanImage {
-    width: 313px;
-    height: 416px;
-    margin: -64rem 33rem 39rem 26rem;
-  }
-  .ringsImage {
-    width: 199px;
-    height: 270px;
-    margin: -58rem 0 0 -38rem;
-  }
-  .iconButtonImage {
-    margin: -51rem -33rem;
-  }
-  
+        font-size: 4rem;
+        margin-top: 1rem;
+      }
+      .headerSection {
+        flex-direction: column;
+        align-items: center;
+        height: 63rem;
+      }
+    
+      .textSection {
+        margin: 4rem 0 0 5rem;
+        font-size: 4rem;
+      }
+     
+      .headerSection .section .buttonSection{
+        margin: 51rem;
+        position: absolute;
+        
+    }
+      .necklaceWomanImage {
+        width: 316px;
+        height: 351px;
+        margin: 5rem -35rem 0 -12rem;
+      }
+      .ringsImage {
+        width: 194px;
+        height: 243px;
+        margin: 3rem 14rem -17rem 31rem;
+      }
+    
+      .iconButtonImage {
+        position: absolute;
+        z-index: 2;
+        margin: 27rem 15rem;
+      }
 /* article */
     article {
         display: flex;
