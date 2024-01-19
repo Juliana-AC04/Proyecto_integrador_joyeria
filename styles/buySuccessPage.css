@@ -434,63 +434,136 @@ footer {
     padding-right: 1rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-.darlingFooter {
+    }
+    
+    .darlingFooter {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.darlingFooter h3{
+    }
+    
+    .darlingFooter h3{
     width: 100%;
-}
-
-.darlingFooter p {
+    }
+    
+    .darlingFooter p {
     margin-top: 3rem;
     margin-bottom: 1.56rem;
     width: 100%;
-}
-
-.secondItemsFooter{
+    }
+    
+    .secondItemsFooter{
     width: 100%;
-}
-
-.itemsFooter p,
-.itemsFooter2 p{
+    }
+    
+    .itemsFooter p,
+    .itemsFooter2 p{
     width: 100%;
-}
-
-.thirdItemsFooter{
+    }
+    
+    .thirdItemsFooter{
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3rem;;
-}
-
-.subscribe {
+    }
+    
+    .subscribe {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
-}
-
-.subscribeContent {
+    }
+    
+    .subscribeContent {
     width: 70%;
-}
-
-.subscribeText {
+    }
+    
+    .subscribeText {
     width: 100%;
-}
-
-.buttonSubscribe {
+    }
+    
+    .buttonSubscribe {
     width: 30%;
-}
-
-.socialMedia {
+    }
+    
+    .socialMedia {
     width: 100%;
+    }
+    
+     
 }
 
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+
+  footer {
+    background: #093931;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    }
+    
+    .darlingFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .darlingFooter h3{
+    width: 100%;
+    }
+    
+    .darlingFooter p {
+    margin-top: 3rem;
+    margin-bottom: 1.56rem;
+    width: 100%;
+    }
+    
+    .secondItemsFooter{
+    width: 100%;
+    }
+    
+    .itemsFooter p,
+    .itemsFooter2 p{
+    width: 100%;
+    }
+    
+    .thirdItemsFooter{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3rem;;
+    }
+    
+    .subscribe {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    }
+    
+    .subscribeContent {
+    width: 70%;
+    }
+    
+    .subscribeText {
+    width: 100%;
+    }
+    
+    .buttonSubscribe {
+    width: 30%;
+    }
+    
+    .socialMedia {
+    width: 100%;
+    }
+    
 }
