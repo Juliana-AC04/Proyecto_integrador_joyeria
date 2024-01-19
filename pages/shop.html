@@ -9,67 +9,77 @@
 </head>
 
 <body>
-  <!-- navbar -->
-  <header>
-    <nav class="navHeader">
-      <h3><a href="../index.html">Darling.</a></h3>
-      <div class="navbar">
-        <ul>
-          <li><a class="navbarMenu" href="../index.html">Home</a></li>
-          <li><a class="navbarMenu" href="../pages/shop.html">Shop</a></li>
-          <li><a class="navbarMenu" href="#">Collections</a></li>
-          <li><a class="navbarMenu" href="#">About</a></li>
-          <li><a class="navbarMenu" href="#">Contact</a></li>
+    <!-- navbar -->
+    <header>
+        <nav class="navHeader">
+          <h3><a href="../index.html">Darling.</a></h3>
+          <div class="navbar">
+            <ul class="headerList">
+              <li><a class="navbarMenu" href="../index.html">Home</a></li>
+              <li class="active"><a class="navbarMenu" href="../pages/shop.html">Shop</a></li>
+              <li><a class="navbarMenu" href="#">Collections</a></li>
+              <li><a class="navbarMenu" href="#">About</a></li>
+              <li><a class="navbarMenu" href="#">Contact</a></li>
+            </ul>
+            <figure class="iconHeader">
+              <a href="#"
+                ><img
+                  src="../assets/homePage/login.png"
+                  class="login"
+                  alt="login"
+              /></a>
+              <a href="#"
+                ><img
+                  src="../assets/homePage/Shopping.png"
+                  class="shopping"
+                  alt="shopping"
+              /></a>
+            </figure>
+          </div>
+          <div class="backgroundMain">
+            <img src="../assets/homePage/vector.png" alt="vector1">
+            <img src="../assets/homePage/vector2.png" alt="vector2">
+                    
+          </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <h1>Our Products</h1>
+        <div class="searchBar">
+            <button>
+              <img src="../assets/shop/Search.png" alt="Icono de búsqueda">
+            </button>
+            <input type="text" placeholder="Find jewelry you like">
+          </div>
+    </main>
+    <!--section  -->
+    <section class="SectionMenu">
+        <div>
+        <ul class="headerMenu">
+          <li class="bodyMenu"><a class="list" href="#">All</a></li>
+          <li><span class="separator"></span></li>
+          <li class="bodyMenu"><a class="list" href="#">Rings</a></li>
+          <li><span class="separator"></span></li>
+          <li class="bodyMenu"><a class="list" href="#">Bracelets</a></li>
+          <li><span class="separator"></span></li>
+          <li class="bodyMenu"><a class="list" href="#">Necklaces</a></li>
+          <li><span class="separator"></span></li>
+          <li class="bodyMenu"><a class="list" href="#">Earrings</a></li>
+          </div>
+          <div>
+          <li class="dropdown">
+            <a class="dropdownPrice" href="#">Sort by price   ▼</a>
+            <ul class="dropdownMenu">
+              <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
+              <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
+              <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
+            </ul>
+          </li>
         </ul>
-        <figure class="iconHeader">
-          <a href="#"><img src="../assets/homePage/login.png" class="login" alt="login" /></a>
-          <a href="#"><img src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
-        </figure>
-      </div>
-      <div class="backgroundMain">
-        <img src="../assets/homePage/vector.png" alt="vector1">
-        <img src="../assets/homePage/vector2.png" alt="vector2">
-
-      </div>
-    </nav>
-  </header>
-  <!-- main -->
-  <main>
-    <h1>Our Products</h1>
-    <div class="searchBar">
-      <button>
-        <img src="../assets/shop/Search.png" alt="Icono de búsqueda">
-      </button>
-      <input type="text" placeholder="Find jewelry you like">
-    </div>
-  </main>
-  <!--section  -->
-  <section class="SectionMenu">
-    <div>
-      <ul class="headerMenu">
-        <li class="bodyMenu"><a class="list" href="#">All</a></li>
-        <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#">Rings</a></li>
-        <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#">Bracelets</a></li>
-        <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#">Necklaces</a></li>
-        <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#">Earrings</a></li>
-    </div>
-    <div>
-      <li class="dropdown">
-        <a class="dropdownPrice" href="#">Sort by price ▼</a>
-        <ul class="dropdownMenu">
-          <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
-          <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
-          <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
-        </ul>
-      </li>
-      </ul>
-    </div>
-
-  </section>
+        </div>
+        
+    </section>
 
   <!--article -->
   <article>
