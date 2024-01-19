@@ -1,136 +1,153 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Orbitron&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 .headerNav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #093931;
-  max-width: 100%;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #093931;
+    max-width: 100%;
+    overflow: hidden;
 }
+
 .navbar {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .container {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  width: 276px;
-  height: 320px;
-  overflow: hidden;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    width: 276px;
+    height: 320px;
+    overflow: hidden;
 }
+
 .login,
 .shopping {
-  width: 20px;
-  height: 20px;
-  padding: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
 }
+
 .tittle {
-  color: #f5d38e;
-  font-family: Cormorant Garamond;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 46px;
+    color: #f5d38e;
+    font-family: Cormorant Garamond;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 46px;
 }
+
 ul {
-  display: flex;
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 22px;
+    display: flex;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
 }
+
 li {
-  display: flex;
-  height: 43px;
-  padding: 10.5px 18.63px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: 43px;
+    padding: 10.5px 18.63px;
+    justify-content: center;
+    align-items: center;
 }
+
 li a:hover {
-  color: #f2c66d;
-  border-bottom: 3px solid #f2c66d;
+    color: #f2c66d;
+    border-bottom: 3px solid #f2c66d;
 }
+
 ul li a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 /* main section */
 .headerMain {
-  background-color: #093931;
-  display: flex;
-  position: relative;
-  z-index: 0;
+    background-color: #093931;
+    display: flex;
+    position: relative;
+    z-index: 0;
 }
+
 .backgroundMain {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
 }
+
 .backgroundMain img {
-  width: 100%;
-  display: block;
-  z-index: -1;
+    width: 100%;
+    display: block;
+    z-index: -1;
 }
 
 .textMain {
-  color: #f5d38e;
-  width: 537px;
-  font-family: Cormorant Garamond;
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 94px;
-  margin: 11rem 0 0 8rem;
+    color: #f5d38e;
+    width: 537px;
+    font-family: Cormorant Garamond;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94px;
+    margin: 11rem 0 0 8rem;
 }
+
 .buttonMain {
-  height: 3rem;
-  width: 12rem;
-  border-radius: 26px;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0);
-  z-index: 2;
-  cursor: pointer;
-  margin: 32rem 41rem 22rem -29rem;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 26px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2;
+    cursor: pointer;
+    margin: 32rem 41rem 22rem -29rem;
 }
+
 .buttonMain .sectionMainButton {
-  text-decoration: none;
-  color: #fff;
-  font-family: Manrope;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
 }
+
 .necklaceWomanImage {
-  margin-top: 6rem;
-  margin-right: 10rem;
-  width: 407px;
-  height: 543px;
-  flex-shrink: 0;
+    margin-top: 6rem;
+    margin-right: 10rem;
+    width: 407px;
+    height: 543px;
+    flex-shrink: 0;
 }
 
 .ringsImage {
-  position: absolute;
-  z-index: 1;
-  width: 241px;
-  height: 321px;
-  flex-shrink: 0;
-  margin: 15rem -16rem;
+    position: absolute;
+    z-index: 1;
+    width: 241px;
+    height: 321px;
+    flex-shrink: 0;
+    margin: 15rem -16rem;
 }
+
 .iconButtonImage {
-  margin: 23rem -10rem;
-  position: absolute;
-  z-index: 2;
+    margin: 23rem -10rem;
+    position: absolute;
+    z-index: 2;
 }
+
 /* article */
 article {
     display: flex;
@@ -186,8 +203,6 @@ article {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 84px;
-
-
 }
 
 .galleryTitle {
@@ -476,7 +491,7 @@ article {
     width: 100%;
 }
 
-.card{
+.card {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -554,7 +569,7 @@ article {
 .buttonRightPeople {
     display: flex;
     width: 5%;
-    height:auto;
+    height: auto;
     padding: 0.65625rem;
     justify-content: center;
     align-items: center;
@@ -562,11 +577,13 @@ article {
     border-radius: 36px;
     border: 1px solid #EFFDFA;
     background: rgba(0, 0, 0, 0.00);
-} 
-.buttonLeftPeople{
+}
+
+.buttonLeftPeople {
     margin-right: 16px;
 }
-.buttonRightPeople{
+
+.buttonRightPeople {
     margin-right: 36px;
 }
 
@@ -587,7 +604,7 @@ footer {
     margin-top: 3rem;
 }
 
-.darlingFooter h3{
+.darlingFooter h3 {
     color: #F5D38E;
     font-family: Cormorant Garamond;
     font-size: 1.875rem;
@@ -607,7 +624,7 @@ footer {
     line-height: 1.375rem;
 }
 
-.secondItemsFooter{
+.secondItemsFooter {
     display: flex;
     flex-direction: row;
 }
@@ -623,7 +640,7 @@ footer {
     line-height: 1.375rem;
 }
 
-.itemsFooter{
+.itemsFooter {
     margin-right: 100px;
 }
 
@@ -705,50 +722,56 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
-  .headerNav {
-    flex-direction: column;
-  }
-  .container {
-    width: 100%;
-    height: auto; /* Cambia la altura a automática para adaptarse al contenido */
-  }
+    .headerNav {
+        flex-direction: column;
+    }
 
-  .tittle {
-    font-size: 50px;
-  }
-  .headerMain {
-    flex-direction: column;
-    align-items: center;
-    height: 70rem;
-  }
+    .container {
+        width: 100%;
+        height: auto;
+        /* Cambia la altura a automática para adaptarse al contenido */
+    }
 
-  .textMain {
-    margin: 4rem 0 0 5rem;
-    font-size: 4rem;
-  }
-  .buttonMain {
-    margin: 56rem;
-    position: absolute;
-  }
-  .necklaceWomanImage {
-    width: 316px;
-    height: 351px;
-    margin: 5rem -35rem 0 -12rem;
-  }
-  .ringsImage {
-    width: 194px;
-    height: 243px;
-    margin: 9rem 0rem -20rem 30rem;
-  }
+    .tittle {
+        font-size: 50px;
+    }
 
-  .iconButtonImage {
-    position: absolute;
-    z-index: 2;
-    margin: 15rem 35rem;
-  }
+    .headerMain {
+        flex-direction: column;
+        align-items: center;
+        height: 70rem;
+    }
 
-  /* Article  */
-  article {
+    .textMain {
+        margin: 4rem 0 0 5rem;
+        font-size: 4rem;
+    }
+
+    .buttonMain {
+        margin: 56rem;
+        position: absolute;
+    }
+
+    .necklaceWomanImage {
+        width: 316px;
+        height: 351px;
+        margin: 5rem -35rem 0 -12rem;
+    }
+
+    .ringsImage {
+        width: 194px;
+        height: 243px;
+        margin: 9rem 0rem -20rem 30rem;
+    }
+
+    .iconButtonImage {
+        position: absolute;
+        z-index: 2;
+        margin: 15rem 35rem;
+    }
+
+    /* Article  */
+    article {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -775,8 +798,8 @@ footer {
         width: 70%;
     }
 
-  /* Carruseles 1 y 2  */
-  .sectionCarousel {
+    /* Carruseles 1 y 2  */
+    .sectionCarousel {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -800,42 +823,98 @@ footer {
         margin-left: 10%;
 
     }
-  /* Story  */
-  .story {
-    width: 100%;
-  }
 
-  .storyImage {
-    width: 90%;
-    height: auto;
-  }
+    /* "Our collections" */
 
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
-
-  .buttonPlayStory {
-    border-radius: 80%;
-    padding: 1%;
-    width: 5%;
-    height: auto;
-  }
-
-  /* From the people  */
-  .peopleContainer {
+    .gallerySection {
         display: flex;
         flex-direction: column;
-        justify-content:center;
-        width: 100%;
-        
+        justify-content: center;
+        margin-bottom: 84px;
     }
-    
+
+    .galleryTitle {
+        text-align: center;
+    }
+
+    .galleryItems {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .columnItem1,
+    .columnItem2,
+    .columnItem3 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .item {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .item img {
+        flex-shrink: 0;
+        border-radius: 8px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .itemTitle {
+        width: 100%;
+        color: #fff;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* Story  */
+    .story {
+        width: 100%;
+    }
+
+    .storyImage {
+        width: 90%;
+        height: auto;
+    }
+
+    .bgImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonPlayStory {
+        border-radius: 80%;
+        padding: 1%;
+        width: 5%;
+        height: auto;
+    }
+
+    /* From the people  */
+    .peopleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+    }
+
     .peopleInfo {
         width: 80%;
         margin-bottom: 5%;
         margin-left: 15%;
     }
+
     .peopleTitle {
         width: 100%;
     }
@@ -843,13 +922,13 @@ footer {
     .peopleText {
         width: 100%;
     }
-    
-    .card{
+
+    .card {
         width: 80%;
         margin-top: 1%;
         margin-bottom: 10%;
     }
-    
+
     .peopleCard {
         width: 80%;
         height: auto;
@@ -858,8 +937,8 @@ footer {
         margin-left: 20%;
         margin-right: 20%;
     }
-    
-    
+
+
     .peopleImg {
         width: 100%;
         height: auto;
@@ -867,151 +946,158 @@ footer {
         border-top-right-radius: 0.5rem;
         border-bottom-left-radius: 0;
     }
-    
+
     .cardInfo {
         display: flex;
         flex-direction: column;
         margin: 20px;
     }
-    
+
     .cardText {
         width: 90%;
     }
-    
+
     .cardName {
         margin-top: 1rem;
     }
-    
+
     .cardCountry {
         margin-bottom: 1rem;
     }
-    
+
     .cardButtons {
         margin-top: -5%;
     }
 
-  /* Footer  */
-  footer {
-    background: #093931;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+    /* Footer  */
+    footer {
+        background: #093931;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
 
-.darlingFooter {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+    .darlingFooter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
-.darlingFooter h3{
-    width: 100%;
-}
+    .darlingFooter h3 {
+        width: 100%;
+    }
 
-.darlingFooter p {
-    margin-top: 3rem;
-    margin-bottom: 1.56rem;
-    width: 100%;
-}
+    .darlingFooter p {
+        margin-top: 3rem;
+        margin-bottom: 1.56rem;
+        width: 100%;
+    }
 
-.secondItemsFooter{
-    width: 100%;
-}
+    .secondItemsFooter {
+        width: 100%;
+    }
 
-.itemsFooter p,
-.itemsFooter2 p{
-    width: 100%;
-}
+    .itemsFooter p,
+    .itemsFooter2 p {
+        width: 100%;
+    }
 
-.thirdItemsFooter{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 3rem;;
-}
+    .thirdItemsFooter {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 3rem;
+        ;
+    }
 
-.subscribe {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
+    .subscribe {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
 
-.subscribeContent {
-    width: 70%;
-}
+    .subscribeContent {
+        width: 70%;
+    }
 
-.subscribeText {
-    width: 100%;
-}
+    .subscribeText {
+        width: 100%;
+    }
 
-.buttonSubscribe {
-    width: 30%;
-}
+    .buttonSubscribe {
+        width: 30%;
+    }
 
-.socialMedia {
-    width: 100%;
-}
+    .socialMedia {
+        width: 100%;
+    }
 
 }
 
 /*vista tabletas */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .headerNav {
-    flex-direction: column;
-  }
-  .tittle {
-    font-size: 50px;
-  }
+    .headerNav {
+        flex-direction: column;
+    }
 
-  .headerMain {
-    flex-direction: column;
-    align-items: center;
-    height: 114vh;
-  }
+    .tittle {
+        font-size: 50px;
+    }
 
-  .backgroundMain {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
-  }
-  .backgroundMain img {
-    width: 100%;
-    display: block;
-    z-index: -1;
-  }
-  .textMain {
-    margin: 1rem;
-    font-size: 4rem;
-  }
+    .headerMain {
+        flex-direction: column;
+        align-items: center;
+        height: 114vh;
+    }
 
-  .buttonMain {
-    margin: 31rem 11rem;
-  }
-  .necklaceWomanImage {
-    width: 313px;
-    height: 416px;
-    margin: -64rem 33rem 39rem 26rem;
-  }
-  .ringsImage {
-    width: 199px;
-    height: 270px;
-    margin: -58rem 0 0 -38rem;
-  }
-  .iconButtonImage {
-    margin: -51rem -33rem;
-  }
-  
-/* article */
+    .backgroundMain {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+
+    .backgroundMain img {
+        width: 100%;
+        display: block;
+        z-index: -1;
+    }
+
+    .textMain {
+        margin: 1rem;
+        font-size: 4rem;
+    }
+
+    .buttonMain {
+        margin: 31rem 11rem;
+    }
+
+    .necklaceWomanImage {
+        width: 313px;
+        height: 416px;
+        margin: -64rem 33rem 39rem 26rem;
+    }
+
+    .ringsImage {
+        width: 199px;
+        height: 270px;
+        margin: -58rem 0 0 -38rem;
+    }
+
+    .iconButtonImage {
+        margin: -51rem -33rem;
+    }
+
+    /* article */
     article {
         display: flex;
         flex-direction: row;
@@ -1037,8 +1123,9 @@ footer {
     .containerText {
         width: 50%;
     }
-/*Carruseles  */
-  .sectionCarousel {
+
+    /*Carruseles  */
+    .sectionCarousel {
         width: 100%;
     }
 
@@ -1058,7 +1145,7 @@ footer {
         margin-left: 1%;
     }
 
-  /* Story  */
+    /* Story  */
     .story {
         width: 100%;
 
@@ -1081,70 +1168,75 @@ footer {
         height: auto;
     }
 
-  /* From the people  */
-  .peopleContainer {
+    /* From the people  */
+    .peopleContainer {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    .peopleInfo{
+
+    .peopleInfo {
         width: 100%;
         margin-left: 15%;
     }
+
     .peopleText {
         width: 100%;
     }
-    
-    .card{
+
+    .card {
         width: 100%;
         margin-right: 5%;
     }
-    
+
     .peopleCard {
         width: 90vw;
         margin-left: 5%;
         margin-right: 5%;
     }
-    
+
     .peopleImg {
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
     }
-    
+
     .cardInfo {
         width: 100%;
         margin: 3%;
     }
-    
+
     .cardText {
         width: 100%;
     }
 
-    .cardName{
+    .cardName {
         margin-top: 2%;
     }
-    .cardCountry{
+
+    .cardCountry {
         margin-bottom: 3%;
     }
 
-  /* Footer */
-  .darlingFooter{
-margin-right: 10px;
-}
+    /* Footer */
+    .darlingFooter {
+        margin-right: 10px;
+    }
 
-.itemsFooter, .itemsFooter2{
-    margin-right: 10px;
-}
+    .itemsFooter,
+    .itemsFooter2 {
+        margin-right: 10px;
+    }
 
 
 }
 
 /* From the people  */
-@media screen and (min-width: 1024px) and (max-width: 1500px){
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
     .peopleContainer {
         width: 100%;
     }
-    .card{
+
+    .card {
         width: 60%;
     }
 }
