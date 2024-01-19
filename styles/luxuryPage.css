@@ -858,25 +858,33 @@ footer {
 .iconButtonArticle{
   margin: -13rem 15rem;
 }
+
 /* container delivery */
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
 .containerFirst,
 .containerSecond,
 .containerThird {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .delivery,
 .lovemessage,
 .locklandscape {
-    width: 80%;
-    height: auto;
+  width: 80%;
+  height: auto;
 }
 
 .containerText {
-    width: 70%;
+  width: 70%;
 }
 
 /* From the people  */

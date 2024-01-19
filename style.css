@@ -162,11 +162,12 @@ ul li a {
     margin: 23rem -10rem;
     position: absolute;
     z-index: 2;
-} */
+} 
 
 /* article */
 article {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -1244,4 +1245,4 @@ footer {
     .card {
         width: 60%;
     }
-}}
+}
