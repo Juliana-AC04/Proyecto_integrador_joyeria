@@ -734,6 +734,15 @@ footer {
     margin-right: 1rem;
 }
 
+.secondItemsFooter a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.secondItemsFooter a:hover{
+    color: #F5D38E;
+}
+
 /* Media queries */
 
 /*Vista móvil */
@@ -1244,4 +1253,4 @@ footer {
     .card {
         width: 60%;
     }
-}}
+}

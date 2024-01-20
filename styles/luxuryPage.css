@@ -681,7 +681,7 @@ footer {
   margin-top: 3rem;
 }
 
-.darlingFooter h3{
+.darlingFooter h3 {
   color: #F5D38E;
   font-family: Cormorant Garamond;
   font-size: 1.875rem;
@@ -701,7 +701,7 @@ footer {
   line-height: 1.375rem;
 }
 
-.secondItemsFooter{
+.secondItemsFooter {
   display: flex;
   flex-direction: row;
 }
@@ -717,7 +717,7 @@ footer {
   line-height: 1.375rem;
 }
 
-.itemsFooter{
+.itemsFooter {
   margin-right: 100px;
 }
 
@@ -794,6 +794,16 @@ footer {
 .mediaIcon {
   margin-right: 1rem;
 }
+
+.secondItemsFooter a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+.secondItemsFooter a:hover{
+  color: #F5D38E;
+}
+
 
 /* Media queries */
 
