@@ -505,12 +505,12 @@ footer {
   margin-right: 1rem;
 }
 
-.secondItemsFooter a {
+.secondItemsFooter a{
   text-decoration: none;
   color: #FFF;
 }
 
-.secondItemsFooter a:hover {
+.secondItemsFooter a:hover{
   color: #F5D38E;
 }
 

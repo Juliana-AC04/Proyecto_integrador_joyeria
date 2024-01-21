@@ -306,6 +306,7 @@ footer {
   padding-left: 1rem;
   padding-right: 1rem;
   justify-content: space-evenly;
+}
 
 
 .darlingFooter {
@@ -423,7 +424,17 @@ footer {
 .mediaIcon {
   margin-right: 1rem;
 }
+
+.secondItemsFooter a{
+  text-decoration: none;
+  color: #FFF;
 }
+
+.secondItemsFooter a:hover{
+  color: #F5D38E;
+}
+
+
 @media screen and (max-width: 599px) {
   footer {
     background: #093931;
