@@ -328,6 +328,39 @@ input {
 
 }
 
+/* pagination gallery */
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.25rem;
+}
+.pagination a{
+  color: #9095A0;
+font-family: Manrope;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.625rem; 
+text-decoration:none;
+}
+.pagination a.page:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0D554A;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  color: #0D554A;
+font-family: Manrope;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.625rem; /* 162.5% */
+}
+
 /* article */
 article {
   display: flex;
