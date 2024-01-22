@@ -1158,6 +1158,34 @@ footer {
         margin-left: 1%;
     }
 
+    /* "Our collections" */
+    .galleryItems {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .columnItem1,
+      .columnItem3 {
+        margin-top: 3%;
+      }
+    
+      .item img {
+        width: 100%; 
+        height: auto;
+        margin: 10px; 
+      }
+    
+      .itemTitle {
+        font-size: 32px; 
+        line-height: 36px; 
+        margin-top: 80%; 
+      }
+    
+      .gallerybutton button {
+        padding: 10px 40px; 
+        font-size: 1rem;
+        line-height: 1.5rem; 
+      }
 
     /* Story  */
     .story {
