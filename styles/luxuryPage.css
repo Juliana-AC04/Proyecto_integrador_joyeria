@@ -431,6 +431,7 @@
   box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
   flex-direction: column;
   align-items: center;
+  
 
 
 }
@@ -877,72 +878,68 @@ footer {
 /*Vista móvil */
 @media screen and (max-width: 599px) {
 
-
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
-  }
+}
 
-  .img {
-    width: 28rem;
-    height: 38rem;
-  }
+.img{
+  width: 25rem;
+    height: 32rem;
+}
 
-  .heart {
-    top: 11.5rem;
-    left: 37rem;
-  }
+.heart{
+  top: 11.5rem;
+  left: 34rem;
+}
+.headerSectionDiv{
+  width: 30rem;
+}
+.button{
+  height: 5rem;
+    width: 31rem;
+}
+.LuxuryDivList{
+   
+    margin: 2rem 0 -5rem 2rem;;
+}
 
-  .LuxuryDivList {
+.ringSize {
+  margin: 0 2rem 0 0;
+}
+/* Article  */
 
-    margin: 2rem 0 -5rem 2rem;
-    ;
-  }
+.articleLuxurydiv{
+  width: 32rem ;
+  height: 38rem ;
 
-  .ringSize {
-    margin: 0 2rem 0 0;
-  }
+}
+.articleLuxury{
+  margin-left: 3rem;
+}
+.descriptionArticle{
+  margin-right: 23rem;
+  font-size: 15px;
+  
+}
+.headerArticle{
 
-  /* Article  */
+  font-size: 30px;
+  
+}
+.infoArticle{
+  width: 29rem;
+  font-size: 15px;
 
-  .articleLuxurydiv {
-    width: 32rem;
-    height: 38rem;
-    display: flex;
-    background: #FFF;
-    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
-    flex-direction: column;
-    align-items: center;
-
-
-  }
-
-  .descriptionArticle {
-    margin-right: 23rem;
-    font-size: 15px;
-
-  }
-
-  .headerArticle {
-
-    font-size: 30px;
-
-  }
-
-  .infoArticle {
-    width: 29rem;
-    font-size: 15px;
-
-  }
-
-  .redRingImg {
-    width: 30rem;
-    height: 20rem;
-  }
-
-  .iconButtonArticle {
-    margin: -13rem 15rem;
-  }
+}
+.redRingImg{
+  width: 30rem;
+  height: 20rem;
+}
+.iconButtonArticle{
+  margin: -13rem 15rem;
+}
+ 
 
   /* container delivery */
 
@@ -1281,4 +1278,78 @@ footer {
   .containerText {
     width: 50%;
   }
+  .sectionCarousel{
+    width: 37rem;
+  }
+   footer {
+    background: #093931;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .darlingFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .darlingFooter h3 {
+    width: 100%;
+  }
+
+  .darlingFooter p {
+    margin-top: 3rem;
+    margin-bottom: 1.56rem;
+    width: 100%;
+  }
+
+  .secondItemsFooter {
+    width: 100%;
+    gap: 10rem;
+  }
+
+  .itemsFooter p,
+  .itemsFooter2 p {
+    width: 100%;
+  }
+
+  .thirdItemsFooter {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3rem;
+    ;
+  }
+
+  .subscribe {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .subscribeContent {
+    width: 70%;
+  }
+
+  .subscribeText {
+    width: 100%;
+  }
+
+  .buttonSubscribe {
+    width: 30%;
+  }
+
+  .socialMedia {
+    width: 100%;
+  }
+
+
 }
