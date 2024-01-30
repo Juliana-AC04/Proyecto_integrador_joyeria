@@ -327,6 +327,7 @@ const tipoProducto = function (categoria, listaDeProductos) {
 // caracteres) y retorne un array con todos los productos cuyos nombres contengan los
 // caracteres del segundo parámetro. Luego, llamar la función pasándole como argumentos 
 // datos de prueba y mostrar el resultado en la consola del navegador.
+
 const buscarPorNombre = function (nombre,listaDeProductos) {
     const nombreMinusculas = nombre.toLowerCase(); //para que lo que ingrese el usuario concuerde con las categorias existentes
     
