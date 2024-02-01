@@ -259,14 +259,14 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
-  margin-right: 5%;
+
   gap: 2.62rem;
 }
 
 .products {
   width: 80%;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   gap: 1.5rem;
   border-radius: 0.5rem;
@@ -282,11 +282,25 @@ input {
 }
 
 .products img,
-.products2 img,
 .products3 img {
+  width: 276px;
+  height: 320px;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+
+.products2 img{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.products2{
+  width: 576px;
+  height: 826px;
+}
+
 
 .infoProduct {
   padding-left: 0.75rem;
@@ -316,6 +330,7 @@ input {
 .seccion {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1.5rem;
   width: 80%;
 }
