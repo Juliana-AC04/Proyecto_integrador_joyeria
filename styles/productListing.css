@@ -187,7 +187,10 @@ input {
   line-height: 22px;
   /* 157.143% */
 }
-
+.listDropdown{
+  background-color: red;
+  margin-top: auto;
+}
 .bodyMenu:hover .list {
 
   border-radius: 19px;
@@ -259,20 +262,19 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 2.62rem;
 }
 
-.products {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 1.5rem;
-  border-radius: 0.5rem;
+.products,
+.productsOne {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 20rem);
+    display: grid;
 
 }
-
+.productsOne figure,
 .products figure,
 .products2 figure,
 .products3 figure {
@@ -280,11 +282,11 @@ input {
   background: #FFF;
   box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
 }
-
+.productsOne img,
 .products img,
 .products3 img {
-  width: 276px;
-  height: 320px;
+  width: 321px;
+  height: 340px;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
@@ -307,7 +309,7 @@ input {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-
+.productName,
 .infoProduct a {
   color: #171A1F;
   font-family: "Cormorant Garamond";
@@ -579,7 +581,6 @@ footer {
   .bodyMenu,
   .bodyDropdown {
     text-align: center;
-    /* Centra el texto en el contenedor */
   }
 
   .headerMenu {
@@ -591,12 +592,10 @@ footer {
 
   .separator {
     display: none;
-    /* Oculta los separadores en pantallas pequeñas */
   }
 
   .dropdownMenu {
     position: static;
-    /* Cambia la posición para que aparezca debajo del elemento padre */
   }
 
   .dropdownPrice {
@@ -605,9 +604,7 @@ footer {
 
   .list,
   .listDropdown {
-
     display: block;
-    /* Hace que los enlaces ocupen todo el ancho del contenedor */
   }
 
   .listImage {
@@ -787,7 +784,6 @@ footer {
   .bodyMenu,
   .bodyDropdown {
     text-align: center;
-    /* Centra el texto en el contenedor */
   }
 
   .headerMenu {
@@ -815,7 +811,6 @@ footer {
   .listDropdown {
 
     display: block;
-    /* Hace que los enlaces ocupen todo el ancho del contenedor */
   }
 
   .listImage {
