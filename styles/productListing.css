@@ -187,10 +187,7 @@ input {
   line-height: 22px;
   /* 157.143% */
 }
-.listDropdown{
-  background-color: red;
-  margin-top: auto;
-}
+
 .bodyMenu:hover .list {
 
   border-radius: 19px;
@@ -215,14 +212,49 @@ input {
   background: #9aefe2;
   margin: 0 5px;
 }
-
 .dropdown {
+  position: relative;
+  display: inline-block;
   color: #171a1f;
   font-family: Manrope;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
 }
+
+.dropdownBtn {
+  color: #171A1F;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius:1rem
+
+}
+
+.dropdownContent a {
+  color: #171a1f;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #f2c66d;
+  border-radius:1rem
+
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
 
 .dropdownPrice {
   border-bottom: 2px solid #9095A0;
@@ -231,30 +263,7 @@ input {
   height: 2rem;
 }
 
-.dropdown .dropdownPrice {
-  color: #171A1F;
-}
 
-.dropdownMenu {
-  position: absolute;
-  top: 100%;
-  padding: 0;
-  margin: 0;
-  display: none;
-}
-
-.listDropdown {
-  color: #171a1f;
-}
-
-.listDropdown:hover {
-  color: #f2c66d
-}
-
-.dropdown:hover .dropdownMenu {
-  display: block;
-
-}
 
 /* Galeria */
 .listProducts {
@@ -422,7 +431,6 @@ article {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  /* 162.5% */
 }
 
 /* Estilos del footer */
@@ -589,22 +597,30 @@ footer {
     flex-direction: column;
     margin-bottom: 13rem;
   }
-
+  .SectionMenu {
+    margin-top: -16rem;
+  }
   .separator {
     display: none;
   }
 
-  .dropdownMenu {
-    position: static;
-  }
+  .dropdownPrice{
+    text-align: left;
 
-  .dropdownPrice {
-    text-align: center;
   }
-
-  .list,
+ 
   .listDropdown {
+    margin-bottom: 15rem;
+    text-align: left;
+
+  
+  }
+ 
+  
+ 
+  .list{
     display: block;
+    margin-top: 35rem;
   }
 
   .listImage {
@@ -631,6 +647,7 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     gap: 1.5rem;
+    margin-top: 23rem;
   }
 
   .products {

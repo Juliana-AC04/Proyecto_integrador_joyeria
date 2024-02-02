@@ -305,71 +305,95 @@
 // navegador.
 
 
-const tipoProducto = function (categoria, listaDeProductos) {
-  let categoriaMinusculas = categoria.toLowerCase(); 
+const filtrarProductos = (categoria, rangoPrecio, listaDeProductos) => {
+  const categoriaMinusculas = categoria.toLowerCase();
 
-  if (categoriaMinusculas === 'all') {
-    return listaDeProductos.map(producto => ({
-      imagen: producto.imagenes[0],
-      nombre: producto.nombre,
-      precio: producto.precio,
-    }));
-  } else {
-    // Filtrar por categoría
-    let productosFiltrados = listaDeProductos
-      .filter(producto => producto.categoria.toLowerCase() === categoriaMinusculas)
-      .map(producto => ({
-        imagen: producto.imagenes[0],
-        nombre: producto.nombre,
-        precio: producto.precio,
-      }));
-    
-    return productosFiltrados;
+  // Filtrar por categoría
+  let productosFiltrados = listaDeProductos.filter(producto =>
+    categoriaMinusculas === 'all' || producto.categoria.toLowerCase() === categoriaMinusculas
+  );
+
+  // Filtrar por rango de precios
+  if (rangoPrecio && rangoPrecio !== 'all') {
+    productosFiltrados = productosFiltrados.filter(producto =>
+      producto.precio >= rangoPrecio[0] && producto.precio <= rangoPrecio[1]
+    );
   }
-}
 
+  return productosFiltrados;
+};
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtén todos los elementos del menú
+  // Obtén todos los elementos del menú de rango de precios
+  const precioItems = document.querySelectorAll('.dropdownContent a');
+
+  // Obtén todos los elementos del menú de categorías
   const menuItems = document.querySelectorAll('.headerMenu .list');
-  
+
   // Obtén el contenedor de productos
   const productsContainer = document.querySelector('.products');
   const productsOneContainer = document.querySelector('.productsOne');
   const seccionContainer = document.getElementById('seccionContainer');
 
-  // Agrega un event listener a cada elemento del menú
+  // Variables para mantener el estado actual
+  let categoriaActual = 'all'; // Categoría predeterminada
+  let rangoPrecioActual = 'all'; // Rango de precios predeterminado
+
+    // Función para actualizar los productos en el contenedor
+  const actualizarProductos = () => {
+    const productosFiltrados = filtrarProductos(categoriaActual, rangoPrecioActual, listaDeProductos);
+
+    // Limpia el contenedor de productos
+    productsContainer.innerHTML = '';
+    productsOneContainer.innerHTML = '';
+    seccionContainer.innerHTML = '';
+
+    // Pinta las imágenes de los productos filtrados en el contenedor
+    productosFiltrados.forEach(producto => {
+      const figureElement = document.createElement('figure');
+      figureElement.innerHTML = `
+        <img src="${producto.imagenes && producto.imagenes.length > 0 ? producto.imagenes[0] : ''}" alt="Product Image">
+        <p class="productName">${producto.nombre}</p>
+        <p class="productPrice">$${producto.precio}</p>
+      `;
+      productsContainer.appendChild(figureElement);
+    });
+
+    console.log('Categoría seleccionada:', categoriaActual, 'Rango de precios seleccionado:', rangoPrecioActual);
+  };
+
+  // Agrega un event listener a cada elemento del menú de categorías
   menuItems.forEach(item => {
     item.addEventListener('click', function (event) {
       event.preventDefault();
-  
+
       // Obtiene la categoría del atributo dataCategoria
-      const categoria = item.getAttribute('dataCategoria');
-  
-      // Llama a la función tipoProducto con la categoría y la lista de productos
-      const imagenesProductos = tipoProducto(categoria, listaDeProductos);
-  
-      // Limpia el contenedor de productos
-      productsContainer.innerHTML = '';
-      productsOneContainer.innerHTML = '';
-      seccionContainer.innerHTML = '';
+      categoriaActual = item.getAttribute('dataCategoria');
 
-      // Pinta las imágenes de los productos filtrados en el contenedor
-      imagenesProductos.forEach(producto => {
-        const figureElement = document.createElement('figure');
-        figureElement.innerHTML = `
-          <img src="${producto.imagen}" alt="Product Image">
-          <p class="productName">${producto.nombre} </p>
-          <p class="productPrice">$${producto.precio}</p>
-        `;
-        productsContainer.appendChild(figureElement);
-      });
-
-      console.log('Categoría seleccionada:', categoria);
+      // Actualiza los productos en el contenedor
+      actualizarProductos();
     });
   });
-});
 
-  
+  // Agrega un event listener a cada elemento del menú de rango de precios
+  precioItems.forEach(item => {
+    item.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      // Obtiene el rango de precios del atributo dataPrecio
+      const rangoPrecioString = item.getAttribute('dataPrecio');
+      
+      if (rangoPrecioString === 'all') {
+        rangoPrecioActual = 'all';
+      } else {
+        // Parsea el rango de precios a un array de números
+        const rangoPrecioArray = rangoPrecioString.split(' ').map(str => parseFloat(str.replace('$', '')));
+        rangoPrecioActual = rangoPrecioArray.length === 2 ? rangoPrecioArray : 'all';
+      }
+
+      // Actualiza los productos en el contenedor
+      actualizarProductos();
+    });
+  });
 
 // • Escribir una función que realice la búsqueda de productos por nombre, reciba como
 // parámetro un array de productos y un término de búsqueda (es decir, una cadena de
@@ -437,19 +461,18 @@ const calcularTotalCompra = function (productos) {
 
 
 
+//Pinta el array en el HTML de produt Listig
+const figureElements = document.querySelectorAll('.products figure, .productsOne figure, .products2 figure, .products3 figure');
+ 
+// Asigna el contenido del array a los elementos figure en orden
+for (let i = 0; i < listaDeProductos.length && i < figureElements.length; i++) {
+    const figureElement = figureElements[i];
+    const producto = listaDeProductos[i];
 
- //Pinta el array en el HTML de produt Listig
- const figureElements = document.querySelectorAll('.products figure, .productsOne figure, .products2 figure, .products3 figure');
- 
- // Asigna el contenido del array a los elementos figure en orden
- for (let i = 0; i < listaDeProductos.length && i < figureElements.length; i++) {
-     const figureElement = figureElements[i];
-     const producto = listaDeProductos[i];
- 
-     // Modifica el contenido de los elementos figure según tu estructura HTML y datos del array
-     figureElement.querySelector('img').src = producto.imagenes[0];
-     figureElement.querySelector('figcaption a').textContent = producto.nombre;
-     figureElement.querySelector('.productPrice').textContent = `$${producto.precio}`;
-     // Puedes agregar más asignaciones según sea necesario para otros datos
- }
- 
+    // Modifica el contenido de los elementos figure según tu estructura HTML y datos del array
+    figureElement.querySelector('img').src = producto.imagenes[0];
+    figureElement.querySelector('figcaption a').textContent = producto.nombre;
+    figureElement.querySelector('.productPrice').textContent = `$${producto.precio}`;
+    // Puedes agregar más asignaciones según sea necesario para otros datos
+}
+})
