@@ -345,6 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
    let categoriaActual = 'all'; // Categoría predeterminada
    let rangoPrecioActual = 'all'; // Rango de precios predeterminado
    let nombreProductoActual = ''; // Nombre de producto predeterminado
+
    const actualizarProductos = () => {
     console.log('Nombre de producto actual:', nombreProductoActual);
     console.log('Categoría actual:', categoriaActual);
@@ -369,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productsContainer.appendChild(figureElement);
     });
   
-    console.log('Categoría seleccionada:', categoriaActual, 'Rango de precios seleccionado:', rangoPrecioActual, 'Nombre de producto:', nombreProductoActual);
+    console.log('Categoria seleccionada:', categoriaActual, 'Rango de precios seleccionado:', rangoPrecioActual, 'Nombre de producto:', nombreProductoActual);
   };
 
   // Agrega un event listener a cada elemento del menú de categorías
