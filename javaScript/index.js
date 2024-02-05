@@ -14,7 +14,7 @@ import { listaDeProductos } from "../modules/products.js";
 // navegador.
 
 
-const filtrarProductos = (categoria, rangoPrecio, listaDeProductos) => {
+const filtrarProductos = (categoria, rangoPrecio, nombreProducto, listaDeProductos) => {
   const categoriaMinusculas = categoria.toLowerCase();
 
   // Filtrar por categoría
@@ -29,17 +29,24 @@ const filtrarProductos = (categoria, rangoPrecio, listaDeProductos) => {
     );
   }
 
+  // Filtrar por nombre de producto
+  if (nombreProducto && nombreProducto.trim() !== '') {
+    productosFiltrados = productosFiltrados.filter(producto =>
+      producto.nombre.toLowerCase().includes(nombreProducto.toLowerCase())
+    );
+  }
+
   return productosFiltrados;
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtén todos los elementos del menú de rango de precios
+  // todos los elementos del menú de rango de precios
   const precioItems = document.querySelectorAll('.dropdownContent a');
 
-  // Obtén todos los elementos del menú de categorías
+  // todos los elementos del menú de categorías
   const menuItems = document.querySelectorAll('.headerMenu .list');
 
-  // Obtén el contenedor de productos
+  // contenedor de productos
   const productsContainer = document.querySelector('.products');
   const productsOneContainer = document.querySelector('.productsOne');
   const seccionContainer = document.getElementById('seccionContainer');
@@ -56,11 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const actualizarProductos = () => {
     const productosFiltrados = filtrarProductos(categoriaActual, rangoPrecioActual, listaDeProductos);
 
+
+   // Variables para mantener el estado actual
+   let categoriaActual = 'all'; // Categoría predeterminada
+   let rangoPrecioActual = 'all'; // Rango de precios predeterminado
+   let nombreProductoActual = ''; // Nombre de producto predeterminado
+   const actualizarProductos = () => {
+    console.log('Nombre de producto actual:', nombreProductoActual);
+    console.log('Categoría actual:', categoriaActual);
+    console.log('Rango de precios actual:', rangoPrecioActual);
+  
+    const productosFiltrados = filtrarProductos(categoriaActual, rangoPrecioActual, nombreProductoActual, listaDeProductos);
+    console.log('Productos filtrados:', productosFiltrados);
+  
+
     // Limpia el contenedor de productos
     productsContainer.innerHTML = '';
     productsOneContainer.innerHTML = '';
     seccionContainer.innerHTML = '';
-
+  
     // Pinta las imágenes de los productos filtrados en el contenedor
     productosFiltrados.forEach(producto => {
       const figureElement = document.createElement('figure');
@@ -74,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productsContainer.appendChild(figureElement);
     });
 
+
         // Resalta la categoría seleccionada
         menuItems.forEach(item => {
           const categoriaId = 'categoria-' + item.getAttribute('dataCategoria');
@@ -84,7 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-    console.log('Categoría seleccionada:', categoriaActual, 'Rango de precios seleccionado:', rangoPrecioActual);
+
+    console.log('Categoría seleccionada:', categoriaActual, 'Rango de precios seleccionado:', rangoPrecioActual, 'Nombre de producto:', nombreProductoActual);
+
   };
 
   // Agrega un event listener a cada elemento del menú de categorías
@@ -92,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener('click', function (event) {
       event.preventDefault();
 
-      // Obtiene la categoría del atributo dataCategoria
+      //  categoría del atributo dataCategoria
       categoriaActual = item.getAttribute('dataCategoria');
 
       // Actualiza los productos en el contenedor
@@ -105,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener('click', function (event) {
       event.preventDefault();
 
-      // Obtiene el rango de precios del atributo dataPrecio
+      // Rango de precios del atributo dataPrecio
       const rangoPrecioString = item.getAttribute('dataPrecio');
       
       if (rangoPrecioString === 'all') {
@@ -115,14 +139,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const rangoPrecioArray = rangoPrecioString.split(' ').map(str => parseFloat(str.replace('$', '')));
         rangoPrecioActual = rangoPrecioArray.length === 2 ? rangoPrecioArray : 'all';
       }
-
       // Actualiza los productos en el contenedor
       actualizarProductos();
     });
   });
-})
 
-
+   // Agrega un event listener al input de búsqueda por nombre
+   const nombreProductoInput = document.getElementById('nombreProductoInput');
+   nombreProductoInput.addEventListener('input', function () {
+     nombreProductoActual = nombreProductoInput.value;
+     actualizarProductos();
+   });
+   
+  }
 // • Escribir una función que realice la búsqueda de productos por nombre, reciba como
 // parámetro un array de productos y un término de búsqueda (es decir, una cadena de
 // caracteres) y retorne un array con todos los productos cuyos nombres contengan los
@@ -188,8 +217,6 @@ const calcularTotalCompra = function (productos) {
   console.log("Total a pagar de la compra:", totalCompra);
 
 
-
-
 //Pinta el array en el HTML de produt Listig
 const figureElements = document.querySelectorAll('.products figure, .productsOne figure, .products2 figure, .products3 figure');
  
@@ -203,4 +230,5 @@ for (let i = 0; i < listaDeProductos.length && i < figureElements.length; i++) {
     figureElement.querySelector('figcaption a').textContent = producto.nombre;
     figureElement.querySelector('.productPrice').textContent = `$${producto.precio}`;
     
-}
+ }
+ })
