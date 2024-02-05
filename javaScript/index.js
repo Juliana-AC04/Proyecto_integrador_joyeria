@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener('click', function (event) {
       event.preventDefault();
 
-      // Obtiene la categoría del atributo dataCategoria
+      //  categoría del atributo dataCategoria
       categoriaActual = item.getAttribute('dataCategoria');
 
       // Actualiza los productos en el contenedor
@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener('click', function (event) {
       event.preventDefault();
 
-      // Obtiene el rango de precios del atributo dataPrecio
+      // Rango de precios del atributo dataPrecio
       const rangoPrecioString = item.getAttribute('dataPrecio');
       
       if (rangoPrecioString === 'all') {
