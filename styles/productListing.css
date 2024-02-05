@@ -147,7 +147,7 @@ button img {
 input {
   border: none;
   padding: 10px;
-  width: 200px;
+  width: 100%;
   outline: none;
   background-color: #fff;
 }
@@ -186,6 +186,15 @@ input {
   font-weight: 400;
   line-height: 22px;
   /* 157.143% */
+}
+
+.headerMenu .list.categoria-seleccionada {
+  border-radius: 19px;
+  background: #0d554a;
+  color: #ffffff;
+  display: flex;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  justify-content: center;
 }
 
 .bodyMenu:hover .list {
@@ -279,7 +288,7 @@ input {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 20rem);
+    grid-template-columns: repeat(4, 1fr);
     display: grid;
 
 }
@@ -294,7 +303,7 @@ input {
 .productsOne img,
 .products img,
 .products3 img {
-  width: 321px;
+  width: 300px;
   height: 340px;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -925,3 +934,5 @@ footer {
 
 
 }
+
+

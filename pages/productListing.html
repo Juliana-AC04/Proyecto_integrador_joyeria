@@ -40,28 +40,28 @@
       <button>
         <img src="../assets/productListing/Search.png" alt="Icono de búsqueda">
       </button>
-      <input type="text" placeholder="Find jewelry you like">
+      <input type="text" id="searchInput" placeholder="Find jewelry you like">
     </div>
   </main>
   <!--section  -->
   <section class="SectionMenu">
     <div>
       <ul class="headerMenu">
-        <li class="bodyMenu"><a class="list" href="#" dataCategoria="all">All</a></li>
+        <li class="bodyMenu"><a class="list" href="#" dataCategoria="all" id="categoria-all">All</a></li>
         <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#" dataCategoria="rings">Rings</a></li>
+        <li class="bodyMenu"><a class="list" href="#" dataCategoria="rings" id="categoria-rings">Rings</a></li>
         <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#" dataCategoria="bracelets">Bracelets</a></li>
+        <li class="bodyMenu"><a class="list" href="#" dataCategoria="bracelets" id="categoria-bracelets">Bracelets</a></li>
         <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#" dataCategoria="necklaces">Necklaces</a></li>
+        <li class="bodyMenu"><a class="list" href="#" dataCategoria="necklaces" id="categoria-necklaces">Necklaces</a></li>
         <li><span class="separator"></span></li>
-        <li class="bodyMenu"><a class="list" href="#" dataCategoria="earrings">Earrings</a></li>
+        <li class="bodyMenu"><a class="list" href="#" dataCategoria="earrings" id="categoria-earrings">Earrings</a></li>
       </ul>
     </div>
     <div class="dropdown">
       <div class="dropdownBtn">Sort by price ▼</div>
       <div class="dropdownContent">
-        <a href="#" dataPrecio="0 200"> $200.00</a>
+        <a href="#" dataPrecio="0 200"> Hasta $200.00</a>
         <a href="#" dataPrecio="200 400">Desde $200.00 hasta $400.00</a>
         <a href="#" dataPrecio="400 700">Desde $400.00 hasta $700.00</a>
         <a href="#" dataPrecio="all">Todos los precios</a>
@@ -76,28 +76,28 @@
     <figure>
       <img>
       <div class="infoProduct">
-        <figcaption><a href="./productDetails.html"></a></figcaption>
+        <figcaption><a href="./productDetails.html" ></a></figcaption>
         <p class="productPrice"></p>
       </div>
     </figure>
     <figure>
       <img>
       <div class="infoProduct">
-        <figcaption><a href="./productDetails.html"></a></figcaption>
+        <figcaption><a href="./productDetails.html" ></a></figcaption>
         <p class="productPrice"></p>
       </div>
     </figure>
     <figure>
       <img>
       <div class="infoProduct">
-        <figcaption><a href="./productDetails.html"></a></figcaption>
+        <figcaption><a href="./productDetails.html" ></a></figcaption>
         <p class="productPrice"></p>
       </div>
     </figure>
     <figure>
       <img>
       <div class="infoProduct">
-        <figcaption><a href="./productDetails.html"></a></figcaption>
+        <figcaption><a href="./productDetails.html" ></a></figcaption>
         <p class="productPrice"></p>
       </div>
     </figure>
@@ -252,7 +252,8 @@
       </div>
     </div>
   </footer>
-  <script src="../javaScript/index.js"></script>
+  <script src="../javaScript/index.js"  type="module" ></script>
+  <script src="../javaScript/productDetails.js" type="module"></script>
 </body>
 
 </html>
