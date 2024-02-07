@@ -454,7 +454,6 @@ article {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
     width: 1.9375rem;
     height: 1.9375rem;
     flex-shrink: 0;
@@ -739,6 +738,101 @@ footer {
     color: #F5D38E;
 }
 
+
+/* Estilos del modal cart */
+#btnCart{
+    cursor: pointer;
+  }
+
+.modalCart{
+    display: flex;
+    justify-content: flex-end;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #08080867;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalCart section{
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+.cartHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5%;
+}
+.cartTitle{
+    color: #0D554A;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px;
+}
+
+.cartHeader button{
+    cursor: pointer;
+    width: 30%;
+    text-decoration: none;
+    background-color: white;
+}
+
+.cartFooter{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+
+}
+
+.sectionPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cartTotal{
+    color: #171A1F;
+    font-family: Manrope;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem
+}
+.cartButton{
+    margin: 5%;
+    display: inline-flex;
+    padding: 0.5625rem 4.75rem 0.5625rem 4.6875rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.375rem;
+    background: #0D554A;
+    border:0;
+}
+
+.cartButton a{
+    text-decoration: none;
+    color:"white"
+}
+
+.cartButton a:hover{
+    color:"white"
+}
 /* Media queries */
 
 /*Vista móvil */

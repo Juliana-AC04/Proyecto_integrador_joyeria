@@ -434,6 +434,11 @@ footer {
   color: #F5D38E;
 }
 
+/* Estilos del modal cart */
+#btnCard{
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 599px) {
   footer {

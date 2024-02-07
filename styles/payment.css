@@ -614,6 +614,11 @@ footer {
   color: #F5D38E;
 }
 
+/* Estilos del modal cart */
+#btnCard{
+  cursor: pointer;
+}
+
 
 /* Media queries */
 
