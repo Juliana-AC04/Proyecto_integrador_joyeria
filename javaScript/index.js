@@ -1,17 +1,16 @@
-// En un archivo script.js, realizar lo siguiente:
-
-// • Declarar una lista de los productos con los siguientes datos: id, nombre, código, precio
-// unitario, tipo de accesorio (Rings, brazalete, Necklaces, Earrings, etc.), imágenes, descripción,
-// cantidad en stock por color y/o talla.
-
 import { listaDeProductos } from "../modules/products.js";
 
-  // • Escribir una función que reciba como parámetros un array de productos y el nombre de
-// un tipo de producto, que utilice la función de array que permita filtrar la lista por la
-// categoría o tipo y devuelva el array resultante. Luego, llamar la función pasándole como
-// argumentos la lista de productos declarado en el ítem anterior y cualquier tipo de
-// accesorio que exista en la lista y, por último, mostrar el resultado en la consola del
-// navegador.
+
+//Capta el id del producto para llevarlo a la vista de detalles
+const goToDetailsProduct = (cards) => {
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const idProduct = card.getAttribute("name");
+      localStorage.setItem("idProduct", JSON.stringify(idProduct));
+      location.href="./productDetails.html";
+    });
+  });
+};
 
 
 const filtrarProductos = (categoria, rangoPrecio, listaDeProductos) => {
@@ -64,15 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pinta las imágenes de los productos filtrados en el contenedor
     productosFiltrados.forEach(producto => {
       const figureElement = document.createElement('figure');
+      figureElement.setAttribute("name", producto.id)
+      figureElement.classList.add("card")
       figureElement.innerHTML = `
         <img src="${producto.imagenes && producto.imagenes.length > 0 ? producto.imagenes[0] : ''}" alt="Product Image">
         <div class="infoProduct">
-        <figcaption><a href="./productDetails.html">${producto.nombre}</a></figcaption>
+        <figcaption>${producto.nombre}</figcaption>
         <p class="productPrice">$${producto.precio}</p>
       </div>
       `;
       productsContainer.appendChild(figureElement);
     });
+
 
         // Resalta la categoría seleccionada
         menuItems.forEach(item => {
@@ -90,20 +92,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Agrega un event listener a cada elemento del menú de categorías
   menuItems.forEach(item => {
     item.addEventListener('click', function (event) {
-      event.preventDefault();
+      // event.preventDefault();
 
       // Obtiene la categoría del atributo dataCategoria
       categoriaActual = item.getAttribute('dataCategoria');
 
       // Actualiza los productos en el contenedor
       actualizarProductos();
+      const cards = document.querySelectorAll(".card");
+      goToDetailsProduct(cards)
     });
   });
 
   // Agrega un event listener a cada elemento del menú de rango de precios
   precioItems.forEach(item => {
     item.addEventListener('click', function (event) {
-      event.preventDefault();
+      // event.preventDefault();
 
       // Obtiene el rango de precios del atributo dataPrecio
       const rangoPrecioString = item.getAttribute('dataPrecio');
@@ -118,46 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Actualiza los productos en el contenedor
       actualizarProductos();
+      const cards = document.querySelectorAll(".card");
+      goToDetailsProduct(cards)
     });
   });
+
 })
 
-
-// • Escribir una función que realice la búsqueda de productos por nombre, reciba como
-// parámetro un array de productos y un término de búsqueda (es decir, una cadena de
-// caracteres) y retorne un array con todos los productos cuyos nombres contengan los
-// caracteres del segundo parámetro. Luego, llamar la función pasándole como argumentos 
-// datos de prueba y mostrar el resultado en la consola del navegador.
-
-const buscarPorNombre = function (nombre,listaDeProductos) {
-    const nombreMinusculas = nombre.toLowerCase(); //para que lo que ingrese el usuario concuerde con las categorias existentes
-    
-    const productosFiltrados = listaDeProductos.filter(producto => producto.nombre.toLowerCase().includes(nombreMinusculas));
-  
-    return productosFiltrados;
-  }
-  console.log(buscarPorNombre('luxury', listaDeProductos));
-
-  // • Crear una función que ordene un array de productos por precios de manera ascendente
-// y descendente y retorne el array resultante. Ejecutar la función y mostrar el resultado en
-// consola.
-
-const ordenarPorPrecio = function (productos, ascendente = true) {
-    productos.sort((a, b) => {
-      if (ascendente) {
-        return a.precio - b.precio;
-      } else {
-        return b.precio - a.precio;
-      }
-    });
-  
-    return productos;
-  };
-  
-  // Ejemplo de uso
-  console.log("\nOrden ascendente:", ordenarPorPrecio([...listaDeProductos]));
-  console.log("\nOrden descendente:", ordenarPorPrecio([...listaDeProductos], false));
-  
 
   // • Crear una función que calcule el total a pagar de una compra, reciba como parámetros
 // un array de productos donde cada producto, tenga como propiedades la cantidad y
@@ -191,7 +162,7 @@ const calcularTotalCompra = function (productos) {
 
 
 //Pinta el array en el HTML de produt Listig
-const figureElements = document.querySelectorAll('.products figure, .productsOne figure, .products2 figure, .products3 figure');
+const figureElements = document.querySelectorAll('.products figure, .productsOne figure, .products2 figure, .products3 figure, .card');
  
 // Asigna el contenido del array a los elementos figure en orden
 for (let i = 0; i < listaDeProductos.length && i < figureElements.length; i++) {
@@ -199,8 +170,11 @@ for (let i = 0; i < listaDeProductos.length && i < figureElements.length; i++) {
     const producto = listaDeProductos[i];
 
     // Modifica el contenido de los elementos figure en el HTML
+    figureElement.setAttribute("name",producto.id)
     figureElement.querySelector('img').src = producto.imagenes[0];
-    figureElement.querySelector('figcaption a').textContent = producto.nombre;
+    figureElement.querySelector('figcaption').textContent = producto.nombre;
     figureElement.querySelector('.productPrice').textContent = `$${producto.precio}`;
     
 }
+
+goToDetailsProduct(figureElements);
