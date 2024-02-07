@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/productDetails.css">
+  <script src="https://kit.fontawesome.com/8005aaefb9.js" crossorigin="anonymous"></script>
   <title>Product Details</title>
 </head>
 
@@ -23,7 +24,7 @@
         </ul>
         <figure class="iconHeader">
           <a href="#"><img src="../assets/homePage/login.png" class="login" alt="login" /></a>
-          <a href="#"><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
+          <a><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
         </figure>
     </nav>
   </header>
@@ -90,8 +91,8 @@
         <div class="squareQuantity">+</div>
       </div>
       <div class="button">
-        <button class="buttonTrolley"><img src="../assets/productDetails/Addshopping.png" class="addToCart"
-            alt="add to cart"><a href="#" class="cartUrl"> Add to bag </a></button>
+        <button class="buttonTrolley" id="btnCart" ><img src="../assets/productDetails/Addshopping.png" class="addToCart"
+            alt="add to cart"><a class="cartUrl"> Add to bag </a></button>
         <button class="buttonBuy "><a href="./payment.html" class="buyNow ">Buy now</a> </button>
       </div>
 
@@ -282,7 +283,31 @@
   </footer>
 
 
+  <!-- Carrito de compras -->
+  <div class="modalCart hidden">
+    <section>
+      <div class="cartHeader">
+        <h2 class="cartTitle">You cart</h2>
+        <button id="closeModal" class="btnExit">
+          <i class="fa-solid fa-xmark fa-2xl"></i>
+        </button>
+      </div>
+      <div class="cartBody">
+        <div class="">
 
+        </div>
+      </div>
+      <div class="cartFooter">
+        <div class="cartDivisor"></div>
+          <div class="sectionPrice">
+            <p class="cartTotal">Total</p>
+            <p class="cartPrice">$0</p>
+          </div>
+          <button class="cartButton"><a href="#">Continue to checkout</a></button>
+      </div>
+    </section>
+
+  </div>
 
   <script src="../javaScript/productDetails.js" type="module"></script>
   <script src="../javaScript/modalCart.js"></script>

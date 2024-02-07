@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/buySuccessPage.css">
+  <script src="https://kit.fontawesome.com/8005aaefb9.js" crossorigin="anonymous"></script>
   <title>Compra exitosa</title>
 </head>
 
@@ -23,7 +24,7 @@
         </ul>
         <figure class="iconHeader">
           <a href="#"><img src="../assets/homePage/login.png" class="login" alt="login" /></a>
-          <a href="#"><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
+          <a><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
         </figure>
     </nav>
 
@@ -96,43 +97,68 @@
     </section>
 
   </header>
-      <!-- Footer -->
-      <footer>
-        <div class="darlingFooter">
-          <h3>Darling</h3>
-          <p>© 2022 Brand, Inc.</p>
+  <!-- Footer -->
+  <footer>
+    <div class="darlingFooter">
+      <h3>Darling</h3>
+      <p>© 2022 Brand, Inc.</p>
+    </div>
+    <div class="secondItemsFooter">
+      <div class="itemsFooter">
+        <p><a href="../pages/productListing.html">Shop</a></p>
+        <p><a href="#">Collections</a></p>
+        <p><a href="#">About</a></p>
+      </div>
+      <div class="itemsFooter2">
+        <p><a a href="#">Contact</a></p>
+        <p><a a href="#">Privacy</a></p>
+        <p><a a href="#">Terms</a></p>
+      </div>
+    </div>
+    <div class="thirdItemsFooter">
+      <p class="textItemFooter"> Subscribe to our newsletter</p>
+      <p class="textItemFooter2">For product announcements and exclusive insights </p>
+      <div class="subscribe">
+        <div class="subscribeContent">
+          <img src="../assets/homePage/mail.png" alt="mail">
+          <p class="subscribeText">Input your email</p>
         </div>
-        <div class="secondItemsFooter">
-          <div class="itemsFooter">
-            <p><a href="../pages/productListing.html">Shop</a></p>
-            <p><a href="#">Collections</a></p>
-            <p><a href="#">About</a></p>
-          </div>
-          <div class="itemsFooter2">
-            <p><a a href="#">Contact</a></p>
-            <p><a a href="#">Privacy</a></p>
-            <p><a a href="#">Terms</a></p>
-          </div>
+        <button class="buttonSubscribe">Subscribe</button>
+      </div>
+      <div class="socialMedia">
+        <img src="../assets/homepage/logoTwitter.png" alt="Logo Twitter" class="mediaIcon">
+        <img src="../assets/homepage/logoFacebook.png" alt="Logo Facebook" class="mediaIcon">
+        <img src="../assets/homepage/logoLinkedin.png" alt="Logo Linkedin" class="mediaIcon">
+        <img src="../assets/homepage/logoYoutube.png" alt="Logo Youtube">
+      </div>
+    </div>
+  </footer>
+  <!-- Carrito de compras -->
+  <div class="modalCart hidden">
+    <section>
+      <div class="cartHeader">
+        <h2 class="cartTitle">You cart</h2>
+        <button id="closeModal" class="btnExit">
+          <i class="fa-solid fa-xmark fa-2xl"></i>
+        </button>
+      </div>
+      <div class="cartBody">
+        <div class="">
+
         </div>
-        <div class="thirdItemsFooter">
-          <p class="textItemFooter"> Subscribe to our newsletter</p>
-          <p class="textItemFooter2">For product announcements and exclusive insights </p>
-          <div class="subscribe">
-            <div class="subscribeContent">
-              <img src="../assets/homePage/mail.png" alt="mail">
-              <p class="subscribeText">Input your email</p>
-            </div>
-            <button class="buttonSubscribe">Subscribe</button>
-          </div>
-          <div class="socialMedia">
-            <img src="../assets/homepage/logoTwitter.png" alt="Logo Twitter" class="mediaIcon">
-            <img src="../assets/homepage/logoFacebook.png" alt="Logo Facebook" class="mediaIcon">
-            <img src="../assets/homepage/logoLinkedin.png" alt="Logo Linkedin" class="mediaIcon">
-            <img src="../assets/homepage/logoYoutube.png" alt="Logo Youtube">
-          </div>
+      </div>
+      <div class="cartFooter">
+        <div class="cartDivisor"></div>
+        <div class="sectionPrice">
+          <p class="cartTotal">Total</p>
+          <p class="cartPrice">$0</p>
         </div>
-      </footer>
-      <script src="../javaScript/modalCart.js"></script>
+        <button class="cartButton"><a href="#">Continue to checkout</a></button>
+      </div>
+    </section>
+
+  </div>
+  <script src="../javaScript/modalCart.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/productListing.css">
+  <script src="https://kit.fontawesome.com/8005aaefb9.js" crossorigin="anonymous"></script>
   <title>Shop</title>
 </head>
 
@@ -23,7 +24,7 @@
         </ul>
         <figure class="iconHeader">
           <a href="#"><img src="../assets/homePage/login.png" class="login" alt="login" /></a>
-          <a href="#"><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
+          <a><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
         </figure>
       </div>
       <div class="backgroundMain">
@@ -41,7 +42,6 @@
         <img src="../assets/productListing/Search.png" alt="Icono de búsqueda">
       </button>
       <input type="text" id="searchInput" placeholder="Find jewelry you like">
-      <input type="text" id="nombreProductoInput" placeholder="Find jewelry you like">
     </div>
   </main>
   
@@ -254,6 +254,31 @@
       </div>
     </div>
   </footer>
+  <!-- Carrito de compras -->
+  <div class="modalCart hidden">
+    <section>
+      <div class="cartHeader">
+        <h2 class="cartTitle">You cart</h2>
+        <button id="closeModal" class="btnExit">
+          <i class="fa-solid fa-xmark fa-2xl"></i>
+        </button>
+      </div>
+      <div class="cartBody">
+        <div class="">
+
+        </div>
+      </div>
+      <div class="cartFooter">
+        <div class="cartDivisor"></div>
+          <div class="sectionPrice">
+            <p class="cartTotal">Total</p>
+            <p class="cartPrice">$0</p>
+          </div>
+          <button class="cartButton"><a href="#">Continue to checkout</a></button>
+      </div>
+    </section>
+
+  </div>
   <script src="../javaScript/index.js"  type="module" ></script>
   <script src="../javaScript/productDetails.js" type="module"></script>
   <script src="../javaScript/modalCart.js"></script>

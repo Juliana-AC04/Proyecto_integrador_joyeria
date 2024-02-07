@@ -87,6 +87,10 @@ ul li a {
   border-radius: 0.1rem;
 }
 
+.iconHeader{
+  z-index: 2;
+}
+
 /* main */
 main {
   background-color: #093931;
@@ -328,7 +332,7 @@ input {
   padding-bottom: 0.75rem;
 }
 .productName,
-.infoProduct a {
+.infoProduct  {
   color: #171A1F;
   font-family: "Cormorant Garamond";
   font-size: 1.5rem;
@@ -336,6 +340,7 @@ input {
   font-weight: 700;
   line-height: 2.25rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .productPrice {
@@ -582,10 +587,107 @@ footer {
 }
 
 /* Estilos del modal cart */
-#btnCard{
+#btnCart{
   cursor: pointer;
 }
 
+.modalCart{
+  display: flex;
+  justify-content: flex-end;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #08080867;
+  z-index: 3;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalCart section{
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.cartHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5%;
+}
+.cartTitle{
+  color: #0D554A;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.btnExit{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  border: white;
+}
+
+.btnExit i{
+  color: black;
+}
+
+.cartFooter{
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+
+.sectionPrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cartTotal{
+  color: #171A1F;
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.cartButton{
+  margin: 5%;
+  display: inline-flex;
+  padding: 0.5625rem 4.75rem 0.5625rem 4.6875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.375rem;
+  background: #0D554A;
+  border:0;
+}
+
+.cartButton a{
+  text-decoration: none;
+  color: white;
+}
+
+.cartButton a:hover{
+  color:"white"
+}
+
+.cartDivisor{
+  border-bottom: 1px solid #F3F4F6;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 /* Media queries */
 
@@ -665,24 +767,31 @@ footer {
     margin-top: 23rem;
   }
 
-  .products {
+  .products,
+  .productsOne {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
   .products img,
-  .products2 img,
+  .productsOne img,
   .products3 img {
     width: 100%;
   }
 
   .products img,
-  .products2 img,
+  .productsOne img,
   .products3 img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
+  .products figure img,
+  .productsOne figure img {
+    width: 300px;
+  }
+
+  
 
   .productPrice {
     color: #171A1F;
@@ -874,7 +983,8 @@ footer {
     gap: 2rem;
   }
 
-  .products {
+  .products,
+  .productsOne{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -882,11 +992,19 @@ footer {
   }
 
   .products figure img,
-  .products2 figure img,
+  .productsOne figure img,
   .products3 figure img {
     width: 100%;
   }
-
+  .products  img,
+  .productsOne img,
+  .products3 img {
+    width: 50%;
+    height: 70%;
+  }
+  .products2 {
+    display: none;
+  }
   .seccion {
     display: flex;
     flex-direction: column;
