@@ -84,48 +84,53 @@
           </div>
         </div>
       </div>
+
       <div class="paymentMethod">
         <div class="method">
-          <h5>Payment Method</h5>
-          <p class="change">Change payment methods</p>
-          <div class="methodCard">
-            <img src="../assets/payment/cardIcon.png" alt="Card Icon">
-            <p class="nameCard">Mastercard</p>
-            <p class="numberCard">**** 5987</p>
-          </div>
+          <h5>Informacion personal</h5>
+          <p class="change">Completa los datos del formulario para realizar el pago.</p>
         </div>
-        <div class="voucher">
-          <h6>Voucher</h6>
-          <div class="apply">
-            <div class="voucherText">
-              <p>$15 OFF</p>
-            </div>
-            <button>Apply</button>
+
+        <form id="procesarPago" method="post">
+          <label  for="nombreCompleto">Nombre Completo:</label>
+          <input placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto" name="nombreCompleto" required>
+
+          <label for="telefono">Teléfono:</label>
+          <input placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
+
+          <label for="direccion">Dirección:</label>
+          <input placeholder="Ingrese su direccion" type="text" id="direccion" name="direccion" required>
+
+          <label for="correo">Correo Electrónico:</label>
+          <input placeholder="Ingrese su correo electronico" type="email" id="correo" name="correo" required>
+
+          <label for="nombreTtarjeta">Nombre en la Tarjeta:</label>
+          <input placeholder="Ingrese el nombre de la tarjeta" type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+
+          <label for="numeroTarjeta">Número de la Tarjeta:</label>
+          <input placeholder="Ingrese el numero de la tarjeta" type="number" id="numeroTarjeta" name="numeroTarjeta" pattern="[0-9]{16}" required>
+
+          <label for="tipoTarjeta">Tipo de Tarjeta:</label>
+          <select id="tipoTtarjeta" name="tipoTarjeta" required>
+            <option value="opcion">Escoge tu tarjeta</option>
+            <option value="mastercard">American Express</option>
+            <option value="mastercard">MasterCard</option>
+              <option value="visa">Visa</option>
+          </select>
+
+          <label for="fechaCaducidad">Fecha de Caducidad:</label>
+          <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+
+          <label for="cvv">CVV:</label>
+          <input placeholder="123" type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+
+          <div class="cardImages">
+            <img src="../assets/payment/americanExpress.png" class="american" alt="americanExpress">
+              <img src="../assets/payment/cardIcon.png" alt="MasterCard">
+              <img src="../assets/payment/visa.png" class="visa" alt="Visa">
           </div>
-          <p class="off">%15 off</p>
-        </div>
-        <div class="summary">
-          <h6>Summary</h6>
-          <div class="prices">
-            <p class="namePrice">Subtotal</p>
-            <p class="numberPrice">$1073.72</p>
-          </div>
-          <div class="prices">
-            <p class="namePrice">Discount</p>
-            <p class="numberPrice">-$15</p>
-          </div>
-          <div class="prices">
-            <p class="namePrice">Fee</p>
-            <p class="numberPrice">$0</p>
-          </div>
-          <div class="divisorLine"></div>
-          <div class="total">
-            <p class="totalName">Total</p>
-            <p class="totalPrice">$1058.72</p>
-          </div>
-          <button class="paymentButton"><a href="buySuccessPage.html">Proceed to payment</a></button>
-        </div>
-      </div>
+          <a href="./buySuccessPage.html" class="button">Pagar</a>
+        </form>
     </section>
     <!-- Payment -->
     <section class="sectionCarousel">
