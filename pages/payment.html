@@ -93,7 +93,7 @@
 
         <form id="procesarPago" method="post">
 
-        <div class="formularioGrupo" id="grupoUsuario">
+        <div class="formularioGrupo" id="grupo_nombreCompleto">
           <label class="usuario" for="nombreCompleto">Nombre Completo:</label>
         <div class="formularioGrupoInput">
           <input class="formularioInput" placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto" name="nombreCompleto" required>
@@ -102,7 +102,7 @@
           <p class="formularioInputError">El nombre debe contener hasta 80 letras</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoTelefono">
+        <div class="formularioGrupo" id="grupo_telefono">
           <label class="telefono" for="telefono">Teléfono:</label>
         <div class="formularioGrupoInput">
           <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
@@ -111,7 +111,7 @@
           <p class="formularioInputError">Error el telefono debe contener hasta 10 numeros</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoDireccion">
+        <div class="formularioGrupo" id="grupo_direccion">
           <label class="direccion" for="direccion">Dirección:</label>
         <div class="formularioGrupoInput">
           <input class="formularioInput" placeholder="Ingrese su direccion" type="text" id="direccion" name="direccion" required>
@@ -121,7 +121,7 @@
         </div>  
 
         
-        <div class="formularioGrupo" id="grupoCorreo">
+        <div class="formularioGrupo" id="grupo_correo">
           <label class="correo" for="correo">Correo Electrónico:</label>
           <div class="formularioGrupoInput">
             <input class="formularioInput" placeholder="Ingrese su correo electronico" type="email" id="correo" name="correo" required>
@@ -131,7 +131,7 @@
         </div>
         
         
-        <div class="formularioGrupo" id="grupoNumeroDeTarjeta">
+        <div class="formularioGrupo" id="grupo_numeroDeTarjeta">
           <label class="numeroTarjeta" for="numeroTarjeta">Número de la Tarjeta:</label>
         <div class="formularioGrupoInput">  
           <input class="formularioInput" placeholder="Ingrese el numero de la tarjeta" type="number" id="numeroTarjeta" name="numeroTarjeta" pattern="[0-9]{16}" required> 
@@ -140,7 +140,7 @@
           <p class="formularioInputError">Este campo solo admite numeros</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoTipoTarjeta">
+        <div class="formularioGrupo" id="grupo_tipoTarjeta">
           <label class="tipoTarjeta" for="tipoTarjeta">Tipo de Tarjeta:</label>
           <div class="formularioGrupoInput">
             <select id="tipoTarjeta" name="tipoTarjeta" required>
@@ -154,7 +154,7 @@
           <p class="formularioInputError">Elije solo las tarjetas opcionales</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoTipoTarjeta">
+        <div class="formularioGrupo" id="grupo_tipoTarjeta">
           <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
         <div class="formularioGrupoInput">    
           <input class="formularioInput" type="date" id="fechaCaducidad" name="fechaCaducidad" required>
@@ -163,7 +163,7 @@
           <p class="formularioInputError">Este campo solo admite seleccionar fecha</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoTipoTarjeta">
+        <div class="formularioGrupo" id="grupo_tipoTarjeta">
           <label class="cvv" for="cvv">CVV:</label>
         <div class="formularioGrupoInput">    
           <input class="formularioInput" placeholder="123" type="number" id="cvv" name="cvv" pattern="[0-9]{3}" required>
@@ -181,7 +181,7 @@
               <img src="../assets/payment/visa.png" class="visa" alt="Visa">
           </div>
           <div class="formularioGrupoBtnEnviar">
-            <button type="submit" class="formularioBtn"> <a href="./buySuccessPage.html">Enviar</a> </button>
+            <button type="submit" class="formularioBtn">Enviar</button>
           </div>
         </form>
     </section>

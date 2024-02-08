@@ -319,8 +319,11 @@ display:none;
   display: block;
 }
 
-
-.formularioGrupo-correcto .formularioLabel{
+.formularioGrupoCorrecto .formularioValidacionEstado {
+	color: #1ed12d;
+	opacity: 1;
+}
+.formularioGrupoIncorrecto .formularioLabel{
   color:#bb2929;
 }
 
