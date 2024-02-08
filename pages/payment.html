@@ -92,44 +92,97 @@
         </div>
 
         <form id="procesarPago" method="post">
-          <label  for="nombreCompleto">Nombre Completo:</label>
-          <input placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto" name="nombreCompleto" required>
 
-          <label for="telefono">Teléfono:</label>
-          <input placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
+        <div class="formularioGrupo" id="grupoUsuario">
+          <label class="usuario" for="nombreCompleto">Nombre Completo:</label>
+        <div class="formularioGrupoInput">
+          <input class="formularioInput" placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto" name="nombreCompleto" required>
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>
+          <p class="formularioInputError">El nombre debe contener hasta 80 letras</p>
+        </div>
 
-          <label for="direccion">Dirección:</label>
-          <input placeholder="Ingrese su direccion" type="text" id="direccion" name="direccion" required>
+        <div class="formularioGrupo" id="grupoTelefono">
+          <label class="telefono" for="telefono">Teléfono:</label>
+        <div class="formularioGrupoInput">
+          <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>
+          <p class="formularioInputError">Error el telefono debe contener hasta 10 numeros</p>
+        </div>
 
-          <label for="correo">Correo Electrónico:</label>
-          <input placeholder="Ingrese su correo electronico" type="email" id="correo" name="correo" required>
+        <div class="formularioGrupo" id="grupoDireccion">
+          <label class="direccion" for="direccion">Dirección:</label>
+        <div class="formularioGrupoInput">
+          <input class="formularioInput" placeholder="Ingrese su direccion" type="text" id="direccion" name="direccion" required>
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>
+          <p class="formularioInputError">La direccion debe contener , carrera o calle</p>
+        </div>  
 
-          <label for="nombreTtarjeta">Nombre en la Tarjeta:</label>
-          <input placeholder="Ingrese el nombre de la tarjeta" type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+        
+        <div class="formularioGrupo" id="grupoCorreo">
+          <label class="correo" for="correo">Correo Electrónico:</label>
+          <div class="formularioGrupoInput">
+            <input class="formularioInput" placeholder="Ingrese su correo electronico" type="email" id="correo" name="correo" required>
+            <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">El correo solo debe contener letras, numeros, puntos, guion medio o bajo y @</p>
+        </div>
+        
+        
+        <div class="formularioGrupo" id="grupoNumeroDeTarjeta">
+          <label class="numeroTarjeta" for="numeroTarjeta">Número de la Tarjeta:</label>
+        <div class="formularioGrupoInput">  
+          <input class="formularioInput" placeholder="Ingrese el numero de la tarjeta" type="number" id="numeroTarjeta" name="numeroTarjeta" pattern="[0-9]{16}" required> 
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>  
+          <p class="formularioInputError">Este campo solo admite numeros</p>
+        </div>
 
-          <label for="numeroTarjeta">Número de la Tarjeta:</label>
-          <input placeholder="Ingrese el numero de la tarjeta" type="number" id="numeroTarjeta" name="numeroTarjeta" pattern="[0-9]{16}" required>
-
-          <label for="tipoTarjeta">Tipo de Tarjeta:</label>
-          <select id="tipoTtarjeta" name="tipoTarjeta" required>
-            <option value="opcion">Escoge tu tarjeta</option>
-            <option value="mastercard">American Express</option>
-            <option value="mastercard">MasterCard</option>
+        <div class="formularioGrupo" id="grupoTipoTarjeta">
+          <label class="tipoTarjeta" for="tipoTarjeta">Tipo de Tarjeta:</label>
+          <div class="formularioGrupoInput">
+            <select id="tipoTarjeta" name="tipoTarjeta" required>
+              <option value="opcion">Escoge tu tarjeta</option>
+              <option value="americanExpress">American Express</option>
+              <option value="mastercard">MasterCard</option>
               <option value="visa">Visa</option>
-          </select>
+            </select>
+            <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">Elije solo las tarjetas opcionales</p>
+        </div>
 
-          <label for="fechaCaducidad">Fecha de Caducidad:</label>
-          <input type="month" id="fechaCaducidad" name="fechaCaducidad" required>
+        <div class="formularioGrupo" id="grupoTipoTarjeta">
+          <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
+        <div class="formularioGrupoInput">    
+          <input class="formularioInput" type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>  
+          <p class="formularioInputError">Este campo solo admite seleccionar fecha</p>
+        </div>
 
-          <label for="cvv">CVV:</label>
-          <input placeholder="123" type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+        <div class="formularioGrupo" id="grupoTipoTarjeta">
+          <label class="cvv" for="cvv">CVV:</label>
+        <div class="formularioGrupoInput">    
+          <input class="formularioInput" placeholder="123" type="number" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+          <i class="formulacionValidacionEstado  fa-solid fa-circle-xmark"></i>
+        </div>   
+          <p class="formularioInputError">Este campo solo admite 3 digitos</p>
+        </div>
 
+        <div class="formularioMensaje" id="formularioMensaje">
+          <p><i class="fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error</b> Por favor llena el formulario correctamente.</p>
+        </div>
           <div class="cardImages">
             <img src="../assets/payment/americanExpress.png" class="american" alt="americanExpress">
               <img src="../assets/payment/cardIcon.png" alt="MasterCard">
               <img src="../assets/payment/visa.png" class="visa" alt="Visa">
           </div>
-          <button class="button" type="submit">Pagar</button>
+          <div class="formularioGrupoBtnEnviar">
+            <button type="submit" class="formularioBtn"> <a href="./buySuccessPage.html">Enviar</a> </button>
+          </div>
         </form>
     </section>
     <!-- Payment -->
