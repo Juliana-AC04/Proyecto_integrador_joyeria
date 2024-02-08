@@ -119,7 +119,7 @@
           </select>
 
           <label for="fechaCaducidad">Fecha de Caducidad:</label>
-          <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+          <input type="month" id="fechaCaducidad" name="fechaCaducidad" required>
 
           <label for="cvv">CVV:</label>
           <input placeholder="123" type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
@@ -129,7 +129,7 @@
               <img src="../assets/payment/cardIcon.png" alt="MasterCard">
               <img src="../assets/payment/visa.png" class="visa" alt="Visa">
           </div>
-          <a href="./buySuccessPage.html" class="button">Pagar</a>
+          <button class="button" type="submit">Pagar</button>
         </form>
     </section>
     <!-- Payment -->
@@ -226,7 +226,8 @@
       </section>
   
     </div>
-  <script src="../javaScript/modalCart.js"></script>
+  <script src="../Scripts/modalCart.js"></script>
+  <script src="../Scripts/payment.js"></script>
 </body>
 
 </html>
