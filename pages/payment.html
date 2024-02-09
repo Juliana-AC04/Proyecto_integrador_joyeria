@@ -175,10 +175,40 @@
         <div class="formularioMensaje" id="formularioMensaje">
           <p><i class="fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error</b> Por favor llena el formulario correctamente.</p>
         </div>
+            </select>
+            <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+          </div>
+          <p class="formularioInputError">Elije solo las tarjetas opcionales</p>
+        </div>
+
+        <div class="formularioGrupo" id="grupoTipoTarjeta">
+          <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
+        <div class="formularioGrupoInput">    
+          <input class="formularioInput" type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
+        </div>  
+          <p class="formularioInputError">Este campo solo admite seleccionar fecha</p>
+        </div>
+
+        <div class="formularioGrupo" id="grupoTipoTarjeta">
+          <label class="cvv" for="cvv">CVV:</label>
+        <div class="formularioGrupoInput">    
+          <input class="formularioInput" placeholder="123" type="number" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+          <i class="formulacionValidacionEstado  fa-solid fa-circle-xmark"></i>
+        </div>   
+          <p class="formularioInputError">Este campo solo admite 3 digitos</p>
+        </div>
+
+        <div class="formularioMensaje" id="formularioMensaje">
+          <p><i class="fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error</b> Por favor llena el formulario correctamente.</p>
+        </div>
           <div class="cardImages">
             <img src="../assets/payment/americanExpress.png" class="american" alt="americanExpress">
               <img src="../assets/payment/cardIcon.png" alt="MasterCard">
               <img src="../assets/payment/visa.png" class="visa" alt="Visa">
+          </div>
+          <div class="formularioGrupoBtnEnviar">
+            <button type="submit" class="formularioBtn"> <a href="./buySuccessPage.html">Enviar</a> </button>
           </div>
           <div class="formularioGrupoBtnEnviar">
             <button type="submit" class="formularioBtn"> <a href="./buySuccessPage.html">Enviar</a> </button>
