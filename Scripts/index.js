@@ -133,11 +133,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Agrega un event listener al input de búsqueda por nombre
   const nombreProductoInput = document.getElementById('searchInput');
+  
   nombreProductoInput.addEventListener('input', function () {
     nombreProductoActual = nombreProductoInput.value;
     actualizarProductos();
     const cards = document.querySelectorAll(".card");
-      goToDetailsProduct(cards);
+    goToDetailsProduct(cards);
   });
 })
 
