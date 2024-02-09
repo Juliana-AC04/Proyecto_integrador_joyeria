@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Mostrar los datos en la página
         document.querySelector(".dateContainer").innerText = fechaActual;
         document.querySelector(".JohnMiller").innerText = datosPago.nombreCompleto;
-        document.querySelector(".visa").innerText = datosPago.tipoTarjeta;
+        document.querySelector(".visa").innerText = "Tarjeta";
     }
 
     // Obtener el botón "Continue shopping"
