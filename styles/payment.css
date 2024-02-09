@@ -175,9 +175,6 @@
 }
 
 /* Payment method */
- 
-
-
 .method h5 {
   color: #171A1F;
   font-family: "Cormorant Garamond";
@@ -253,8 +250,10 @@ input, select {
 
 .formularioInputError{
 font-size: 12px;
-margin-bottom: 0;
+margin-bottom: 1rem;
 display: none;
+color:#cc2c34;
+
 }
 .formularioInputError-activo{
  display: block;
@@ -266,24 +265,21 @@ right: 20px;
 bottom: 30px;
 z-index: 100;
 font-size: 16px;
- opacity: 0; 
 }
 
 .formularioMensaje{
-height: 45px;
 line-height: 45px;
-background-color:#cc2c34;
-padding: 0 15px;
-border-radius:3px;
-display:none;
+color:#cc2c34;
 }
 
 .formularioMensaje-activo{
   display: block;
+
    }
 
 .formularioMensaje p{
  margin: 0;
+ margin-bottom: 1rem;
   }
 .formularioGrupoBtnEnviar{
   display: flex;
@@ -312,18 +308,8 @@ display:none;
   background-color: #45a049;
 }
 
-.formularioMensajeExito{
-  font-size: 15px;
-  color:#4562a0;
- margin-top: 1rem;
- display: none;
-}
-.formularioMensajeExito-activo{
-  display: block;
-}
 
-
-.formularioGrupo-correcto .formularioLabel{
+.formularioGrupoIncorrecto .formularioLabel{
   color:#bb2929;
 }
 
