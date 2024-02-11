@@ -192,17 +192,18 @@
 
 }
 
-.grey {
-  background-color: #DEE1E6;
+.gold {
+  border: 1px solid #0D554A;
+  background-color: #EFB810;
   ;
   border-radius: 50%;
   width: 36px;
   height: 36px;
 }
 
-.rose {
+.silver {
   border: 1px solid #0D554A;
-  background-color: #E6AE87;
+  background-color: #e3e4e5;
   border-radius: 50%;
   width: 36px;
   height: 36px;

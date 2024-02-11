@@ -8,8 +8,8 @@ export  const listaDeProductos = [
       imagenes: ['../assets/productListing/AuroraRing.png'],
       descripcion: "Rings rodio rosado",
       stock: [
-        { color: "rodio rosado", talla: "48", cantidad: 50 },
-        { color: "rodio rosado", talla: "50", cantidad: 30 },
+        { color: "dorado", talla: "48", cantidad: 50 },
+        { color: "dorado", talla: "50", cantidad: 30 },
       ],
     },
   
