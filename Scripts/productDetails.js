@@ -1,56 +1,61 @@
-import { listaDeProductos } from "../modules/products.js"
+import { listaDeProductos } from "../modules/products.js";
 
 const idProduct = JSON.parse(localStorage.getItem("idProduct"));
-const selectedProduct = listaDeProductos.find((product) => product.id == idProduct);
+const selectedProduct = listaDeProductos.find(
+  (product) => product.id == idProduct
+);
 
 const printDetailsProduct = (producto) => {
-    const nombreProducto = document.getElementById("nombreProducto");
-    
-    const productDetail = document.getElementById("productDetail")
+  const nombreProducto = document.getElementById("nombreProducto");
 
-    nombreProducto.innerText = producto.nombre;
+  const productDetail = document.getElementById("productDetail");
 
-    // Generar HTML para las opciones de color
-const colorsHTML = producto.stock.map(item => {
-    let colorClass = "";
-    if (item.color === "dorado") {
+  nombreProducto.innerText = producto.nombre;
+
+  // Generar HTML para las opciones de color
+  const colorsHTML = producto.stock
+    .map((item) => {
+      let colorClass = "";
+      if (item.color === "dorado") {
         colorClass = "gold";
         return `<div class="${colorClass}"></div>`;
-    } else if (item.color === "plateado") {
+      } else if (item.color === "plateado") {
         colorClass = "silver";
         return `<div class="${colorClass}"></div>`;
-    }
-}).find(element => element !== undefined); // Encuentra el primer elemento no indefinido (el primer div creado)
+      }
+    })
+    .find((element) => element !== undefined); // Encuentra el primer elemento no indefinido (el primer div creado)
 
+  const colorDisponible = producto.stock[0].color;
 
-    const colorDisponible = producto.stock[0].color;
-
-    // Generar HTML para las opciones de talla
-    let sizesHTML = '';
-    if (producto.categoria !== 'Necklaces' && producto.categoria !== 'Earrings') {
-        sizesHTML = `
+  // Generar HTML para las opciones de talla
+  let sizesHTML = "";
+  if (producto.categoria !== "Necklaces" && producto.categoria !== "Earrings") {
+    sizesHTML = `
             <div class="ringSize">
                 <p class="size">Size</p>
                 <p class="sizeOption">What is my size?</p>
             </div>
             <div class="squareContainer">
-            ${producto.stock.map(item => `<div class="square">${item.talla}</div>`).join('')}
+            ${producto.stock
+              .map((item) => `<div class="square">${item.talla}</div>`)
+              .join("")}
         </div>
         `;
-    }
+  }
 
-    productDetail.innerHTML = `
+  productDetail.innerHTML = `
     <div class="imageLuxurySection">
     <div>
         <figure class="luxuryImage">
-            <img src="${producto.imagenes}" alt="${producto.nombre}">
-            <img src="${producto.imagenes}" alt="${producto.nombre}">
-            <img src="${producto.imagenes}" alt="${producto.nombre}">
-            <img src="${producto.imagenes}" alt="${producto.nombre}">
+            <img class="detailsImage" id="detailsImagen" src="${producto.imagenes}" alt="${producto.nombre}">
+            <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
+            <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
+            <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
         </figure>
     </div>
     <figure>
-        <img src="${producto.imagenes}" alt="${producto.nombre}">
+        <img class="detailsImg" src="${producto.imagenes}" alt="${producto.nombre}">
         <img src="../assets/productDetails/Heart.png" class="heart" alt="heart">
     </figure>
     <div class="headerSectionDiv">
@@ -77,58 +82,38 @@ const colorsHTML = producto.stock.map(item => {
         <div class="dropdownContainer">
             <div class="dropdown">
                 <a class="dropdownPrice" href="#">Delivery▼</a>
-                <ul class="dropdownMenu">
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
-                </ul>
             </div>
             <div class="dropdown">
                 <a class="dropdownPrice" href="#">Payment ▼</a>
-                <ul class="dropdownMenu">
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
-                </ul>
             </div>
             <div class="dropdown">
                 <a class="dropdownPrice" href="#">Warranty▼</a>
-                <ul class="dropdownMenu">
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
-                </ul>
             </div>
             <div class="dropdown">
                 <a class="dropdownPrice" href="#">Care▼</a>
-                <ul class="dropdownMenu">
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 1</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 2</a></li>
-                    <li class="bodyDropdown"><a class="listDropdown" href="#">Opción 3</a></li>
-                </ul>
             </div>
         </div>
     </div>
 </div>
   `;
 
-    // Obtener el elemento de cantidad y los botones de incremento y decremento
-    const quantityElement = document.getElementById("quantity");
-    const incrementButton = document.getElementById("increment");
-    const decrementButton = document.getElementById("decrement");
+  // Obtener el elemento de cantidad y los botones de incremento y decremento
+  const quantityElement = document.getElementById("quantity");
+  const incrementButton = document.getElementById("increment");
+  const decrementButton = document.getElementById("decrement");
 
-    // Agregar eventos de clic a los botones de incremento y decremento
-    incrementButton.addEventListener("click", () => {
-        const currentQuantity = parseInt(quantityElement.textContent);
-        quantityElement.textContent = currentQuantity + 1;
-    });
+  // Agregar eventos de clic a los botones de incremento y decremento
+  incrementButton.addEventListener("click", () => {
+    const currentQuantity = parseInt(quantityElement.textContent);
+    quantityElement.textContent = currentQuantity + 1;
+  });
 
-    decrementButton.addEventListener("click", () => {
-        const currentQuantity = parseInt(quantityElement.textContent);
-        if (currentQuantity > 0) {
-            quantityElement.textContent = currentQuantity - 1;
-        }
-    });
+  decrementButton.addEventListener("click", () => {
+    const currentQuantity = parseInt(quantityElement.textContent);
+    if (currentQuantity > 0) {
+      quantityElement.textContent = currentQuantity - 1;
+    }
+  });
 };
 
 printDetailsProduct(selectedProduct);

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Orbitron&family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Orbitron&family=Press+Start+2P&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Manrope:wght@400;700&family=Orbitron&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Manrope:wght@400;700&family=Orbitron&family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -26,7 +26,6 @@
   width: 20px;
   height: 20px;
   padding: 10px;
-
 }
 
 .darling {
@@ -67,7 +66,7 @@
 
 .listNavbar .navbarMenu:hover {
   color: #f2c66d;
-  border-bottom: 3px solid #F2C66D;
+  border-bottom: 3px solid #f2c66d;
 }
 
 .navbarList .listNavbar .navbarMenu {
@@ -75,11 +74,9 @@
   color: white;
 }
 
-
-
 /* div luxury */
 .LuxuryDivList {
-  color: #0D554A;
+  color: #0d554a;
   font-family: Cormorant Garamond;
   font-size: 1rem;
   font-weight: 400;
@@ -91,14 +88,26 @@
 
 .home {
   margin-right: 1rem;
-
 }
 
 .arrow {
   width: 16px;
   height: 16px;
   margin-right: 1rem;
+}
 
+.detailsImage {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+.detailsImg {
+  width: 25rem;
+  height: 35rem;
+  margin-right: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 .shop {
@@ -109,8 +118,6 @@
 .luxurySection {
   display: flex;
   justify-content: space-evenly;
-
-
 }
 
 .imageLuxurySection {
@@ -119,7 +126,6 @@
 
 .luxuryImage img {
   margin-top: 1rem;
-  /* Ajusta el espacio entre las imágenes */
 }
 
 .luxuryImage {
@@ -132,30 +138,24 @@
   height: 636px;
 }
 
-.image1 {
-  border: 1px solid #0D554A;
-}
-
-.image1,
-.image4 {
-  width: 64px;
-  height: 82px;
-  border-radius: 4px;
+#detailsImagen {
+  border: 1px solid #0d554a;
 }
 
 .heart {
   position: absolute;
-  margin: 2rem -4rem;
+  margin: 3rem -6rem;
 }
 
 /*  luxury chartms*/
 
 .headerSection {
-  color: #0D554A;
+  color: #0d554a;
   font-family: Cormorant Garamond;
   font-size: 40px;
   font-weight: 600;
   line-height: 56px;
+  margin-top: 2rem;
 }
 
 .code {
@@ -168,7 +168,7 @@
 }
 
 .price {
-  color: #B37D10;
+  color: #b37d10;
   font-family: Manrope;
   font-size: 40px;
   font-style: normal;
@@ -189,20 +189,18 @@
 
 .opcionColor {
   display: flex;
-
 }
 
 .gold {
-  border: 1px solid #0D554A;
-  background-color: #EFB810;
-  ;
+  border: 1px solid #0d554a;
+  background-color: #efb810;
   border-radius: 50%;
   width: 36px;
   height: 36px;
 }
 
 .silver {
-  border: 1px solid #0D554A;
+  border: 1px solid #0d554a;
   background-color: #e3e4e5;
   border-radius: 50%;
   width: 36px;
@@ -224,8 +222,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
-
-
 }
 
 .sizeOption {
@@ -250,10 +246,9 @@
   width: 40px;
   height: 40px;
   margin: 2px;
-  border: 1px solid #565E6C;
+  border: 1px solid #565e6c;
   border-radius: 4px;
-  background: #FFF;
-
+  background: #fff;
 }
 
 .firstSquare {
@@ -264,9 +259,9 @@
   height: 40px;
   margin: 2px;
   border-radius: 4px;
-  border: 1px solid #8F640C;
-  background: #FFF;
-  color: #8F640C;
+  border: 1px solid #8f640c;
+  background: #fff;
+  color: #8f640c;
   font-family: Manrope;
   font-size: 14px;
   font-style: normal;
@@ -280,7 +275,7 @@
 
 .squareQuantity {
   border-radius: 4px;
-  background: #F3F4F6;
+  background: #f3f4f6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,8 +293,12 @@
   align-items: flex-end;
   gap: 8px;
   border-radius: 26px;
-  border: 1px solid #0D554A;
-  background: #FFF;
+  border: 1px solid #0d554a;
+  background: #fff;
+}
+#decrement,
+#increment {
+  border: 1px solid #0d554a;
 }
 
 .addToCart {
@@ -308,7 +307,7 @@
 }
 
 .cartUrl {
-  color: #0D554A;
+  color: #0d554a;
   font-family: Manrope;
   font-size: 18px;
   font-style: normal;
@@ -325,14 +324,14 @@
   align-items: flex-end;
   gap: 8px;
   border-radius: 26px;
-  border: 1px solid #0D554A;
-  background: #FFF;
+  border: 1px solid #0d554a;
+  background: #fff;
   border-radius: 26px;
-  background: #0D554A;
+  background: #0d554a;
 }
 
 .buyNow {
-  color: #FFF;
+  color: #fff;
   font-family: Manrope;
   font-size: 18px;
   font-style: normal;
@@ -347,17 +346,14 @@
   justify-content: space-evenly;
 }
 
-
 .dropdownPrice {
-  color: #171A1F;
+  color: #171a1f;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-
 }
-
 
 .dropdownContainer {
   display: flex;
@@ -381,7 +377,6 @@
 .listDropdown {
   position: relative;
   text-decoration: none;
-
 }
 
 .dropdownPrice::after,
@@ -392,49 +387,41 @@
   left: 0;
   width: 12rem;
   height: 1px;
-  background-color: #171A1F;
+  background-color: #171a1f;
   /* Color de la línea, ajusta según sea necesario */
 }
 
 .dropdownMenu {
-
   position: absolute;
   display: none;
 }
 
 .listDropdown {
-  color: #171A1F
+  color: #171a1f;
 }
 
 .listDropdown:hover {
-  color: #f2c66d
+  color: #f2c66d;
 }
 
 .dropdown:hover .dropdownMenu {
   display: block;
-
 }
-
 
 /* article */
 .articleLuxury {
   display: flex;
   justify-content: space-around;
-
-
 }
 
 .articleLuxurydiv {
   width: 80rem;
   height: 50rem;
   display: flex;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
   flex-direction: column;
   align-items: center;
-  
-
-
 }
 
 .descriptionArticle {
@@ -447,7 +434,7 @@
 }
 
 .headerArticle {
-  color: #0D554A;
+  color: #0d554a;
   font-family: Cormorant Garamond;
   font-size: 40px;
   font-style: normal;
@@ -506,11 +493,10 @@ article {
   width: 62px;
   height: 62px;
   margin-bottom: 18px;
-
 }
 
 .containerTitle {
-  color: #171A1F;
+  color: #171a1f;
   text-align: center;
   font-family: Cormorant Garamond;
   font-size: 18px;
@@ -521,7 +507,7 @@ article {
 
 .containerText {
   width: 278px;
-  color: #9095A0;
+  color: #9095a0;
   text-align: center;
   font-family: Manrope;
   font-size: 16px;
@@ -530,17 +516,15 @@ article {
   /* 162.5% */
 }
 
-
-
 /* section luxury */
 .sectionCarousel {
   display: flex;
   flex-direction: column;
-  background: #FFF;
+  background: #fff;
 }
 
 .carouselTitle {
-  color: #0D554A;
+  color: #0d554a;
   font-family: "Cormorant Garamond";
   font-size: 40px;
   font-style: normal;
@@ -548,7 +532,6 @@ article {
   line-height: 56px;
   margin-left: 10%;
 }
-
 
 .carouselInfo {
   margin-top: 78px;
@@ -563,7 +546,6 @@ article {
   margin-bottom: 48px;
   overflow: hidden;
   margin-left: 10%;
-
 }
 
 .carouselItem {
@@ -572,8 +554,9 @@ article {
   height: 410px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: #FFF;
-  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
+  background: #fff;
+  box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07),
+    0px 0px 2px 0px rgba(23, 26, 31, 0.12);
 }
 
 .carouselItem img {
@@ -582,18 +565,17 @@ article {
 }
 
 .carouselItem figcaption {
-  color: #171A1F;
+  color: #171a1f;
   font-family: Cormorant Garamond;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   margin-left: 12px;
-
 }
 
 .carouselItem p {
-  color: #171A1F;
+  color: #171a1f;
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
@@ -602,7 +584,6 @@ article {
   text-align: left;
   margin-left: 12px;
 }
-
 
 /* Estilos de la sección "From the people" */
 .peopleContainer {
@@ -732,8 +713,6 @@ article {
   margin-right: 16px;
 }
 
-
-
 /* Estilos del footer */
 footer {
   background: #093931;
@@ -743,7 +722,6 @@ footer {
   padding-left: 1rem;
   padding-right: 1rem;
   justify-content: space-evenly;
-
 }
 
 .darlingFooter {
@@ -751,7 +729,7 @@ footer {
 }
 
 .darlingFooter h3 {
-  color: #F5D38E;
+  color: #f5d38e;
   font-family: Cormorant Garamond;
   font-size: 1.875rem;
   font-style: normal;
@@ -762,7 +740,7 @@ footer {
 .darlingFooter p {
   margin-top: 5.81rem;
   margin-bottom: 1.56rem;
-  color: #FFF;
+  color: #fff;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
@@ -778,7 +756,7 @@ footer {
 .itemsFooter p,
 .itemsFooter2 p {
   margin-top: 0.75rem;
-  color: #FFF;
+  color: #fff;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
@@ -791,7 +769,7 @@ footer {
 }
 
 .textItemFooter {
-  color: #FFF;
+  color: #fff;
   font-family: Cormorant Garamond;
   font-size: 1.25rem;
   font-style: normal;
@@ -800,14 +778,13 @@ footer {
 }
 
 .textItemFooter2 {
-  color: #FAFAFB;
+  color: #fafafb;
   font-family: Manrope;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
 }
-
 
 .subscribe {
   margin-top: 1rem;
@@ -817,18 +794,17 @@ footer {
 }
 
 .subscribeContent {
-
   display: inline-flex;
   padding: 0.4375rem 8.25rem 0.375rem 0.75rem;
   align-items: center;
   gap: 0.375rem;
   border-radius: 1.125rem 0rem 0rem 1.125rem;
-  border: 1px solid #FFF;
-  background: rgba(0, 0, 0, 0.00);
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0);
 }
 
 .subscribeText {
-  color: #FFF;
+  color: #fff;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
@@ -842,9 +818,9 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 0rem 1.125rem 1.125rem 0rem;
-  border: 1px solid #F2C66D;
-  background: #F2C66D;
-  color: #6B4A09;
+  border: 1px solid #f2c66d;
+  background: #f2c66d;
+  color: #6b4a09;
   font-family: Manrope;
   font-size: 0.875rem;
   font-style: normal;
@@ -864,24 +840,24 @@ footer {
   margin-right: 1rem;
 }
 
-.secondItemsFooter a{
+.secondItemsFooter a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
-.secondItemsFooter a:hover{
-  color: #F5D38E;
+.secondItemsFooter a:hover {
+  color: #f5d38e;
 }
 
 /* Estilos del modal cart */
-#btnCart{
+#btnCart {
   cursor: pointer;
 }
 
-.modalCart{
+.modalCart {
   display: flex;
   justify-content: flex-end;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -889,89 +865,88 @@ footer {
   background-color: #08080867;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.show{
+.show {
   display: flex;
   justify-content: flex-end;
 }
 
-.modalCart section{
+.modalCart section {
   width: 50%;
   height: 100%;
   background-color: white;
 }
 
-.cartHeader{
+.cartHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5%;
 }
-.cartTitle{
-  color: #0D554A;
+.cartTitle {
+  color: #0d554a;
   font-family: Cormorant Garamond;
   font-size: 40px;
   font-weight: 600;
   line-height: 56px;
 }
 
-.btnExit{
+.btnExit {
   cursor: pointer;
   text-decoration: none;
   background-color: white;
   border: white;
-  
 }
 
-.btnExit i{
+.btnExit i {
   color: black;
 }
 
-.cartFooter{
+.cartFooter {
   display: flex;
   flex-direction: column;
   margin: 5%;
 }
 
-.sectionPrice{
+.sectionPrice {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.cartTotal{
-  color: #171A1F;
+.cartTotal {
+  color: #171a1f;
   font-family: Manrope;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
 }
-.cartButton{
+.cartButton {
   margin: 5%;
   display: inline-flex;
   padding: 0.5625rem 4.75rem 0.5625rem 4.6875rem;
   justify-content: center;
   align-items: center;
   border-radius: 1.375rem;
-  background: #0D554A;
-  border:0;
+  background: #0d554a;
+  border: 0;
 }
 
-.cartButton a{
+.cartButton a {
   text-decoration: none;
   color: white;
 }
 
-.cartButton a:hover{
-  color:"white"
+.cartButton a:hover {
+  color: "white";
 }
 
-.cartDivisor{
-  border-bottom: 1px solid #F3F4F6;
+.cartDivisor {
+  border-bottom: 1px solid #f3f4f6;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -979,92 +954,107 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
+  body {
+    overflow-x: hidden;
+  }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
   }
   .headerNav {
     flex-direction: column;
   }
-  
+
   .navHeader {
     flex-direction: column;
   }
   /* section */
+  .imageLuxurySection {
+    display: flex;
+  }
+  .detailsImage {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .detailsImg {
+    width: 16rem;
+    height: 21rem;
+  }
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
-}
+  }
+  .headerSectionDiv {
+    margin: 22rem 0 0 -23rem;
+    display: block;
+  }
+  .buttonTrolley {
+    width: 18rem;
+    height: 3rem;
+  }
 
-.img{
-  width: 17rem;
-  height: 23.5rem;
-}
+  .img {
+    width: 17rem;
+    height: 23.5rem;
+  }
 
-.heart{
-  top: 11.5rem;
-  left: 25rem;
-}
-.headerSectionDiv{
-  width: 30rem;
-}
-.button{
-  display: grid;
+  .heart {
+    top: 11.5rem;
+    left: 25rem;
+  }
+
+  .button {
+    display: grid;
     margin-right: 9rem;
-}
-.LuxuryDivList{
-   
-    margin: 2rem 0 -5rem 2rem;;
-}
-.dropdownContainer{
-  display: none;
-}
+  }
+  .LuxuryDivList {
+    margin: 2rem 0 -5rem 2rem;
+  }
+  .dropdownContainer {
+    display: none;
+  }
 
-.squareContainer {
-  width: 22rem;
-}
-.ringSize {
-  margin: 0 9rem 0 0;
-}
+  .squareContainer {
+    width: 22rem;
+  }
+  .ringSize {
+    margin: 0 9rem 0 0;
+  }
 
-/* Article  */
+  /* Article  */
 
-.articleLuxurydiv{
-  width: 100%;
-  height: 100%;
-  margin-right: 3rem;
-
-}
-.articleLuxury{
-  margin-left: 3rem;
-}
-.descriptionArticle{
-  margin-right: 16rem;
-  font-size: 15px;
-  
-}
-.headerArticle{
-  margin-left: 1rem;
-  font-size: 30px;
-  
-}
-.infoArticle{
-  width: 20rem;
-  font-size: 15px;
-
-}
-.redRingImg{
-  width: 20rem;
-  height: 18rem;
-}
-.iconButtonArticle{
-  margin: -12rem 9rem;
-}
- 
+  .articleLuxurydiv {
+    width: 100%;
+    height: 100%;
+    margin-right: 3rem;
+  }
+  .articleLuxury {
+    margin-left: 3rem;
+  }
+  .descriptionArticle {
+    margin-right: 16rem;
+    font-size: 15px;
+  }
+  .headerArticle {
+    margin-left: 1rem;
+    font-size: 30px;
+  }
+  .infoArticle {
+    width: 20rem;
+    font-size: 15px;
+  }
+  .redRingImg {
+    width: 20rem;
+    height: 18rem;
+  }
+  .iconButtonArticle {
+    margin: -12rem 9rem;
+  }
 
   /* container delivery */
 
   /* Article  */
-  .containerArticle{
+  .containerArticle {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1097,7 +1087,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
-
   }
 
   .peopleInfo {
@@ -1130,7 +1119,6 @@ footer {
     margin-left: 20%;
     margin-right: 20%;
   }
-
 
   .peopleImg {
     width: 100%;
@@ -1206,7 +1194,6 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3rem;
-    ;
   }
 
   .subscribe {
@@ -1231,10 +1218,6 @@ footer {
   .socialMedia {
     width: 100%;
   }
-
-
-
-
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
@@ -1254,9 +1237,7 @@ footer {
   }
 
   .LuxuryDivList {
-
     margin: 2rem 0 -5rem 2rem;
-    ;
   }
 
   .ringSize {
@@ -1267,30 +1248,24 @@ footer {
     width: 34rem;
     height: 38rem;
     display: flex;
-    background: #FFF;
+    background: #fff;
     box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
     flex-direction: column;
     align-items: center;
-
-
   }
 
   .descriptionArticle {
     margin-right: 23rem;
     font-size: 16px;
-
   }
 
   .headerArticle {
-
     font-size: 30px;
-
   }
 
   .infoArticle {
     width: 29rem;
     font-size: 18px;
-
   }
 
   .redRingImg {
@@ -1398,10 +1373,10 @@ footer {
   .containerText {
     width: 50%;
   }
-  .sectionCarousel{
+  .sectionCarousel {
     width: 37rem;
   }
-   footer {
+  footer {
     background: #093931;
     display: flex;
     flex-direction: column;
@@ -1445,7 +1420,6 @@ footer {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3rem;
-    ;
   }
 
   .subscribe {
@@ -1470,6 +1444,4 @@ footer {
   .socialMedia {
     width: 100%;
   }
-
-
 }
