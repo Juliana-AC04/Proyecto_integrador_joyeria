@@ -979,74 +979,92 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
-
+  .listNavbar {
+    padding: 9.5px 5.629999999999999px;
+  }
+  .headerNav {
+    flex-direction: column;
+  }
+  
+  .navHeader {
+    flex-direction: column;
+  }
+  /* section */
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
 }
 
 .img{
-  width: 25rem;
-    height: 32rem;
+  width: 17rem;
+  height: 23.5rem;
 }
 
 .heart{
   top: 11.5rem;
-  left: 34rem;
+  left: 25rem;
 }
 .headerSectionDiv{
   width: 30rem;
 }
 .button{
-  height: 5rem;
-    width: 31rem;
+  display: grid;
+    margin-right: 9rem;
 }
 .LuxuryDivList{
    
     margin: 2rem 0 -5rem 2rem;;
 }
-
-.ringSize {
-  margin: 0 2rem 0 0;
+.dropdownContainer{
+  display: none;
 }
+
+.squareContainer {
+  width: 22rem;
+}
+.ringSize {
+  margin: 0 9rem 0 0;
+}
+
 /* Article  */
 
 .articleLuxurydiv{
-  width: 32rem ;
-  height: 38rem ;
+  width: 100%;
+  height: 100%;
+  margin-right: 3rem;
 
 }
 .articleLuxury{
   margin-left: 3rem;
 }
 .descriptionArticle{
-  margin-right: 23rem;
+  margin-right: 16rem;
   font-size: 15px;
   
 }
 .headerArticle{
-
+  margin-left: 1rem;
   font-size: 30px;
   
 }
 .infoArticle{
-  width: 29rem;
+  width: 20rem;
   font-size: 15px;
 
 }
 .redRingImg{
-  width: 30rem;
-  height: 20rem;
+  width: 20rem;
+  height: 18rem;
 }
 .iconButtonArticle{
-  margin: -13rem 15rem;
+  margin: -12rem 9rem;
 }
  
 
   /* container delivery */
 
   /* Article  */
-  article {
+  .containerArticle{
     display: flex;
     flex-direction: column;
     width: 100%;

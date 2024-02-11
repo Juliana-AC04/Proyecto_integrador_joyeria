@@ -642,6 +642,16 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
+  .listNavbar {
+    padding: 9.5px 5.629999999999999px;
+  }
+  .headerNav {
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    margin-top: -21rem;
+  }
 /* Section order */
 .order {
   display: flex;

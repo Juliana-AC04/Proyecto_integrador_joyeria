@@ -284,9 +284,7 @@ hr {
   align-items: center;
   background: #0d554a;
   border-radius: 26px;
-  border: 1px solid #0D554A;
- 
-  
+  border: 1px solid #0d554a;
 }
 .continue {
   text-decoration: none;
@@ -307,7 +305,6 @@ footer {
   padding-right: 1rem;
   justify-content: space-evenly;
 }
-
 
 .darlingFooter {
   margin-top: 3rem;
@@ -425,24 +422,24 @@ footer {
   margin-right: 1rem;
 }
 
-.secondItemsFooter a{
+.secondItemsFooter a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
-.secondItemsFooter a:hover{
-  color: #F5D38E;
+.secondItemsFooter a:hover {
+  color: #f5d38e;
 }
 
 /* Estilos del modal cart */
-#btnCart{
+#btnCart {
   cursor: pointer;
 }
 
-.modalCart{
+.modalCart {
   display: flex;
   justify-content: flex-end;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -450,94 +447,144 @@ footer {
   background-color: #08080867;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.show{
+.show {
   display: flex;
   justify-content: flex-end;
 }
 
-.modalCart section{
+.modalCart section {
   width: 50%;
   height: 100%;
   background-color: white;
 }
 
-.cartHeader{
+.cartHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 5%;
 }
-.cartTitle{
-  color: #0D554A;
+.cartTitle {
+  color: #0d554a;
   font-family: Cormorant Garamond;
   font-size: 40px;
   font-weight: 600;
   line-height: 56px;
 }
 
-.btnExit{
+.btnExit {
   cursor: pointer;
   text-decoration: none;
   background-color: white;
   border: white;
-  
 }
 
-.btnExit i{
+.btnExit i {
   color: black;
 }
 
-.cartFooter{
+.cartFooter {
   display: flex;
   flex-direction: column;
   margin: 5%;
 }
 
-.sectionPrice{
+.sectionPrice {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.cartTotal{
-  color: #171A1F;
+.cartTotal {
+  color: #171a1f;
   font-family: Manrope;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.25rem;
 }
-.cartButton{
+.cartButton {
   margin: 5%;
   display: inline-flex;
   padding: 0.5625rem 4.75rem 0.5625rem 4.6875rem;
   justify-content: center;
   align-items: center;
   border-radius: 1.375rem;
-  background: #0D554A;
-  border:0;
+  background: #0d554a;
+  border: 0;
 }
 
-.cartButton a{
+.cartButton a {
   text-decoration: none;
   color: white;
 }
 
-.cartButton a:hover{
-  color:"white"
+.cartButton a:hover {
+  color: "white";
 }
 
-.cartDivisor{
-  border-bottom: 1px solid #F3F4F6;
+.cartDivisor {
+  border-bottom: 1px solid #f3f4f6;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
 @media screen and (max-width: 599px) {
+  .listNavbar {
+    padding: 9.5px 5.629999999999999px;
+  }
+  .headerNav {
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    margin-top: -21rem;
+  }
+  .containerBuys {
+    width: 22rem;
+  }
+  .dateContainer,
+  .JohnMiller,
+  .visa,
+  .numbers {
+    margin-left: -10rem;
+  }
+  .price {
+    margin-left: -11rem;
+  }
+  .priceOrder {
+    margin-left: 9rem;
+    margin-top: -2rem;
+  }
+  .imageGift {
+    height: 11rem;
+    width: 12rem;
+  }
+
+  .contenedor {
+    margin-left: -12.5rem;
+    margin-top: -11rem;
+  }
+  .date,
+  .customer,
+  .total {
+    font-size: 14px;
+    line-height: 5px;
+  }
+
+  .Payment,
+  .Order {
+    font-size: 12px;
+  }
+
+  .button {
+    margin: 0;
+  }
+
   footer {
     background: #093931;
     display: flex;
@@ -547,70 +594,67 @@ footer {
     padding-right: 1rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    }
-    
-    .darlingFooter {
+  }
+
+  .darlingFooter {
     width: 100%;
     display: flex;
     flex-direction: column;
-    }
-    
-    .darlingFooter h3{
+  }
+
+  .darlingFooter h3 {
     width: 100%;
-    }
-    
-    .darlingFooter p {
+  }
+
+  .darlingFooter p {
     margin-top: 3rem;
     margin-bottom: 1.56rem;
     width: 100%;
-    }
-    
-    .secondItemsFooter{
+  }
+
+  .secondItemsFooter {
     width: 100%;
-    }
-    
-    .itemsFooter p,
-    .itemsFooter2 p{
+  }
+
+  .itemsFooter p,
+  .itemsFooter2 p {
     width: 100%;
-    }
-    
-    .thirdItemsFooter{
+  }
+
+  .thirdItemsFooter {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 3rem;;
-    }
-    
-    .subscribe {
+    margin-top: 3rem;
+  }
+
+  .subscribe {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
-    }
-    
-    .subscribeContent {
+  }
+
+  .subscribeContent {
     width: 70%;
-    }
-    
-    .subscribeText {
+  }
+
+  .subscribeText {
     width: 100%;
-    }
-    
-    .buttonSubscribe {
+  }
+
+  .buttonSubscribe {
     width: 30%;
-    }
-    
-    .socialMedia {
+  }
+
+  .socialMedia {
     width: 100%;
-    }
-    
-     
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-
   footer {
     background: #093931;
     display: flex;
@@ -620,63 +664,62 @@ footer {
     padding-right: 1rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    }
-    
-    .darlingFooter {
+  }
+
+  .darlingFooter {
     width: 100%;
     display: flex;
     flex-direction: column;
-    }
-    
-    .darlingFooter h3{
+  }
+
+  .darlingFooter h3 {
     width: 100%;
-    }
-    
-    .darlingFooter p {
+  }
+
+  .darlingFooter p {
     margin-top: 3rem;
     margin-bottom: 1.56rem;
     width: 100%;
-    }
-    
-    .secondItemsFooter{
+  }
+
+  .secondItemsFooter {
     width: 100%;
-    }
-    
-    .itemsFooter p,
-    .itemsFooter2 p{
+  }
+
+  .itemsFooter p,
+  .itemsFooter2 p {
     width: 100%;
-    }
-    
-    .thirdItemsFooter{
+  }
+
+  .thirdItemsFooter {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 3rem;;
-    }
-    
-    .subscribe {
+    margin-top: 3rem;
+  }
+
+  .subscribe {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
     width: 100%;
-    }
-    
-    .subscribeContent {
+  }
+
+  .subscribeContent {
     width: 70%;
-    }
-    
-    .subscribeText {
+  }
+
+  .subscribeText {
     width: 100%;
-    }
-    
-    .buttonSubscribe {
+  }
+
+  .buttonSubscribe {
     width: 30%;
-    }
-    
-    .socialMedia {
+  }
+
+  .socialMedia {
     width: 100%;
-    }
-    
+  }
 }
