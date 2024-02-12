@@ -675,6 +675,9 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
+   body{
+    overflow-x: hidden
+  }
   li {
     padding: 9.5px 5.629999999999999px;
   }

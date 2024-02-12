@@ -259,13 +259,13 @@ color:#cc2c34;
  display: block;
   }
 
-.formulacionValidacionEstado{
-position: absolute;
-right: 20px;
-bottom: 30px;
-z-index: 100;
-font-size: 16px;
-}
+  .formulacionValidacionEstado {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    font-size: 16px;
+    z-index: 10;
+  }
 
 .formularioMensaje{
 line-height: 45px;
@@ -540,6 +540,7 @@ footer {
 }
 
 .modalCart{
+  z-index: 20;
   display: flex;
   justify-content: flex-end;
   position:fixed;

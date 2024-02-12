@@ -956,6 +956,7 @@ footer {
 @media screen and (max-width: 599px) {
   body {
     overflow-x: hidden;
+    
   }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
@@ -970,6 +971,7 @@ footer {
   /* section */
   .imageLuxurySection {
     display: flex;
+    margin-left: 6%;
   }
   .detailsImage {
     width: 4rem;
@@ -977,15 +979,15 @@ footer {
   }
 
   .detailsImg {
-    width: 16rem;
-    height: 21rem;
+    width: 90%;
+    height: 40%;
   }
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
   }
   .headerSectionDiv {
-    margin: 22rem 0 0 -23rem;
+    margin: 22rem 0 0 -24rem;
     display: block;
   }
   .buttonTrolley {
@@ -999,8 +1001,8 @@ footer {
   }
 
   .heart {
-    top: 11.5rem;
-    left: 25rem;
+    top: 17%;
+    left: 83%;
   }
 
   .button {
@@ -1221,39 +1223,64 @@ footer {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+    
+  }
+  .imageLuxurySection {
+    display: flex;
+    margin-left: 3rem;
+  }
+  .detailsImage {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .detailsImg {
+    width: 19rem;
+    height: 24rem;
+
+  }
   .luxurySection {
-    margin: 6rem 2rem;
+    margin:6rem 4rem;
     display: block;
+  }
+  .headerSectionDiv {
+    margin: 27rem 0 0 -27rem;
+    display: block;
+  }
+  .buttonTrolley {
+    width: 18rem;
+    height: 3rem;
   }
 
   .img {
-    width: 28rem;
-    height: 38rem;
+    width: 17rem;
+    height: 23.5rem;
   }
 
   .heart {
-    top: 11.5rem;
-    left: 37rem;
+    top: 14%;
+    left: 87%;
   }
 
+  .button {
+    display: grid;
+    margin-right: 9rem;
+  }
   .LuxuryDivList {
     margin: 2rem 0 -5rem 2rem;
   }
+  .dropdownContainer {
+    display: none;
+  }
 
+  .squareContainer {
+    width: 22rem;
+  }
   .ringSize {
-    margin: 0 2rem 0 0;
+    margin: 0 9rem 0 0;
   }
-
-  .articleLuxurydiv {
-    width: 34rem;
-    height: 38rem;
-    display: flex;
-    background: #fff;
-    box-shadow: 0px 3px 6px 0px rgba(18, 15, 40, 0.12);
-    flex-direction: column;
-    align-items: center;
-  }
-
   .descriptionArticle {
     margin-right: 23rem;
     font-size: 16px;

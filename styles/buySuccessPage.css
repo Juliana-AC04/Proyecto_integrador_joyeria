@@ -532,8 +532,26 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
 @media screen and (max-width: 599px) {
+  body {
+    overflow-x: hidden;
+    
+  }
+  .listNavbar {
+    padding: 9.5px 5.629999999999999px;
+  }
+  .headerNav {
+    flex-direction: column;
+  }
+
+  .navHeader {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 599px) {
+  body{
+    overflow-x: hidden
+  }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
   }
@@ -655,6 +673,9 @@ footer {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
+  body{
+    overflow-x: hidden
+  }
   footer {
     background: #093931;
     display: flex;
