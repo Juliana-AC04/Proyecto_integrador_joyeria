@@ -46,18 +46,16 @@ const printDetailsProduct = (producto) => {
 
   productDetail.innerHTML = `
     <div class="imageLuxurySection">
-    <div>
-        <figure class="luxuryImage">
+    <div class="luxuryImage">
             <img class="detailsImage" id="detailsImagen" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
-        </figure>
     </div>
-    <figure>
+    <div class="imagenPrincipal">
         <img class="detailsImg" src="${producto.imagenes}" alt="${producto.nombre}">
         <img src="../assets/productDetails/Heart.png" class="heart" alt="heart">
-    </figure>
+    </div>
     <div class="headerSectionDiv">
         <h3 class="headerSection">${producto.nombre}</h3>
         <p class="code">Code: ${producto.codigo}</p>
