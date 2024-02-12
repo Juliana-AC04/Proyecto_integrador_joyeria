@@ -13,30 +13,44 @@ const goToDetailsProduct = (cards) => {
 };
 
 
-const filtrarProductos = (categoria, rangoPrecio, nombreProducto, listaDeProductos) => {
+const filtrarPorCategoria = (categoria, listaDeProductos) => {
   const categoriaMinusculas = categoria.toLowerCase();
-
-  // Filtrar por categoría
-  let productosFiltrados = listaDeProductos.filter(producto =>
+  return listaDeProductos.filter(producto =>
     categoriaMinusculas === 'all' || producto.categoria.toLowerCase() === categoriaMinusculas
   );
+};
 
-  // Filtrar por rango de precios
-  if (rangoPrecio && rangoPrecio !== 'all') {
-    productosFiltrados = productosFiltrados.filter(producto =>
-      producto.precio >= rangoPrecio[0] && producto.precio <= rangoPrecio[1]
-    );
+const filtrarPorRangoPrecio = (rangoPrecio, listaDeProductos) => {
+  if (!rangoPrecio || rangoPrecio === 'all') {
+    return listaDeProductos;
   }
 
-  // Filtrar por nombre de producto
-  if (nombreProducto && nombreProducto.trim() !== '') {
-    productosFiltrados = productosFiltrados.filter(producto =>
-      producto.nombre.toLowerCase().includes(nombreProducto.toLowerCase())
-    );
+  return listaDeProductos.filter(producto =>
+    producto.precio >= rangoPrecio[0] && producto.precio <= rangoPrecio[1]
+  );
+};
+
+const filtrarPorNombreProducto = (nombreProducto, listaDeProductos) => {
+  if (!nombreProducto || nombreProducto.trim() === '') {
+    return listaDeProductos;
   }
 
+  const nombreProductoMinusculas = nombreProducto.toLowerCase();
+  return listaDeProductos.filter(producto =>
+    producto.nombre.toLowerCase().includes(nombreProductoMinusculas)
+  );
+};
+
+// Función principal
+const filtrarProductos = (categoria, rangoPrecio, nombreProducto, listaDeProductos) => {
+  let productosFiltrados = filtrarPorCategoria(categoria, listaDeProductos);
+  productosFiltrados = filtrarPorRangoPrecio(rangoPrecio, productosFiltrados);
+  productosFiltrados = filtrarPorNombreProducto(nombreProducto, productosFiltrados);
   return productosFiltrados;
 };
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // todos los elementos del menú de rango de precios
   const precioItems = document.querySelectorAll('.dropdownContent a');

@@ -38,7 +38,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="squareContainer">
             ${producto.stock
-              .map((item) => `<div class="square">${item.talla}</div>`)
+              .map((item) => `<button class="square">${item.talla}</button>`)
               .join("")}
         </div>
         `;
