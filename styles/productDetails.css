@@ -286,6 +286,11 @@
   cursor: pointer;
 }
 
+.selected{
+  background-color:#0d554a;
+  color: white;
+}
+
 .buttonTrolley {
   margin-top: 1.5rem;
   display: inline-flex;
@@ -296,6 +301,11 @@
   border-radius: 26px;
   border: 1px solid #0d554a;
   background: #fff;
+  margin-right: 10px;
+}
+
+.buttonTrolley:hover{
+  background-color: #76ec72;
 }
 #decrement,
 #increment {
@@ -329,6 +339,7 @@
   background: #fff;
   border-radius: 26px;
   background: #0d554a;
+  cursor: pointer;
 }
 
 .buyNow {
