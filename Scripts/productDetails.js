@@ -1,4 +1,5 @@
-import { listaDeProductos } from "../modules/products.js";
+
+document.addEventListener("DOMContentLoaded", function() {
 
 const idProduct = JSON.parse(localStorage.getItem("idProduct"));
 const selectedProduct = listaDeProductos.find(
@@ -117,3 +118,4 @@ const printDetailsProduct = (producto) => {
 };
 
 printDetailsProduct(selectedProduct);
+});
