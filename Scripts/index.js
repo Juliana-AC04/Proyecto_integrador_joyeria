@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       figureElement.setAttribute("name", producto.id)
       figureElement.classList.add("card")
       figureElement.innerHTML = `
-        <img  src="${producto.imagenes && producto.imagenes.length > 0 ? producto.imagenes[0] : ''}" alt="Product Image">
+        <img src="${producto.imagenes && producto.imagenes.length > 0 ? producto.imagenes[0] : ''}" alt="Product Image">
         <div class="infoProduct">
         <figcaption>${producto.nombre}</figcaption>
         <p class="productPrice">$${producto.precio}</p>
