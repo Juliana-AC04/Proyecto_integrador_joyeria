@@ -265,6 +265,7 @@
   border: 1px solid #565e6c;
   border-radius: 4px;
   background: #fff;
+  cursor: pointer;
 }
 
 
@@ -282,6 +283,7 @@
   height: 40px;
   margin: 2px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .buttonTrolley {

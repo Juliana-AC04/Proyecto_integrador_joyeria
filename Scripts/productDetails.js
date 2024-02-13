@@ -1,10 +1,50 @@
-import { listaDeProductos } from "../modules/products.js";
-
 const idProduct = JSON.parse(localStorage.getItem("idProduct"));
-const selectedProduct = listaDeProductos.find(
-  (product) => product.id == idProduct
-);
+const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
 
+
+// Función asincrónica para obtener los detalles del producto
+const fetchProductDetails = async () => {
+  try {
+    // Petición GET
+    const response = await fetch(`${URL_BASE}listadeproductos`);
+    if (!response.ok) {
+      console.error("Error al obtener los detalles del producto:", response.statusText);
+      return null;
+    }
+
+    const productList = await response.json();
+
+    const selectedProduct = productList.find(producto => producto.id == idProduct);
+
+    if (!selectedProduct) {
+      console.error("Producto seleccionado no encontrado");
+      return null;
+    }
+
+    return selectedProduct;
+  } catch (error) {
+    console.error("Error al obtener los detalles del producto:", error);
+    return null;
+  }
+};
+
+// Función para inicializar 
+const initializeProductDetails = async () => {
+  try {
+    const selectedProduct = await fetchProductDetails();
+
+    if (!selectedProduct) {
+      console.error("No hay producto disponible");
+      return;
+    }
+    printDetailsProduct(selectedProduct);
+  } catch (error) {
+    console.error("Error al inicializar los detalles del producto:", error);
+  }
+};
+
+
+//Esto pinta la informarción de nuestro producto seleccionado
 const printDetailsProduct = (producto) => {
   const nombreProducto = document.getElementById("nombreProducto");
 
@@ -38,7 +78,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="squareContainer">
             ${producto.stock
-              .map((item) => `<button class="square">${item.talla}</button>`)
+              .map((item) => `<button class="square" >${item.talla}</button>`)
               .join("")}
         </div>
         `;
@@ -114,4 +154,4 @@ const printDetailsProduct = (producto) => {
   });
 };
 
-printDetailsProduct(selectedProduct);
+initializeProductDetails();
