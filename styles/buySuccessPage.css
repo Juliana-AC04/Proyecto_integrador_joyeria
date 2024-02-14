@@ -539,6 +539,214 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+/* Estilos del modal cart */
+#btnCart {
+  cursor: pointer;
+}
+
+.modalCart {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #08080867;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalCart section {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto
+}
+.cartHeader {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1% 5% 1% 5%;
+  position: sticky;
+  top: 0; 
+  z-index: 1; 
+}
+
+
+.cartTitle {
+  color: #0d554a;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.btnExit {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  border: white;
+}
+
+.cartFooter {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 5% 1% 5%;
+  position: sticky;
+  bottom: 0; 
+  z-index: 1;  
+  background-color: white
+}
+
+
+.sectionPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cartTotal {
+  color: #171a1f;
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.cartButton {
+  margin: 5%;
+  display: inline-flex;
+  padding: 0.5625rem 4.75rem 0.5625rem 4.6875rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.375rem;
+  background: #0d554a;
+  border: 0;
+}
+
+.cartButton a {
+  text-decoration: none;
+  color: white;
+}
+
+.cartButton a:hover {
+  color: "white";
+}
+
+.cartDivisor {
+  border-bottom: 1px solid #f3f4f6;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*estilos del body donde se pintan los productos del carrito  */
+.cartBody {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 5% 1% 5%;
+  justify-content: space-between;
+}
+
+.cartBody .productos:last-child .cartDivisor {
+  display: none;
+}
+
+.productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cartProductImg {
+  width: 30%;
+}
+
+.cartProductImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.infoProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itemNombre {
+  color: black;
+  font-family: Cormorant Garamond;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.itemCodigo{
+  color: #323842;
+  font-family: Manrope;
+  font-size: 100%;
+  font-style: normal;
+  line-height: 26px;
+}
+
+.itemPrecio{
+  color: #b37d10;
+    font-family: Manrope;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+.itemTalla{
+  color: #323842;
+  font-family: Manrope;
+  font-size: 100%;
+  font-style: normal;
+  line-height: 26px;
+}
+
+.editProducto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.cantidadCartBtn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid #b37d10;
+  background-color: #ffffff;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.cantidadCart {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #424955;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+/* vista movil */
 @media screen and (max-width: 599px) {
   body {
     overflow-x: hidden;

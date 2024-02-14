@@ -6,7 +6,7 @@ const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
 const fetchProductDetails = async () => {
   try {
     // Petición GET
-    const response = await fetch(`${URL_BASE}listadeproductos`);
+    const response = await fetch("${URL_BASE}", listadeproductos);
     if (!response.ok) {
       console.error("Error al obtener los detalles del producto:", response.statusText);
       return null;
@@ -58,10 +58,10 @@ const printDetailsProduct = (producto) => {
       let colorClass = "";
       if (item.color === "dorado") {
         colorClass = "gold";
-        return `<div class="${colorClass}"></div>`;
+        return <div class="${colorClass}"></div>;
       } else if (item.color === "plateado") {
         colorClass = "silver";
-        return `<div class="${colorClass}"></div>`;
+        return <div class="${colorClass}"></div>;
       }
     })
     .find((element) => element !== undefined); // Encuentra el primer elemento no indefinido (el primer div creado)
@@ -78,7 +78,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="squareContainer">
             ${producto.stock
-        .map((item) => `<button class="square talla" >${item.talla}</button>`)
+        .map((item) => <button class="square talla" >${item.talla}</button>)
         .join("")}
         </div>
         `;
@@ -252,7 +252,8 @@ function addToCart() {
       talla: selectedSize ? selectedSize.textContent : null,
       cantidad: quantity,
       precioUnitario: producto.precio,
-      precioTotal: producto.precio * quantity
+      precioTotal: producto.precio * quantity,
+      imagenes: producto.imagenes
     });
   }
 

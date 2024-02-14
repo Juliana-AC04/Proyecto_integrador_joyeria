@@ -133,33 +133,26 @@
       </div>
     </div>
   </footer>
-  <!-- Carrito de compras -->
-  <div class="modalCart hidden">
-    <section>
-      <div class="cartHeader">
-        <h2 class="cartTitle">You cart</h2>
-        <button id="closeModal" class="btnExit">
-          <i class="fa-solid fa-xmark fa-2xl"></i>
-        </button>
-      </div>
-      <div class="cartBody">
-        <div class="">
-
-        </div>
-      </div>
-      <div class="cartFooter">
-        <div class="cartDivisor"></div>
-        <div class="sectionPrice">
-          <p class="cartTotal">Total</p>
-          <p class="cartPrice">$0</p>
-        </div>
-        <button class="cartButton"><a href="#">Continue to checkout</a></button>
-      </div>
-    </section>
-
-  </div>
+ <!-- Carrito de compras -->
+ <div class="modalCart hidden">
+  <section>
+    <div class="cartHeader">
+      <h2 class="cartTitle">Your cart</h2>
+      <button id="closeModal" class="btnExit">
+        <i class="fa-solid fa-xmark fa-2xl"></i>
+      </button>
+    </div>
+    <div id="cartBody" class="cartBody">
+      <!-- Aquí se agregarán los productos del carrito -->
+    </div>
+    <div id="cartFooter" class="cartFooter">
+      <!-- Aquí se agregará el footer del carrito y el mensaje de carrito vacío -->
+    </div>
+  </section>
+</div>
+<script src="../Scripts/modalCart.js"></script>
   <script src="../Scripts/buySuccesPage.js"></script>
-  <script src="../Scripts/modalCart.js"></script>
+
 </body>
 
 </html>
