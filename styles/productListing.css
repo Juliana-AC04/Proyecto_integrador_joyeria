@@ -36,12 +36,12 @@
 }
 
 h3 {
-  z-index: 2;
   color: #f5d38e;
   font-family: Cormorant Garamond;
   font-size: 30px;
   font-weight: 400;
   line-height: 46px;
+  z-index: 2;
 }
 
 h3 a {
@@ -58,28 +58,28 @@ ul {
   line-height: 22px;
 }
 
-li {
+.headerList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.listNavbar {
+  color: white;
   display: flex;
   height: 43px;
   padding: 10.5px 18.63px;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #093931;
 }
 
-li .navbarMenu:hover {
+.listNavbar:hover {
   color: #f2c66d;
   border-bottom: 3px solid #f2c66d;
 }
-
-ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.headerList .active a {
-  color: #f5d38e;
-}
-
 .headerList .active {
   border-bottom: 4px solid #f5d38e;
   border-radius: 0.1rem;
@@ -119,7 +119,7 @@ h1 {
 .backgroundMain img {
   width: 100%;
   display: block;
-  z-index: -1;
+  z-index: -10;
 }
 
 .searchBar {
@@ -157,6 +157,13 @@ input {
 .headerMenu.active .separator {
   display: none;
   /* Oculta los separadores en pantallas pequeñas cuando el menú está activo */
+}
+li {
+  display: flex;
+  height: 43px;
+  padding: 10.5px 18.63px;
+  justify-content: center;
+  align-items: center;
 }
 
 .SectionMenu {
@@ -675,8 +682,8 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
-   body{
-    overflow-x: hidden
+  body {
+    overflow-x: hidden;
   }
   li {
     padding: 9.5px 5.629999999999999px;
@@ -901,8 +908,8 @@ footer {
 
 /*Vista tablet */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  body{
-    overflow-x: hidden
+  body {
+    overflow-x: hidden;
   }
   .navHeader {
     flex-direction: column;
