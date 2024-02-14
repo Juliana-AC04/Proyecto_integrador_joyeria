@@ -137,7 +137,13 @@
   margin-top: 1rem;
 }
 
-.luxuryImage img {
+.imagenPrincipal {
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+  height: 35rem;
+  margin-right: 3rem;
+  border-radius: 0.5rem;
   margin-top: 1rem;
 
 }
@@ -970,7 +976,6 @@ footer {
 @media screen and (max-width: 599px) {
   body {
     overflow-x: hidden;
-    
   }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
@@ -988,21 +993,24 @@ footer {
     margin-left: 6%;
   }
   .detailsImage {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .detailsImg {
-    width: 90%;
-    height: 40%;
+    width: 13rem;
+    height: 35%;
+    margin-top: 0;
   }
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
   }
   .headerSectionDiv {
-    margin: 22rem 0 0 -24rem;
-    display: block;
+    /* margin: 22rem 0 0 -24rem; */
+    /* display: block; */
+    margin-left: -21rem;
+    margin-top: 16rem;
   }
   .buttonTrolley {
     width: 18rem;
@@ -1015,8 +1023,8 @@ footer {
   }
 
   .heart {
-    top: 17%;
-    left: 83%;
+    position: absolute;
+    margin: 1rem -5rem;
   }
 
   .button {
@@ -1239,7 +1247,6 @@ footer {
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   body {
     overflow-x: hidden;
-    
   }
   .imageLuxurySection {
     display: flex;
@@ -1253,10 +1260,10 @@ footer {
   .detailsImg {
     width: 19rem;
     height: 24rem;
-
+    margin-top: 0;
   }
   .luxurySection {
-    margin:6rem 4rem;
+    margin: 6rem 4rem;
     display: block;
   }
   .headerSectionDiv {
@@ -1274,10 +1281,14 @@ footer {
   }
 
   .heart {
-    top: 14%;
-    left: 87%;
+    top: 18%;
+    left: 91%;
   }
-
+  .articleLuxurydiv {
+    width: 87%;
+    height: 20%;
+    margin-right: 2rem;
+  }
   .button {
     display: grid;
     margin-right: 9rem;

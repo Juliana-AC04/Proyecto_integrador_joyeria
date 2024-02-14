@@ -39,28 +39,35 @@
   text-decoration: none;
   color: #f5d38e;
 }
-.navbarList {
-  z-index: 2;
+ul {
   display: flex;
   font-family: Manrope;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
 }
+.headerList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
 .listNavbar {
+  color: white;
   display: flex;
   height: 43px;
   padding: 10.5px 18.63px;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #093931;
+  transition: background-color 0.3s ease; /* Agregado para la transición del color de fondo */
 }
-.listNavbar .navbarMenu:hover {
+
+.listNavbar:hover {
   color: #f2c66d;
   border-bottom: 3px solid #f2c66d;
-}
-.navbarList .listNavbar .navbarMenu {
-  text-decoration: none;
-  color: white;
 }
 
 .buys {
@@ -535,7 +542,6 @@ footer {
 @media screen and (max-width: 599px) {
   body {
     overflow-x: hidden;
-    
   }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
@@ -549,8 +555,8 @@ footer {
   }
 }
 @media screen and (max-width: 599px) {
-  body{
-    overflow-x: hidden
+  body {
+    overflow-x: hidden;
   }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
@@ -673,8 +679,8 @@ footer {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  body{
-    overflow-x: hidden
+  body {
+    overflow-x: hidden;
   }
   footer {
     background: #093931;

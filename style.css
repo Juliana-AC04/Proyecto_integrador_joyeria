@@ -5,7 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 .headerNav {
@@ -53,23 +52,28 @@ ul {
   font-weight: 700;
   line-height: 22px;
 }
+.headerList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
 
 .listNavbar {
+  color: white;
   display: flex;
   height: 43px;
   padding: 10.5px 18.63px;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #093931;
+  transition: background-color 0.3s ease; /* Agregado para la transición del color de fondo */
 }
 
-.listNavbar a:hover {
+.listNavbar:hover {
   color: #f2c66d;
   border-bottom: 3px solid #f2c66d;
-}
-
-ul .listNavbar a {
-  text-decoration: none;
-  color: white;
 }
 
 /* Section section */
@@ -942,6 +946,9 @@ footer {
 
 /*Vista móvil */
 @media screen and (max-width: 599px) {
+  body {
+    overflow-x: hidden;
+  }
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
   }

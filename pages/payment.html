@@ -15,12 +15,13 @@
     <nav class="navHeader">
       <h3 class="darling"><a class="darlingLink" href="../index.html">Darling.</a></h3>
       <div class="navbar">
-        <ul class="navbarList">
-          <li class="listNavbar"><a class="navbarMenu" href="../index.html">Home</a></li>
-          <li class="listNavbar"><a class="navbarMenu" href="../pages/productListing.html">Shop</a></li>
-          <li class="listNavbar"><a class="navbarMenu" href="#">Collections</a></li>
-          <li class="listNavbar"><a class="navbarMenu" href="#">About</a></li>
-          <li class="listNavbar"><a class="navbarMenu" href="#">Contact</a></li>
+        <ul class="headerList">
+          <li class="li"><button class="listNavbar active" type="button" onclick="location.href='../index.html'">Home</button></li>
+          <li class="li"><button class="listNavbar" type="button" onclick="location.href='./pages/productListing.html'">Shop</button></li>
+          <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Collections</button></li>
+          <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">About</button></li>
+          <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Contact</button></li>
+        </ul>
         </ul>
         <figure class="iconHeader">
           <a href="#"
@@ -104,11 +105,11 @@
 
         <div class="formularioGrupo" id="grupo_telefono">
           <label class="telefono" for="telefono">Teléfono:</label>
-        <div class="formularioGrupoInput">
-          <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="number" required>
-          <i class="formulacionValidacionEstado fa-solid fa-circle-xmark"></i>
-        </div>
-          <p class="formularioInputError">Error el telefono debe contener hasta 10 numeros</p>
+          <div class="formularioGrupoInput">
+            <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
+            <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+          </div>
+          <p class="formularioInputError">Error, el teléfono debe contener hasta 10 números</p>
         </div>
 
         <div class="formularioGrupo" id="grupo_direccion">
@@ -140,7 +141,7 @@
           <p class="formularioInputError">Este campo solo admite hasta 16 digitos.</p>
         </div>
 
-        <div class="formularioGrupo" id="grupoTipoTarjeta">
+        <div class="formularioGrupo" id="grupo_fechaCaducidad">
           <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
         <div class="formularioGrupoInput">    
           <input class="formularioInput" type="month" id="fechaCaducidad" name="fechaCaducidad" required>
