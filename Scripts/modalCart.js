@@ -7,12 +7,20 @@ const toggleModal = (button, modal) => {
     button.addEventListener("click", () =>{
         modal.classList.toggle("hidden");
         modal.classList.toggle("show");
+       console.log("click", button)
     })
+    
 }
 
 toggleModal(cartButton, modal)
 toggleModal(closeButton, modal)
 
+modal.addEventListener("click", (e) => {
+    if (e.target.classList.contains('close')) {
+        modal.classList.toggle("hidden");
+        modal.classList.toggle("show");
+    }
+})
 
 //Pintar los productos
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -23,7 +31,11 @@ carrito.innerHTML = '';
 
 // Verificar si el carrito está vacío
 if (cartItems.length === 0) {
-    carrito.innerHTML = '<p>El carrito está vacío.</p>';
+    carrito.innerHTML = `<p class="carritoVacio">El carrito actualmente está vacío.</p>
+    <button class="cartButton"><a href="../pages/productListing.html">start your purchase</a></button>
+    `
+
+    ;
     // Filtrar los elementos con cantidad mayor a 0
     cartItems = cartItems.filter(item => item.cantidad > 0);
 } else {

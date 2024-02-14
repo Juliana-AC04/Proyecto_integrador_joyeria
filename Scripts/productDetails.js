@@ -195,6 +195,7 @@ addToBagButton.addEventListener("click", () => {
 // Agregar un controlador de eventos al botón de cerrar modal
 closeButton.addEventListener("click", () => {
   modal.classList.add("hidden");
+  console.log("click", closeButton );
 });
 
 });

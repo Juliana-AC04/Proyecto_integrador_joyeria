@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  z-index: 2; /* Ajusta según sea necesario, mayor que el modal */
 }
 
 .navbar {
@@ -48,14 +49,14 @@
 }
 
 .navbarList {
-  z-index: 2;
   display: flex;
   font-family: Manrope;
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
+  position: relative;
+  z-index: 2;
 }
-
 .listNavbar {
   display: flex;
   height: 43px;
@@ -123,16 +124,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.imagenPrincipal {
-  display: flex;
-  flex-direction: row;
-  width: 25rem;
-  height: 35rem;
-  margin-right: 3rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
 }
 
 .imagenPrincipal {
@@ -885,6 +876,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #08080867;
+  z-index: 10000;
 }
 
 .hidden {
@@ -894,7 +886,9 @@ footer {
 .show {
   display: flex;
   justify-content: flex-end;
+  /* z-index: 10; */
 }
+
 
 .modalCart section {
   width: 50%;
@@ -910,9 +904,8 @@ footer {
   padding: 1% 5% 1% 5%;
   position: sticky;
   top: 0; 
-  z-index: 1; 
-}
 
+}
 
 .cartTitle {
   color: #0d554a;
@@ -925,8 +918,8 @@ footer {
 .btnExit {
   cursor: pointer;
   text-decoration: none;
-  background-color: white;
-  border: white;
+  background-color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255);
 }
 
 .cartFooter {
@@ -986,7 +979,12 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1% 5% 1% 5%;
-  justify-content: space-between;
+  align-items: center;
+}
+.carritoVacio{
+  font-size: 2rem;
+  color: #0d554a;
+
 }
 
 .cartBody .productos:last-child .cartDivisor {

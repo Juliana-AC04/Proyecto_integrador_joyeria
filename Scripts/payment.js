@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const itemsContainer = document.querySelector('.orderSummary .items');
+  const itemsContainer = document.querySelector(".orderSummary .items");
   const formulario = document.getElementById("procesarPago");
   const inputs = document.querySelectorAll("#procesarPago input");
   const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-
   const expresiones = {
-    nombreCompleto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    nombreCompleto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
     telefono: /^\d{7,10}$/,
     direccion: /^[A-Za-z0-9\s,#.'-]+$/,
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     numeroTarjeta: /^\d{14,16}$/,
-    fechaCaducidad: /^(20\d{2})-(0[1-9]|1[0-2])$/, // Formato YYYY-MM para fecha de caducidad
+    fechaCaducidad: /^(20\d{2})-(0[1-9]|1[0-2])$/, 
     cvv: /^\d{3}$/,
   };
 
@@ -108,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       grupoCampo.classList.remove("formularioGrupoIncorrecto");
       grupoCampo.classList.add("formularioGrupoCorrecto");
       iconoEstadoCampo.classList.add("fa-check-circle");
-      iconoEstadoCampo.classList.remove("fa-times-circle");
+      iconoEstadoCampo.classList.remove("fa-times-circle ");
       mensajeError.classList.remove("formularioInputError-activo");
       campos[campo] = true;
     }
@@ -121,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       grupoCampo.classList.remove("formularioGrupoCorrecto");
       iconoEstadoCampo.classList.add("fa-times-circle");
       iconoEstadoCampo.classList.remove("fa-check-circle");
+      iconoEstadoCampo.style.color = "red";
       mensajeError.classList.add("formularioInputError-activo");
       campos[campo] = false;
 
@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
-    // Ocultar mensaje de error si está visible
     ocultarMensajeError();
 
     // Obtener los valores de los campos del formulario
@@ -189,43 +188,65 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Supongamos que tienes un array llamado cartItems con la información del carrito
 
- // Función para obtener la información del carrito desde localStorage
- const obtenerInformacionDelCarrito = () => {
-  return JSON.parse(localStorage.getItem("cartItems")) || [];
-};
+  // Función para obtener la información del carrito desde localStorage
+  const obtenerInformacionDelCarrito = () => {
+    return JSON.parse(localStorage.getItem("cartItems")) || [];
+  };
+ // Función para eliminar un elemento del carrito por su índice
+ function removeItemFromCart(index) {
+  // Elimina el elemento del carrito usando el índice
+  cartItems.splice(index, 1);
+  console.log("Antes de eliminar:", cartItems);
+  console.log("Después de hacer clic en eliminar:", cartItems);
 
+alert("El accesorio se ha eliminado correctamente!")
+  // Actualiza el localStorage con el carrito modificado
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Evento click en el contenedor de items para delegar la acción al botón delete
+itemsContainer.addEventListener("click", (event) => {
+  if (event.target && event.target.id === "delete") {
+    const itemIndex = event.target.closest(".item").dataset.index;
+    removeItemFromCart(itemIndex);
+    mostrarElementosDelCarrito(); 
+  }
+
+});
+// Función para mostrar los elementos del carrito en el contenedor
 const mostrarElementosDelCarrito = () => {
-  itemsContainer.innerHTML = '';
+  itemsContainer.innerHTML = "";
 
-  
-  // Recorrer los elementos del carrito y crear dinámicamente el HTML para cada artículo
-  cartItems.forEach(item => {
-    const newItem = document.createElement('div');
-    newItem.classList.add('item');
+  cartItems.forEach((item, index) => {
+      const newItem = document.createElement("div");
+      newItem.classList.add("item");
+      newItem.dataset.index = index;
 
     newItem.innerHTML = `
-      <img class="imgPayment" src="${item.imagenes}" alt="${item.nombre}">
-      <div class="itemInfo">
-        <h5>${item.nombre}</h5>
-        <p>Code: ${item.codigo}</p>
-        <p>Price: $${item.precioUnitario.toFixed(2)}</p>
-        <p>Color: ${item.color}</p>
-        <p>Talla: ${item.talla || 'N/A'}</p>
-        <p>Quantity: ${item.cantidad}</p>
-      </div>
-      <div class="itemPrice">
-        <p>Total: $${item.precioTotal.toFixed(2)}
-        <button id="delete"><i class="delete  fa-regular fa-trash-can"></i></button>
-        </p>
-        
-      </div>
-    `;
-    // Agregar el nuevo elemento al contenedor
-    itemsContainer.appendChild(newItem);
+    <img class="imgPayment" src="${item.imagenes}" alt="${item.nombre}">
+    <div class="itemInfo">
+      <h5>${item.nombre}</h5>
+      <p>Code: ${item.codigo}</p>
+    </div>
+    <div class="itemPrice">
+      <p class="price"> $${item.precioTotal.toFixed(2)} </p>
+    </div>
+    <div class="btnDelete">
+            <button id="delete"><i class="delete fa-regular fa-trash-can"></i></button>
+        </div>
+  `;
+  itemsContainer.appendChild(newItem);
+
+  // Añadir evento click al botón de eliminación
+  const deleteButton = newItem.querySelector("#delete");
+  deleteButton.addEventListener("click", () => {
+      removeItemFromCart(index);
+      mostrarElementosDelCarrito();
   });
+});
+
 };
-  mostrarElementosDelCarrito();
+mostrarElementosDelCarrito();
 
 })

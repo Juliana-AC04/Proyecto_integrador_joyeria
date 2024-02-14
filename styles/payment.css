@@ -153,6 +153,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  margin-right: 3rem;
 }
 
 .itemPrice p {
@@ -171,16 +172,17 @@ ul {
   padding: 0; 
   cursor: pointer; 
   font-size: 24px;
-  margin-left:0.5rem;
+  
 
 }
 
-
-.deleteIcon {
+.btnDelete{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .imgPayment{
   width: 30%;
   height: 30%;
@@ -270,6 +272,7 @@ select {
   display: block;
 }
 
+
 .formulacionValidacionEstado {
   position: absolute;
   right: 20px;
@@ -313,8 +316,14 @@ select {
   text-decoration: none;
 }
 
+
 .formularioBtn:hover {
   background-color: #45a049;
+}
+
+.formularioGrupoCorrecto .formularioValidacionEstado {
+	color: #1ed12d;
+	opacity: 1;
 }
 
 .formularioGrupoIncorrecto .formularioLabel {
@@ -549,6 +558,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #08080867;
+  z-index: 10000;
 }
 
 .hidden {
@@ -558,7 +568,9 @@ footer {
 .show {
   display: flex;
   justify-content: flex-end;
+  /* z-index: 10; */
 }
+
 
 .modalCart section {
   width: 50%;
@@ -573,8 +585,8 @@ footer {
   justify-content: space-between;
   padding: 1% 5% 1% 5%;
   position: sticky;
-  top: 4rem; 
-  z-index: 1; 
+  top: 0; 
+  /* z-index: 1;  */
 }
 
 
@@ -650,8 +662,14 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 1% 5% 1% 5%;
-  justify-content: space-between;
+  align-items: center;
 }
+.carritoVacio{
+  font-size: 2rem;
+  color: #0d554a;
+
+}
+
 
 .cartBody .productos:last-child .cartDivisor {
   display: none;
@@ -777,24 +795,7 @@ footer {
     margin-bottom: 10%;
   }
 
-  .items {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .itemInfo {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
+ 
 
   /* Payment method */
   .paymentMethod {
@@ -804,7 +805,15 @@ footer {
     padding: 1rem;
     margin-bottom: 10%;
   }
-
+  .btnDelete {
+    position: relative;
+  }
+.item{
+  width: 17rem;
+}
+.itemInfo{
+  margin-left: 1rem;
+}
   .summary {
     margin-bottom: 1rem;
   }
@@ -911,7 +920,9 @@ footer {
     padding: 1rem;
     margin-bottom: 10%;
   }
-
+  .btnDelete {
+    position: relative;
+}
   .summary {
     margin-bottom: 1rem;
   }
