@@ -252,7 +252,8 @@ function addToCart() {
       talla: selectedSize ? selectedSize.textContent : null,
       cantidad: quantity,
       precioUnitario: producto.precio,
-      precioTotal: producto.precio * quantity
+      precioTotal: producto.precio * quantity,
+      imagenes: producto.imagenes
     });
   }
 

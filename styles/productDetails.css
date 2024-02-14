@@ -287,8 +287,8 @@
 }
 
 .selected{
-  background-color:#0d554a;
-  color: white;
+  border:1px solid #b37d10;;
+  color: #b37d10;
 }
 
 .buttonTrolley {

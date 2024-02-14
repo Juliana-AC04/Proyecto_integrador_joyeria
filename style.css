@@ -16,13 +16,16 @@
   max-width: 100%;
   overflow: hidden;
 }
+
 .headerList .active a {
   color: #f5d38e;
 }
+
 .headerList .active {
   border-bottom: 4px solid #f5d38e;
   border-radius: 0.1rem;
 }
+
 .navbar {
   display: flex;
   align-items: center;
@@ -77,6 +80,7 @@ ul .listNavbar a {
   z-index: 0;
   height: 50rem;
 }
+
 .backgroundSection {
   position: absolute;
   width: 100%;
@@ -85,6 +89,7 @@ ul .listNavbar a {
   left: 0;
   z-index: -2;
 }
+
 .buttonSection .sectionButton {
   text-decoration: none;
   color: #fff;
@@ -93,17 +98,20 @@ ul .listNavbar a {
   font-weight: 400;
   line-height: 28px;
 }
+
 .backgroundSection img {
   width: 100%;
   display: block;
   z-index: -1;
 }
+
 .headerSection {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding-top: 4.81rem;
 }
+
 .headerSection .section {
   width: 50%;
   display: flex;
@@ -121,6 +129,7 @@ ul .listNavbar a {
   font-weight: 400;
   line-height: 94px;
 }
+
 .headerSection .section .buttonSection {
   height: 3rem;
   width: 12rem;
@@ -130,6 +139,7 @@ ul .listNavbar a {
   z-index: 2;
   margin-right: 21rem;
 }
+
 .sectionItem {
   position: relative;
   width: 15.1rem;
@@ -145,11 +155,13 @@ ul .listNavbar a {
   margin-top: -26rem;
   margin-bottom: 57%;
 }
+
 .iconButtonImage {
   position: absolute;
   top: -18rem;
   left: 20rem;
 }
+
 .headerImage {
   position: relative;
 }
@@ -747,14 +759,20 @@ footer {
   width: 50%;
   height: 100%;
   background-color: white;
+  overflow-y: auto
 }
-
 .cartHeader {
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5%;
+  padding: 1% 5% 1% 5%;
+  position: sticky;
+  top: 0; 
+  z-index: 1; 
 }
+
+
 .cartTitle {
   color: #0d554a;
   font-family: Cormorant Garamond;
@@ -770,15 +788,16 @@ footer {
   border: white;
 }
 
-.btnExit i {
-  color: black;
-}
-
 .cartFooter {
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  margin: 1% 5% 1% 5%;
+  position: sticky;
+  bottom: 0; 
+  z-index: 1;  
+  background-color: white
 }
+
 
 .sectionPrice {
   display: flex;
@@ -794,6 +813,7 @@ footer {
   font-weight: 400;
   line-height: 1.25rem;
 }
+
 .cartButton {
   margin: 5%;
   display: inline-flex;
@@ -820,6 +840,104 @@ footer {
   margin-bottom: 5%;
 }
 
+/*estilos del body donde se pintan los productos del carrito  */
+.cartBody {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 5% 1% 5%;
+  justify-content: space-between;
+}
+
+.cartBody .productos:last-child .cartDivisor {
+  display: none;
+}
+
+.productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cartProductImg {
+  width: 30%;
+}
+
+.cartProductImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.infoProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itemNombre {
+  color: black;
+  font-family: Cormorant Garamond;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.itemCodigo{
+  color: #323842;
+  font-family: Manrope;
+  font-size: 100%;
+  font-style: normal;
+  line-height: 26px;
+}
+
+.itemPrecio{
+  color: #b37d10;
+    font-family: Manrope;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+.itemTalla{
+  color: #323842;
+  font-family: Manrope;
+  font-size: 100%;
+  font-style: normal;
+  line-height: 26px;
+}
+
+.editProducto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.cantidadCartBtn {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid #b37d10;
+  background-color: #ffffff;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.cantidadCart {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #424955;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
 /* Media queries */
 
 /*Vista móvil */
@@ -827,18 +945,22 @@ footer {
   .listNavbar {
     padding: 9.5px 5.629999999999999px;
   }
+
   .headerNav {
     flex-direction: column;
   }
+
   .header {
     display: flex;
     margin-top: -21rem;
   }
+
   .headerSection .section .textSection {
     font-size: 3rem;
     margin-top: -3rem;
     width: 23rem;
   }
+
   .headerSection {
     flex-direction: column;
     align-items: center;
@@ -855,6 +977,7 @@ footer {
     height: 351px;
     margin: 5rem -35rem 0 -12rem;
   }
+
   .ringsImage {
     width: 194px;
     height: 243px;
@@ -1141,24 +1264,28 @@ footer {
 
 /*vista tabletas */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  body{
+  body {
     overflow-x: hidden;
   }
+
   .headerNav {
     flex-direction: column;
   }
+
   .container {
     overflow: hidden;
   }
-  
+
   .header {
     display: flex;
     margin-top: -20rem;
   }
+
   .headerSection .section .textSection {
     font-size: 4rem;
     margin-top: 1rem;
   }
+
   .headerSection {
     flex-direction: column;
     align-items: center;
@@ -1174,11 +1301,13 @@ footer {
     margin: 51rem;
     position: absolute;
   }
+
   .necklaceWomanImage {
     width: 316px;
     height: 351px;
     margin: 5rem -35rem 0 -12rem;
   }
+
   .ringsImage {
     width: 194px;
     height: 243px;
@@ -1190,6 +1319,7 @@ footer {
     z-index: 2;
     margin: 27rem 15rem;
   }
+
   /* article */
   article {
     display: flex;
@@ -1295,10 +1425,12 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
   .peopleTitle {
     max-width: 70%;
     margin-right: 0;
   }
+
   .peopleInfo {
     width: 100%;
     margin-left: 15%;
