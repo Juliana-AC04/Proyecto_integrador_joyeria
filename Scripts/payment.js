@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const itemsContainer = document.querySelector('.orderSummary .items');
   const formulario = document.getElementById("procesarPago");
   const inputs = document.querySelectorAll("#procesarPago input");
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
 
   const expresiones = {
     nombreCompleto: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -144,8 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   formulario.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evitar que el formulario se envíe
-
+    event.preventDefault();
     // Ocultar mensaje de error si está visible
     ocultarMensajeError();
 
@@ -186,4 +188,44 @@ document.addEventListener("DOMContentLoaded", function () {
       location.href = "./buySuccessPage.html";
     }
   });
-});
+
+  // Supongamos que tienes un array llamado cartItems con la información del carrito
+
+ // Función para obtener la información del carrito desde localStorage
+ const obtenerInformacionDelCarrito = () => {
+  return JSON.parse(localStorage.getItem("cartItems")) || [];
+};
+
+const mostrarElementosDelCarrito = () => {
+  itemsContainer.innerHTML = '';
+
+  
+  // Recorrer los elementos del carrito y crear dinámicamente el HTML para cada artículo
+  cartItems.forEach(item => {
+    const newItem = document.createElement('div');
+    newItem.classList.add('item');
+
+    newItem.innerHTML = `
+      <img class="imgPayment" src="${item.imagenes}" alt="${item.nombre}">
+      <div class="itemInfo">
+        <h5>${item.nombre}</h5>
+        <p>Code: ${item.codigo}</p>
+        <p>Price: $${item.precioUnitario.toFixed(2)}</p>
+        <p>Color: ${item.color}</p>
+        <p>Talla: ${item.talla || 'N/A'}</p>
+        <p>Quantity: ${item.cantidad}</p>
+      </div>
+      <div class="itemPrice">
+        <p>Total: $${item.precioTotal.toFixed(2)}
+        <button id="delete"><i class="delete  fa-regular fa-trash-can"></i></button>
+        </p>
+        
+      </div>
+    `;
+    // Agregar el nuevo elemento al contenedor
+    itemsContainer.appendChild(newItem);
+  });
+};
+  mostrarElementosDelCarrito();
+
+})

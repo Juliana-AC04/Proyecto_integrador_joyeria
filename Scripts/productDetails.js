@@ -6,7 +6,7 @@ const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
 const fetchProductDetails = async () => {
   try {
     // Petición GET
-    const response = await fetch("${URL_BASE}", listadeproductos);
+    const response = await fetch(`${URL_BASE}listadeproductos`);
     if (!response.ok) {
       console.error("Error al obtener los detalles del producto:", response.statusText);
       return null;
@@ -58,10 +58,10 @@ const printDetailsProduct = (producto) => {
       let colorClass = "";
       if (item.color === "dorado") {
         colorClass = "gold";
-        return <div class="${colorClass}"></div>;
+        return `<div class="${colorClass}"></div>`;
       } else if (item.color === "plateado") {
         colorClass = "silver";
-        return <div class="${colorClass}"></div>;
+        return `<div class="${colorClass}"></div>`;
       }
     })
     .find((element) => element !== undefined); // Encuentra el primer elemento no indefinido (el primer div creado)
@@ -78,7 +78,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="squareContainer">
             ${producto.stock
-        .map((item) => <button class="square talla" >${item.talla}</button>)
+        .map((item) => `<button class="square talla" >${item.talla}</button>`)
         .join("")}
         </div>
         `;
@@ -114,7 +114,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="button">
                 <button id="btnCart" class="buttonTrolley bag" ><img src="../assets/productDetails/Addshopping.png" class="addToCart" alt="add to cart"><a class="cartUrl"> Add to bag </a></button>
-                <button class="buttonBuy "><a class="buyNow">Buy now</a></button>
+                <button id="buyNow" class="buttonBuy "><a class="buyNow">Buy now</a></button>
             </div>
         </div>
         <div class="dropdownContainer">
@@ -199,6 +199,7 @@ closeButton.addEventListener("click", () => {
 
 });
 
+
 // Obtener el botón "Buy Now"
 const buyNowButton = document.querySelector(".buttonBuy");
 
@@ -214,9 +215,9 @@ buyNowButton.addEventListener("click", () => {
     }
   }
 
-  // Si se seleccionó una talla o si el producto no es un anillo, proceder a la página de pago
+  // Si se seleccionó una talla o si el producto no es un anillo, proceder a agregar al carrito y luego a la página de pago
   addToCart();
-  window.location.href = "./payment.html";
+  
 });
 
 function addToCart() {

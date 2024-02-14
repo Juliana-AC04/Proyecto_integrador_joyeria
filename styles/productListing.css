@@ -62,6 +62,7 @@ ul {
   list-style-type: none;
   padding: 0;
   display: flex;
+  
 }
 
 .listNavbar {
@@ -74,6 +75,7 @@ ul {
   border: none;
   cursor: pointer;
   background-color: #093931;
+  
 }
 
 .listNavbar:hover {

@@ -2,6 +2,7 @@ const cartButton = document.getElementById("btnCart");
 const modal = document.querySelector(".modalCart");
 const closeButton = document.getElementById("closeModal");
 
+// Función para mostrar y ocultar el modal del carrito
 const toggleModal = (button, modal) => {
     button.addEventListener("click", () =>{
         modal.classList.toggle("hidden");
@@ -15,66 +16,71 @@ toggleModal(closeButton, modal)
 
 //Pintar los productos
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-cartItems = cartItems.filter(item => item.cantidad > 0);
-
 const carrito = document.getElementById("cartBody");
 
+// Limpiar el contenido existente en el contenedor
 carrito.innerHTML = '';
 
-cartItems.forEach(item => {
-    // Crear un nuevo elemento div para cada elemento del carrito
-    const itemCarrito = document.createElement('div');
-    itemCarrito.classList.add('carrito-item');
+// Verificar si el carrito está vacío
+if (cartItems.length === 0) {
+    carrito.innerHTML = '<p>El carrito está vacío.</p>';
+    // Filtrar los elementos con cantidad mayor a 0
+    cartItems = cartItems.filter(item => item.cantidad > 0);
+} else {
+    // Recorrer los elementos del carrito y crear dinámicamente el HTML para cada artículo
+    cartItems.forEach(item => {
+        // Crear un nuevo elemento div para cada elemento del carrito
+        const itemCarrito = document.createElement('div');
+        itemCarrito.classList.add('carrito-item');
 
-    // Verificar si la talla es null
-    const tallaHTML = item.talla ? <p class="itemTalla">Talla:${item.talla}</p> : '';
+        // Verificar si la talla es null
+        const tallaHTML = item.talla ? `<p class="itemTalla">Talla:${item.talla}</p>` : '';
 
-    // Agregar el contenido del elemento del carrito
-    itemCarrito.innerHTML = `
-        <div class="productos" data-item-id="${item.id}">
-          <div class="cartProductImg">
-            <img src="${item.imagenes}">
-          </div>
-          <div class="infoProducto">
-            <h3 class="itemNombre">${item.nombre}</h3>
-            <p class="itemCodigo">Código:${item.codigo}</p>
-            <p class="itemPrecio">$${item.precioTotal.toFixed(2)}</p>
-            ${tallaHTML}
-          </div>
-          <div class="editProducto">
-            <button class="cantidadCartBtn" id="menosProduct"><i class="fa-solid fa-minus fa-sm" style="    color: #b37d10;"></i></button>
-            <div  class="cantidadCart" id="cantidadProducto">${item.cantidad}</div>
-            <button class="cantidadCartBtn" id="masProduct"><i class="fa-solid fa-plus fa-sm" style="color: #b37d10;"></i></button>
-          </div>
-          </div>
-          <hr class="cartDivisor">
+        // Agregar el contenido del elemento del carrito
+        itemCarrito.innerHTML = `
+            <div class="productos" data-item-id="${item.id}">
+              <div class="cartProductImg">
+                <img src="${item.imagenes}">
+              </div>
+              <div class="infoProducto">
+                <h3 class="itemNombre">${item.nombre}</h3>
+                <p class="itemCodigo">Código:${item.codigo}</p>
+                <p class="itemPrecio">$${item.precioTotal.toFixed(2)}</p>
+                ${tallaHTML}
+              </div>
+              <div class="editProducto">
+                <button class="cantidadCartBtn" id="menosProduct"><i class="fa-solid fa-minus fa-sm" style="    color: #b37d10;"></i></button>
+                <div  class="cantidadCart" id="cantidadProducto">${item.cantidad}</div>
+                <button class="cantidadCartBtn" id="masProduct"><i class="fa-solid fa-plus fa-sm" style="color: #b37d10;"></i></button>
+              </div>
+              </div>
+              <hr class="cartDivisor">
+        `;
+
+        // Agregar el elemento del carrito al contenedor del carrito
+        carrito.appendChild(itemCarrito);
+    });
+    
+    // Obtener el total actual del carrito
+    let total = 0;
+    cartItems.forEach(item => {
+        total += item.precioTotal;
+    });
+
+    // Crear el HTML del footer del carrito
+    const footerHTML = `
+        <div class="cartFooter">
+            <div class="sectionPrice">
+                <p class="cartTotal">Total</p>
+                <p class="cartPrice">$${total.toFixed(2)}</p>
+            </div>
+            <button class="cartButton"><a href="./payment.html">Continue to checkout</a></button>
+        </div>
     `;
 
-    // Agregar el elemento del carrito al contenedor del carrito
-    carrito.appendChild(itemCarrito);
-});
-
-// Obtener el total actual del carrito
-let total = 0;
-cartItems.forEach(item => {
-    total += item.precioTotal;
-});
-
-// Crear el HTML del footer del carrito
-const footerHTML = `
-  <div class="cartFooter">
-    <div class="sectionPrice">
-      <p class="cartTotal">Total</p>
-      <p class="cartPrice">$${total.toFixed(2)}</p>
-    </div>
-    <button class="cartButton"><a href="#">Continue to checkout</a></button>
-  </div>
-`;
-
-// Agregar el HTML del footer del carrito al modal
-modal.querySelector('section').innerHTML += footerHTML;
-
+    // Agregar el HTML del footer del carrito al modal
+    modal.querySelector('section').innerHTML += footerHTML;
+}
 // Agregar un controlador de eventos a los botones de cantidad
 const cantidadCartButtons = document.querySelectorAll(".cantidadCartBtn");
 
@@ -92,7 +98,7 @@ cantidadCartButtons.forEach(button => {
                 if (cartItems[index].cantidad === 0) {
                     cartItems.splice(index, 1);
                     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-                    // location.reload();
+                    location.reload();//esto recarga la página del carrito para mostrar cambios
                 }
             }
             // Actualizar el precio total del elemento
@@ -107,15 +113,15 @@ cantidadCartButtons.forEach(button => {
                 total += item.precioTotal;
             });
             const cartPrice = document.querySelector(".cartPrice");
-            cartPrice.textContent = $$;{total.toFixed(2)};
+            cartPrice.textContent = `$${total.toFixed(2)}`;
 
             // Actualizar el precio del producto en la interfaz
             const precioProductoElement = button.parentElement.previousElementSibling.querySelector(".itemPrecio");
-            precioProductoElement.textContent = $$;{cartItems[index].precioTotal.toFixed(2)};
+            precioProductoElement.textContent = `$${cartItems[index].precioTotal.toFixed(2)}`;
 
             // Actualizar la cantidad mostrada en el carrito
             const cantidadElement = button.parentElement.querySelector(".cantidadCart");
             cantidadElement.textContent = cartItems[index].cantidad;
-        }
-    });
+        }
+    });
 });

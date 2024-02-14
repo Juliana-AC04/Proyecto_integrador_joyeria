@@ -469,12 +469,7 @@ footer {
   background-color: white;
 }
 
-.cartHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5%;
-}
+
 .cartTitle {
   color: #0d554a;
   font-family: Cormorant Garamond;
@@ -577,7 +572,7 @@ footer {
   justify-content: space-between;
   padding: 1% 5% 1% 5%;
   position: sticky;
-  top: 0; 
+  top: 4rem;
   z-index: 1; 
 }
 

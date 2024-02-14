@@ -166,12 +166,26 @@ ul {
   /* 157.143% */
 }
 
+#delete {
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+  font-size: 24px;
+  margin-left:0.5rem;
+
+}
+
+
 .deleteIcon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.imgPayment{
+  width: 30%;
+  height: 30%;
+  border-radius:0.5rem;
+}
 /* Payment method */
 .method h5 {
   color: #171a1f;
@@ -559,7 +573,7 @@ footer {
   justify-content: space-between;
   padding: 1% 5% 1% 5%;
   position: sticky;
-  top: 0; 
+  top: 4rem; 
   z-index: 1; 
 }
 
