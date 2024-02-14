@@ -137,10 +137,26 @@
   margin-top: 1rem;
 }
 
+.imagenPrincipal {
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+  height: 35rem;
+  margin-right: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+
+}
+
 .luxuryImage {
   display: flex;
   flex-direction: column;
-  gap: 1%;
+}
+
+.img {
+  margin: 1rem 1rem;
+  width: 477px;
+  height: 636px;
 }
 
 #detailsImagen {
