@@ -10,43 +10,34 @@
 </head>
 
 <body>
-    <!-- navbar -->
-   <header>
+  <!-- navbar -->
+  <header>
     <nav class="navHeader">
       <h3 class="darling"><a class="darlingLink" href="../index.html">Darling.</a></h3>
       <div class="navbar">
         <ul class="headerList">
-          <li class="li"><button class="listNavbar active" type="button" onclick="location.href='../index.html'">Home</button></li>
-          <li class="li"><button class="listNavbar" type="button" onclick="location.href='./pages/productListing.html'">Shop</button></li>
+          <li class="li"><button class="listNavbar active" type="button"
+              onclick="location.href='../index.html'">Home</button></li>
+          <li class="li"><button class="listNavbar" type="button"
+              onclick="location.href='./pages/productListing.html'">Shop</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Collections</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">About</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Contact</button></li>
         </ul>
         </ul>
         <figure class="iconHeader">
-          <a href="#"
-            ><img
-              src="../assets/homePage/login.png"
-              class="login"
-              alt="login"
-          /></a>
-          <a href="#"
-            ><img
-              id="btnCart"
-              src="../assets/homePage/Shopping.png"
-              class="shopping"
-              alt="shopping"
-          /></a>
+          <a href="#"><img src="../assets/homePage/login.png" class="login" alt="login" /></a>
+          <a href="#"><img id="btnCart" src="../assets/homePage/Shopping.png" class="shopping" alt="shopping" /></a>
         </figure>
     </nav>
 
-     <section class="order">
+    <section class="order">
       <div class="orderSummary">
         <div class="items">
-        <h4>Order summary</h4>
-           <div class="item">
+          <h4>Order summary</h4>
+          <div class="item">
             <div class="itemInfo">
-            <h5></h5>
+              <h5></h5>
               <p></p>
               <button><i class="formulacionValidacionEstado  fa-regular fa-trash-can"></i></button>
             </div>
@@ -93,172 +84,191 @@
 
         <form id="procesarPago" method="post">
 
-        <div class="formularioGrupo" id="grupo_nombreCompleto">
-          <label class="usuario" for="nombreCompleto">Nombre Completo:</label>
-        <div class="formularioGrupoInput">
-          <input class="formularioInput" placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto" name="nombreCompleto" required>
-          <i class="formulacionValidacionEstado fas fa-times-circle"></i>
-        </div>
-          <p class="formularioInputError">El nombre debe contener hasta 40 letras</p>
-        </div>
-
-        <div class="formularioGrupo" id="grupo_telefono">
-          <label class="telefono" for="telefono">Teléfono:</label>
-          <div class="formularioGrupoInput">
-            <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono" name="telefono" required>
-            <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+          <div class="formularioGrupo" id="grupo_nombreCompleto">
+            <label class="usuario" for="nombreCompleto">Nombre Completo:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese su nombre completo" type="text" id="nombreCompleto"
+                name="nombreCompleto" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">El nombre debe contener hasta 40 letras</p>
           </div>
-          <p class="formularioInputError">Error, el teléfono debe contener hasta 10 números</p>
-        </div>
 
-        <div class="formularioGrupo" id="grupo_direccion">
-          <label class="direccion" for="direccion">Dirección:</label>
-        <div class="formularioGrupoInput">
-          <input class="formularioInput" placeholder="Ingrese su direccion" type="text" id="direccion" name="direccion" required>
-          <i class="formulacionValidacionEstado fas fa-times-circle"></i>
-        </div>
-          <p class="formularioInputError">La direccion debe contener , carrera o calle</p>
-        </div>  
-
-        
-        <div class="formularioGrupo" id="grupo_correo">
-          <label class="correo" for="correo">Correo Electrónico:</label>
-          <div class="formularioGrupoInput">
-            <input class="formularioInput" placeholder="Ingrese su correo electronico" type="email" id="correo" name="correo" required>
-            <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+          <div class="formularioGrupo" id="grupo_telefono">
+            <label class="telefono" for="telefono">Teléfono:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese su numero de telefono" type="tel" id="telefono"
+                name="telefono" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">Error, el teléfono debe contener hasta 10 números</p>
           </div>
-          <p class="formularioInputError">El correo solo debe contener letras, numeros, puntos, guion medio o bajo y @.</p>
-        </div>
-        
-        
-        <div class="formularioGrupo" id="grupo_numeroTarjeta">
-          <label class="numeroTarjeta" for="numeroTarjeta">Número de la Tarjeta:</label>
-        <div class="formularioGrupoInput">  
-          <input class="formularioInput" placeholder="Ingrese el numero de la tarjeta" type="number" id="numeroTarjeta" name="numeroTarjeta" required> 
-          <i class="formulacionValidacionEstado fas fa-times-circle"></i>
-        </div>  
-          <p class="formularioInputError">Este campo solo admite hasta 16 digitos.</p>
-        </div>
 
-        <div class="formularioGrupo" id="grupo_fechaCaducidad">
-          <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
-        <div class="formularioGrupoInput">    
-          <input class="formularioInput" type="month" id="fechaCaducidad" name="fechaCaducidad" required>
-          <i class="formulacionValidacionEstado fas fa-times-circle"></i>
-        </div>  
-          <p class="formularioInputError">Este campo solo admite seleccionar fecha.</p>
-        </div>
+          <div class="formularioGrupo" id="grupo_direccion">
+            <label class="direccion" for="direccion">Dirección:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese su direccion" type="text" id="direccion"
+                name="direccion" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">La direccion debe contener , carrera o calle</p>
+          </div>
 
-        <div class="formularioGrupo" id="grupo_cvv">
-          <label class="cvv" for="cvv">CVV:</label>
-        <div class="formularioGrupoInput">    
-          <input class="formularioInput" placeholder="123" type="number" id="cvv" name="cvv" required>
-          <i class="formulacionValidacionEstado  fas fa-times-circle"></i>
-        </div>   
-          <p class="formularioInputError">Este campo solo admite 3 digitos.</p>
-        </div>
 
-        <div class="formularioMensaje" id="formularioMensaje">
-          <p><i class=" fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error</b> Por favor llena el formulario correctamente.</p>
-        </div>
+          <div class="formularioGrupo" id="grupo_correo">
+            <label class="correo" for="correo">Correo Electrónico:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese su correo electronico" type="email" id="correo"
+                name="correo" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">El correo solo debe contener letras, numeros, puntos, guion medio o bajo y
+              @.</p>
+          </div>
+
+
+          <div class="formularioGrupo" id="grupo_nombreTarjeta">
+            <label class="nombreTarjeta" for="nombreTarjeta">Nombre en la Tarjeta:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese el numero de la tarjeta" type="text"
+                id="nombreTarjeta" name="nombreTarjeta" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">El nombre debe contener hasta 40 letras.</p>
+          </div>
+
+
+          <div class="formularioGrupo" id="grupo_numeroTarjeta">
+            <label class="numeroTarjeta" for="numeroTarjeta">Número de la Tarjeta:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="Ingrese el numero de la tarjeta" type="number"
+                id="numeroTarjeta" name="numeroTarjeta" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">Este campo solo admite hasta 16 digitos.</p>
+          </div>
+
+          <div class="formularioGrupo" id="grupo_fechaCaducidad">
+            <label class="tipoTarjeta" for="fechaCaducidad">Fecha de Caducidad:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" type="month" id="fechaCaducidad" name="fechaCaducidad" required>
+              <i class="formulacionValidacionEstado fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">Este campo solo admite seleccionar fecha.</p>
+          </div>
+
+          <div class="formularioGrupo" id="grupo_cvv">
+            <label class="cvv" for="cvv">CVV:</label>
+            <div class="formularioGrupoInput">
+              <input class="formularioInput" placeholder="123" type="number" id="cvv" name="cvv" required>
+              <i class="formulacionValidacionEstado  fas fa-times-circle"></i>
+            </div>
+            <p class="formularioInputError">Este campo solo admite 3 digitos.</p>
+          </div>
+
+          <div class="formularioMensaje" id="formularioMensaje">
+            <p><i class=" fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error</b> Por favor llena el formulario
+              correctamente.</p>
+          </div>
           <div class="cardImages">
             <img src="../assets/payment/americanExpress.png" class="american" alt="americanExpress">
-              <img src="../assets/payment/cardIcon.png" alt="MasterCard">
-              <img src="../assets/payment/visa.png" class="visa" alt="Visa">
+            <img src="../assets/payment/cardIcon.png" alt="MasterCard">
+            <img src="../assets/payment/visa.png" class="visa" alt="Visa">
           </div>
           <div class="formularioGrupoBtnEnviar">
             <button type="submit" class="formularioBtn">Enviar</button>
           </div>
         </form>
+      </div>
     </section>
     <!-- Payment -->
     <section class="sectionCarousel">
-        <h2 class="carouselTitle">You may also like</h2>
-        <div class="carousel">
-          <figure class="carouselItem">
-            <img src="../assets/payment/ShimmeringStones.png" alt="Shimmering Stones">
-            <figcaption>Shimmering Stones</figcaption>
-            <p class="sectionPrice">$168.76</p>
-          </figure>
-          <figure class="carouselItem">
-            <img src="../assets/payment/ExquisiteOrnaments.png" alt="Exquisite Ornaments">
-            <figcaption>Exquisite Ornaments</figcaption>
-            <p class="sectionPrice">$125.28</p>
-          </figure>
-          <figure class="carouselItem">
-            <img src="../assets/payment/EleganceandGrace.png" alt="Elegance and Grace">
-            <figcaption>Elegance and Grace</figcaption>
-            <p class="sectionPrice">$620.73</p>
-          </figure>
-          <figure class="carouselItem">
-            <img src="../assets/payment/LuxuryCharms.png" alt="Luxury Charms">
-            <figcaption>Luxury Charms</figcaption>
-            <p class="sectionPrice">$327.71</p>
-          </figure>
-          <figure class="carouselItem">
-            <img src="../assets/payment/ExquisiteOrnaments.png" alt="Blissful Bloom">
-            <figcaption>Blissful Bloom</figcaption>
-            <p class="sectionPrice">$327.71</p>
-          </figure>
+      <h2 class="carouselTitle">You may also like</h2>
+      <div class="carousel">
+        <figure class="carouselItem">
+          <img src="../assets/payment/ShimmeringStones.png" alt="Shimmering Stones">
+          <figcaption>Shimmering Stones</figcaption>
+          <p class="sectionPrice">$168.76</p>
+        </figure>
+        <figure class="carouselItem">
+          <img src="../assets/payment/ExquisiteOrnaments.png" alt="Exquisite Ornaments">
+          <figcaption>Exquisite Ornaments</figcaption>
+          <p class="sectionPrice">$125.28</p>
+        </figure>
+        <figure class="carouselItem">
+          <img src="../assets/payment/EleganceandGrace.png" alt="Elegance and Grace">
+          <figcaption>Elegance and Grace</figcaption>
+          <p class="sectionPrice">$620.73</p>
+        </figure>
+        <figure class="carouselItem">
+          <img src="../assets/payment/LuxuryCharms.png" alt="Luxury Charms">
+          <figcaption>Luxury Charms</figcaption>
+          <p class="sectionPrice">$327.71</p>
+        </figure>
+        <figure class="carouselItem">
+          <img src="../assets/payment/ExquisiteOrnaments.png" alt="Blissful Bloom">
+          <figcaption>Blissful Bloom</figcaption>
+          <p class="sectionPrice">$327.71</p>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="darlingFooter">
+        <h3>Darling</h3>
+        <p>© 2022 Brand, Inc.</p>
+      </div>
+      <div class="secondItemsFooter">
+        <div class="itemsFooter">
+          <p>Shop</p>
+          <p>Collections</p>
+          <p>About</p>
+        </div>
+        <div class="itemsFooter2">
+          <p>Contact</p>
+          <p>Privacy</p>
+          <p>Terms</p>
+        </div>
+      </div>
+      <div class="thirdItemsFooter">
+        <p class="textItemFooter"> Subscribe to our newsletter</p>
+        <p class="textItemFooter2">For product announcements and exclusive insights </p>
+        <div class="subscribe">
+          <div class="subscribeContent">
+            <img src="../assets/homePage/mail.png" alt="mail">
+            <p class="subscribeText">Input your email</p>
+          </div>
+          <button class="buttonSubscribe">Subscribe</button>
+        </div>
+        <div class="socialMedia">
+          <img src="../assets/homepage/logoTwitter.png" alt="Logo Twitter" class="mediaIcon">
+          <img src="../assets/homepage/logoFacebook.png" alt="Logo Facebook" class="mediaIcon">
+          <img src="../assets/homepage/logoLinkedin.png" alt="Logo Linkedin" class="mediaIcon">
+          <img src="../assets/homepage/logoYoutube.png" alt="Logo Youtube">
+        </div>
+      </div>
+    </footer>
+    <!-- Carrito de compras -->
+    <div class="modalCart hidden">
+      <section>
+        <div class="cartHeader">
+          <h2 class="cartTitle">Your cart</h2>
+          <button id="closeModal" class="btnExit">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+          </button>
+        </div>
+        <div id="cartBody" class="cartBody">
+          <!-- Aquí se agregarán los productos del carrito -->
+        </div>
+        <div id="cartFooter" class="cartFooter">
+          <!-- Aquí se agregará el footer del carrito y el mensaje de carrito vacío -->
         </div>
       </section>
- 
-
-  <!-- Footer -->
-  <footer>
-    <div class="darlingFooter">
-      <h3>Darling</h3>
-      <p>© 2022 Brand, Inc.</p>
     </div>
-    <div class="secondItemsFooter">
-      <div class="itemsFooter">
-        <p>Shop</p>
-        <p>Collections</p>
-        <p>About</p>
-      </div>
-      <div class="itemsFooter2">
-        <p>Contact</p>
-        <p>Privacy</p>
-        <p>Terms</p>
-      </div>
-    </div>
-    <div class="thirdItemsFooter">
-      <p class="textItemFooter"> Subscribe to our newsletter</p>
-      <p class="textItemFooter2">For product announcements and exclusive insights </p>
-      <div class="subscribe">
-        <div class="subscribeContent">
-          <img src="../assets/homePage/mail.png" alt="mail">
-          <p class="subscribeText">Input your email</p>
-        </div>
-        <button class="buttonSubscribe">Subscribe</button>
-      </div>
-      <div class="socialMedia">
-        <img src="../assets/homepage/logoTwitter.png" alt="Logo Twitter" class="mediaIcon">
-        <img src="../assets/homepage/logoFacebook.png" alt="Logo Facebook" class="mediaIcon">
-        <img src="../assets/homepage/logoLinkedin.png" alt="Logo Linkedin" class="mediaIcon">
-        <img src="../assets/homepage/logoYoutube.png" alt="Logo Youtube">
-      </div>
-    </div>
-  </footer>
- <!-- Carrito de compras -->
- <div class="modalCart hidden">
-  <section>
-    <div class="cartHeader">
-      <h2 class="cartTitle">Your cart</h2>
-      <button id="closeModal" class="btnExit">
-        <i class="fa-solid fa-xmark fa-2xl"></i>
-      </button>
-    </div>
-    <div id="cartBody" class="cartBody">
-      <!-- Aquí se agregarán los productos del carrito -->
-    </div>
-    <div id="cartFooter" class="cartFooter">
-      <!-- Aquí se agregará el footer del carrito y el mensaje de carrito vacío -->
-    </div>
-  </section>
-</div>
-<script src="../Scripts/modalCart.js"></script>
-<script src="../Scripts/payment.js"></script>
+    <script src="../Scripts/modalCart.js"></script>
+    <script src="../Scripts/payment.js"></script>
 
 </body>
 

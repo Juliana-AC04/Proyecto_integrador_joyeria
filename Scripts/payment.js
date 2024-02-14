@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     telefono: /^\d{7,10}$/,
     direccion: /^[A-Za-z0-9\s,#.'-]+$/,
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    nombreTarjeta: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     numeroTarjeta: /^\d{14,16}$/,
     fechaCaducidad: /^(20\d{2})-(0[1-9]|1[0-2])$/, // Formato YYYY-MM para fecha de caducidad
     cvv: /^\d{3}$/,
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     telefono: false,
     direccion: false,
     correo: false,
+    nombreTarjeta:false,
     numeroTarjeta: false,
     fechaCaducidad: false,
     cvv: false,
@@ -50,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "correo":
         validarCampo(expresiones.correo, e.target, "correo");
+        break;
+      case "nombreTarjeta":
+        validarCampo(expresiones.nombreTarjeta, e.target, "nombreTarjeta");
         break;
       case "numeroTarjeta":
         validarCampo(expresiones.numeroTarjeta, e.target, "numeroTarjeta");
@@ -133,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       campos.telefono &&
       campos.direccion &&
       campos.correo &&
+      campos.nombreTarjeta &&
       campos.numeroTarjeta &&
       campos.fechaCaducidad &&
       campos.cvv
@@ -156,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const telefono = document.getElementById("telefono").value;
     const direccion = document.getElementById("direccion").value;
     const correo = document.getElementById("correo").value;
+    const nombreTarjeta = document.getElementById("nombreTarjeta").value;
     const numeroTarjeta = document.getElementById("numeroTarjeta").value;
     const fechaCaducidad = document.getElementById("fechaCaducidad").value;
     const cvv = document.getElementById("cvv").value;
@@ -166,6 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
       campos.telefono &&
       campos.direccion &&
       campos.correo &&
+      campos.nombreTarjeta &&
       campos.numeroTarjeta &&
       campos.fechaCaducidad &&
       campos.cvv
@@ -176,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         telefono,
         direccion,
         correo,
+        nombreTarjeta,
         numeroTarjeta,
         fechaCaducidad,
         cvv,

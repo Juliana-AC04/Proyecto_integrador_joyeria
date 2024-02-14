@@ -275,7 +275,8 @@ select {
   right: 20px;
   bottom: 30px;
   font-size: 16px;
-  z-index: 10;
+  z-index: 100;
+  opacity: 0;
 }
 
 .formularioMensaje {
@@ -316,13 +317,18 @@ select {
 .formularioBtn:hover {
   background-color: #45a049;
 }
+.formularioGrupoCorrecto .formulacionValidacionEstado{
+ color: #45a049;
+ opacity: 1;
+}
 
 .formularioGrupoIncorrecto .formularioLabel {
   color: #bb2929;
 }
 
-.formularioGrupoIncorrecto .formularioValidacionEstado {
+.formularioGrupoIncorrecto .formulacionValidacionEstado{
   color: #bb2929;
+  opacity: 1;
 }
 .formularioGrupoIncorrecto .formularioInput {
   border: 3px solid #bb2929;
