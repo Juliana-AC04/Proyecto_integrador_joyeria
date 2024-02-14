@@ -74,7 +74,7 @@
   color: white;
 }
 
-/* div luxury */
+/* Estilos de detalles de los productos*/
 .LuxuryDivList {
   color: #0d554a;
   font-family: Cormorant Garamond;
@@ -105,9 +105,7 @@
 .detailsImg {
   width: 25rem;
   height: 35rem;
-  margin-right: 3rem;
   border-radius: 0.5rem;
-  margin-top: 1rem;
 }
 
 .shop {
@@ -117,11 +115,26 @@
 /* luxurySection */
 .luxurySection {
   display: flex;
-  justify-content: space-evenly;
+  
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .imageLuxurySection {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.imagenPrincipal {
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+  height: 35rem;
+  margin-right: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 .luxuryImage {
@@ -136,7 +149,8 @@
 
 .heart {
   position: absolute;
-  margin: 3rem -6rem;
+  margin-left: 22rem;
+  margin-top: 1rem;
 }
 
 /*  luxury chartms*/
@@ -241,25 +255,9 @@
   border: 1px solid #565e6c;
   border-radius: 4px;
   background: #fff;
+  cursor: pointer;
 }
 
-.firstSquare {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  margin: 2px;
-  border-radius: 4px;
-  border: 1px solid #8f640c;
-  background: #fff;
-  color: #8f640c;
-  font-family: Manrope;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
 
 .squareQuantityLuxury {
   display: flex;
@@ -275,6 +273,12 @@
   height: 40px;
   margin: 2px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.selected{
+  background-color:#0d554a;
+  color: white;
 }
 
 .buttonTrolley {
@@ -287,6 +291,11 @@
   border-radius: 26px;
   border: 1px solid #0d554a;
   background: #fff;
+  margin-right: 10px;
+}
+
+.buttonTrolley:hover{
+  background-color: #76ec72;
 }
 #decrement,
 #increment {
@@ -320,6 +329,7 @@
   background: #fff;
   border-radius: 26px;
   background: #0d554a;
+  cursor: pointer;
 }
 
 .buyNow {
@@ -399,6 +409,8 @@
 .dropdown:hover .dropdownMenu {
   display: block;
 }
+
+
 
 /* article */
 .articleLuxury {

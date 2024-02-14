@@ -92,14 +92,17 @@ const printDetailsProduct = (producto) => {
   productDetail.innerHTML = `
     <div class="imageLuxurySection">
     <div class="luxuryImage">
+    <div class="luxuryImage">
             <img class="detailsImage" id="detailsImagen" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
             <img class="detailsImage" src="${producto.imagenes}" alt="${producto.nombre}">
     </div>
     <div class="imagenPrincipal">
+    <div class="imagenPrincipal">
         <img class="detailsImg" src="${producto.imagenes}" alt="${producto.nombre}">
         <img src="../assets/productDetails/Heart.png" class="heart" alt="heart">
+    </div>
     </div>
     <div class="headerSectionDiv">
         <h3 class="headerSection">${producto.nombre}</h3>
@@ -120,19 +123,25 @@ const printDetailsProduct = (producto) => {
             <div class="button">
                 <button id="btnCart" class="buttonTrolley bag" ><img src="../assets/productDetails/Addshopping.png" class="addToCart" alt="add to cart"><a class="cartUrl"> Add to bag </a></button>
                 <button class="buttonBuy "><a class="buyNow">Buy now</a></button>
+                <button id="btnCart" class="buttonTrolley bag" ><img src="../assets/productDetails/Addshopping.png" class="addToCart" alt="add to cart"><a class="cartUrl"> Add to bag </a></button>
+                <button class="buttonBuy "><a class="buyNow">Buy now</a></button>
             </div>
         </div>
         <div class="dropdownContainer">
             <div class="dropdown">
                 <a class="dropdownPrice" >Delivery▼</a>
+                <a class="dropdownPrice" >Delivery▼</a>
             </div>
             <div class="dropdown">
+                <a class="dropdownPrice" >Payment ▼</a>
                 <a class="dropdownPrice" >Payment ▼</a>
             </div>
             <div class="dropdown">
                 <a class="dropdownPrice" >Warranty▼</a>
+                <a class="dropdownPrice" >Warranty▼</a>
             </div>
             <div class="dropdown">
+                <a class="dropdownPrice" >Care▼</a>
                 <a class="dropdownPrice" >Care▼</a>
             </div>
         </div>
@@ -140,16 +149,16 @@ const printDetailsProduct = (producto) => {
 </div>
   `;
 
-  // Obtener el elemento de cantidad y los botones de incremento y decremento
-  const quantityElement = document.getElementById("quantity");
-  const incrementButton = document.getElementById("increment");
-  const decrementButton = document.getElementById("decrement");
+// Obtener el elemento de cantidad y los botones de incremento y decremento
+const quantityElement = document.getElementById("quantity");
+const incrementButton = document.getElementById("increment");
+const decrementButton = document.getElementById("decrement");
 
-  // Agregar eventos de clic a los botones de incremento y decremento
-  incrementButton.addEventListener("click", () => {
-    const currentQuantity = parseInt(quantityElement.textContent);
-    quantityElement.textContent = currentQuantity + 1;
-  });
+// Agregar eventos de clic a los botones de incremento y decremento
+incrementButton.addEventListener("click", () => {
+  const currentQuantity = parseInt(quantityElement.textContent);
+  quantityElement.textContent = currentQuantity + 1;
+});
 
   decrementButton.addEventListener("click", () => {
     const currentQuantity = parseInt(quantityElement.textContent);
