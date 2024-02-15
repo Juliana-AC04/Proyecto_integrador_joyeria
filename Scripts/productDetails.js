@@ -3,7 +3,8 @@ const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
 
 
 // Función asincrónica para obtener los detalles del producto
-const fetchProductDetails = async () => {
+const fetchProductDetails = async (e) => {
+  e.preventDefault();
   try {
     // Petición GET
     const response = await fetch(`${URL_BASE}listadeproductos`);
