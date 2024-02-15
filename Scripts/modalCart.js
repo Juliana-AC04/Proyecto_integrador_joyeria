@@ -9,7 +9,6 @@ const toggleModal = (button, modal) => {
         modal.classList.toggle("show");
        console.log("click", button)
     })
-    
 }
 
 toggleModal(cartButton, modal)
@@ -31,11 +30,7 @@ carrito.innerHTML = '';
 
 // Verificar si el carrito está vacío
 if (cartItems.length === 0) {
-    carrito.innerHTML = `<p class="carritoVacio">El carrito actualmente está vacío.</p>
-    <button class="cartButton"><a href="../pages/productListing.html">start your purchase</a></button>
-    `
-
-    ;
+    carrito.innerHTML = '<p>El carrito está vacío.</p>';
     // Filtrar los elementos con cantidad mayor a 0
     cartItems = cartItems.filter(item => item.cantidad > 0);
 } else {

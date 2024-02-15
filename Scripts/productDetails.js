@@ -235,6 +235,18 @@ function addToCart() {
     }
   }
 
+  const stockAvailable = producto.stock.find(item => item.talla === (selectedSize ? selectedSize.textContent : null));
+  if (!stockAvailable) {
+    alert("No hay stock disponible para esta talla");
+    return;
+  }
+
+  // Verificar si la cantidad seleccionada es mayor que la disponible en stock
+  if (quantity > stockAvailable.cantidad) {
+    alert("No hay suficiente stock disponible para la cantidad seleccionada");
+    return;
+  }
+
   // Obtener el carrito de compras del almacenamiento local
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 

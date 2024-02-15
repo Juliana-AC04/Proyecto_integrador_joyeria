@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       grupoCampo.classList.remove("formularioGrupoIncorrecto");
       grupoCampo.classList.add("formularioGrupoCorrecto");
       iconoEstadoCampo.classList.add("fa-check-circle");
-      iconoEstadoCampo.classList.remove("fa-times-circle ");
+      iconoEstadoCampo.classList.remove("fa-times-circle");
       mensajeError.classList.remove("formularioInputError-activo");
       campos[campo] = true;
     }
