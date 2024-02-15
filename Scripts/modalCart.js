@@ -16,8 +16,8 @@ toggleModal(closeButton, modal)
 
 modal.addEventListener("click", (e) => {
     if (e.target.classList.contains('close')) {
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("show");
+        modal.classList.add("hidden");
+        modal.classList.remove("show");
     }
 })
 
