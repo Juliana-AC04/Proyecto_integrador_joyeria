@@ -566,7 +566,16 @@ footer {
   background-color: #08080867;
   z-index: 10000;
 }
-
+.cartEmpty{
+  display: flex;
+  margin-top: 3rem;
+  color:#093931;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  
+}
 .hidden {
   display: none;
 }

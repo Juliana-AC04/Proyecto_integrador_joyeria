@@ -996,7 +996,16 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.cartEmpty{
+  display: flex;
+  margin-top: 3rem;
+  color:#093931;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  
+}
 .cartProductImg {
   width: 30%;
 }
@@ -1104,16 +1113,14 @@ footer {
 
   .detailsImg {
     width: 13rem;
-    height: 35%;
-    margin-top: 0;
+    height: 47%;
+    
   }
   .luxurySection {
     margin: 6rem 2rem;
     display: block;
   }
   .headerSectionDiv {
-    /* margin: 22rem 0 0 -24rem; */
-    /* display: block; */
     margin-left: -21rem;
     margin-top: 16rem;
   }
@@ -1129,7 +1136,7 @@ footer {
 
   .heart {
     position: absolute;
-    margin: 1rem -5rem;
+    margin: 0rem 11rem;
   }
 
   .button {
@@ -1365,7 +1372,7 @@ footer {
   .detailsImg {
     width: 19rem;
     height: 24rem;
-    margin-top: 0;
+   
   }
   .luxurySection {
     margin: 6rem 4rem;
@@ -1386,9 +1393,10 @@ footer {
   }
 
   .heart {
-    top: 18%;
-    left: 91%;
+    position: absolute;
+    margin: 0rem 16rem;
   }
+
   .articleLuxurydiv {
     width: 87%;
     height: 20%;

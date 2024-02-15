@@ -456,7 +456,16 @@ footer {
 #btnCart {
   cursor: pointer;
 }
-
+.cartEmpty{
+  display: flex;
+  margin-top: 3rem;
+  color:#093931;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  
+}
 .modalCart {
   display: flex;
   justify-content: flex-end;
@@ -791,46 +800,13 @@ footer {
     display: flex;
     margin-top: -21rem;
   }
-  .containerBuys {
-    width: 22rem;
-  }
-  .dateContainer,
-  .JohnMiller,
-  .visa,
-  .numbers {
-    margin-right: -10rem;
-  }
-  .price {
-    margin-left: -11rem;
-  }
-  .priceOrder {
-    margin-left: 9rem;
-    margin-top: -2rem;
-  }
-  .imageGift {
-    height: 11rem;
-    width: 12rem;
-  }
+.containerBuys {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: column; /* Cambia a un diseño de columna */
 
-  .contenedor {
-    margin-left: -12.5rem;
-    margin-top: -11rem;
-  }
-  .date,
-  .customer,
-  .total {
-    font-size: 14px;
-    line-height: 5px;
-  }
-
-  .Payment,
-  .Order {
-    font-size: 12px;
-  }
-
-  .button {
-    margin: 0;
-  }
+}
 
   footer {
     background: #093931;

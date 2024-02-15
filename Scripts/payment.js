@@ -297,8 +297,6 @@ function generateUniqueId() {
  function removeItemFromCart(index) {
   // Elimina el elemento del carrito usando el índice
   cartItems.splice(index, 1);
-  console.log("Antes de eliminar:", cartItems);
-  console.log("Después de hacer clic en eliminar:", cartItems);
 
 alert("El accesorio se ha eliminado correctamente!")
   // Actualiza el localStorage con el carrito modificado

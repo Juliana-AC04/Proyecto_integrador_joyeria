@@ -194,7 +194,16 @@ li {
   line-height: 22px;
   /* 157.143% */
 }
-
+.cartEmpty{
+  display: flex;
+  margin-top: 3rem;
+  color:#093931;
+  font-family: Cormorant Garamond;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 56px;
+  
+}
 .headerMenu .list.categoria-seleccionada {
   border-radius: 19px;
   background: #0d554a;

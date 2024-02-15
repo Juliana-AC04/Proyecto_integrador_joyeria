@@ -16,8 +16,8 @@ toggleModal(closeButton, modal)
 
 modal.addEventListener("click", (e) => {
     if (e.target.classList.contains('close')) {
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("show");
+        modal.classList.remove("hidden");
+        modal.classList.add("show");
     }
 })
 
@@ -30,7 +30,7 @@ carrito.innerHTML = '';
 
 // Verificar si el carrito está vacío
 if (cartItems.length === 0) {
-    carrito.innerHTML = '<p>El carrito está vacío.</p>';
+    carrito.innerHTML = '<p class="cartEmpty">El carrito se encuentra vacío.</p>';
     // Filtrar los elementos con cantidad mayor a 0
     cartItems = cartItems.filter(item => item.cantidad > 0);
 } else {
