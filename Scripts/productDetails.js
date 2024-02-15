@@ -114,7 +114,7 @@ const printDetailsProduct = (producto) => {
             </div>
             <div class="button">
                 <button id="btnCart" class="buttonTrolley bag" ><img src="../assets/productDetails/Addshopping.png" class="addToCart" alt="add to cart"><a class="cartUrl"> Add to bag </a></button>
-                <button id="buyNow" class="buttonBuy "><a class="buyNow">Buy now</a></button>
+                <button id="buyNow" class="buttonBuy "><a href="./payment.html" class="buyNow">Buy now</a></button>
             </div>
         </div>
         <div class="dropdownContainer">
@@ -135,151 +135,153 @@ const printDetailsProduct = (producto) => {
 </div>
   `;
 
-// Obtener el elemento de cantidad y los botones de incremento y decremento
-const quantityElement = document.getElementById("quantity");
-const incrementButton = document.getElementById("increment");
-const decrementButton = document.getElementById("decrement");
+  // Obtener el elemento de cantidad y los botones de incremento y decremento
+  const quantityElement = document.getElementById("quantity");
+  const incrementButton = document.getElementById("increment");
+  const decrementButton = document.getElementById("decrement");
 
-// Agregar eventos de clic a los botones de incremento y decremento
-incrementButton.addEventListener("click", () => {
-  const currentQuantity = parseInt(quantityElement.textContent);
-  quantityElement.textContent = currentQuantity + 1;
-});
-
-decrementButton.addEventListener("click", () => {
-  const currentQuantity = parseInt(quantityElement.textContent);
-  if (currentQuantity > 0) {
-    quantityElement.textContent = currentQuantity - 1;
-  }
-});
-
-// Obtener todos los botones de talla
-const tallaButtons = document.querySelectorAll(".talla");
-
-// Agregar un controlador de eventos de clic a cada botón de talla
-tallaButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    // Eliminar la clase "selected" de todos los botones de talla
-    tallaButtons.forEach(btn => {
-      btn.classList.remove("selected");
-    });
-
-    // Agregar la clase "selected" solo al botón de talla seleccionado
-    button.classList.add("selected");
+  // Agregar eventos de clic a los botones de incremento y decremento
+  incrementButton.addEventListener("click", () => {
+    const currentQuantity = parseInt(quantityElement.textContent);
+    quantityElement.textContent = currentQuantity + 1;
   });
-});
 
-// Obtener el botón "Add to bag"
-const addToBagButton = document.querySelector(".buttonTrolley.bag");
-
-// Agregar un controlador de eventos al botón "Add to bag"
-addToBagButton.addEventListener("click", () => {
-  // Verificar si el producto es un anillo y requiere selección de talla
-  if (producto.categoria === "Rings") {
-    // Si es un anillo, verificar si se ha seleccionado una talla
-    const selectedSize = document.querySelector(".talla.selected");
-    if (!selectedSize) {
-      alert("Por favor seleccione una talla antes de añadir al carrito");
-      return;
+  decrementButton.addEventListener("click", () => {
+    const currentQuantity = parseInt(quantityElement.textContent);
+    if (currentQuantity > 0) {
+      quantityElement.textContent = currentQuantity - 1;
     }
-  }
+  });
 
-  // Si se seleccionó una talla o si el producto no es un anillo, agregar al carrito y abrir el modal
-  addToCart();
+  // Obtener todos los botones de talla
+  const tallaButtons = document.querySelectorAll(".talla");
 
+  // Agregar un controlador de eventos de clic a cada botón de talla
+  tallaButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Eliminar la clase "selected" de todos los botones de talla
+      tallaButtons.forEach(btn => {
+        btn.classList.remove("selected");
+      });
 
-  modal.classList.remove("hidden");
-
-  const closeButton = document.getElementById("closeModal");
-
-// Agregar un controlador de eventos al botón de cerrar modal
-closeButton.addEventListener("click", () => {
-  modal.classList.add("hidden");
-  console.log("click", closeButton );
-});
-
-});
-
-
-// Obtener el botón "Buy Now"
-const buyNowButton = document.querySelector(".buttonBuy");
-
-// Agregar un controlador de eventos al botón "Buy Now"
-buyNowButton.addEventListener("click", () => {
-  // Verificar si el producto es un anillo y requiere selección de talla
-  if (producto.categoria === "Rings") {
-    // Si es un anillo, verificar si se ha seleccionado una talla
-    const selectedSize = document.querySelector(".talla.selected");
-    if (!selectedSize) {
-      alert("Por favor seleccione una talla antes de proceder al pago");
-      return;
-    }
-  }
-
-  // Si se seleccionó una talla o si el producto no es un anillo, proceder a agregar al carrito y luego a la página de pago
-  addToCart();
-  
-});
-
-function addToCart() {
-  // Obtener la cantidad seleccionada
-  const quantity = parseInt(document.getElementById("quantity").textContent);
-
-  // Obtener la talla seleccionada si es un anillo
-  let selectedSize = null;
-  if (producto.categoria === "Rings") {
-    selectedSize = document.querySelector(".talla.selected");
-    if (!selectedSize) {
-      // Si es un anillo y no se ha seleccionado una talla, salir de la función sin agregar al carrito
-      return;
-    }
-  }
-
-  const stockAvailable = producto.stock.find(item => item.talla === (selectedSize ? selectedSize.textContent : null));
-  if (!stockAvailable) {
-    alert("No hay stock disponible para esta talla");
-    return;
-  }
-
-  // Verificar si la cantidad seleccionada es mayor que la disponible en stock
-  if (quantity > stockAvailable.cantidad) {
-    alert("No hay suficiente stock disponible para la cantidad seleccionada");
-    return;
-  }
-
-  // Obtener el carrito de compras del almacenamiento local
-  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-  // Buscar si el producto ya está en el carrito
-  const existingItemIndex = cartItems.findIndex(item => item.id === idProduct && item.talla === (selectedSize ? selectedSize.textContent : null));
-
-  if (existingItemIndex !== -1) {
-    // Si el producto ya está en el carrito, actualizar la cantidad
-    cartItems[existingItemIndex].cantidad += quantity;
-  } else {
-    // Si el producto no está en el carrito, agregarlo
-    cartItems.push({
-      id: idProduct,
-      nombre: producto.nombre,
-      codigo: producto.codigo,
-      color: colorDisponible,
-      talla: selectedSize ? selectedSize.textContent : null,
-      cantidad: quantity,
-      precioUnitario: producto.precio,
-      precioTotal: producto.precio * quantity,
-      imagenes: producto.imagenes
+      // Agregar la clase "selected" solo al botón de talla seleccionado
+      button.classList.add("selected");
     });
+  });
+
+  // Obtener el botón "Add to bag"
+  const addToBagButton = document.querySelector(".buttonTrolley.bag");
+
+  // Agregar un controlador de eventos al botón "Add to bag"
+  addToBagButton.addEventListener("click", () => {
+    // Verificar si el producto es un anillo y requiere selección de talla
+    if (producto.categoria === "Rings") {
+      // Si es un anillo, verificar si se ha seleccionado una talla
+      const selectedSize = document.querySelector(".talla.selected");
+      if (!selectedSize) {
+        alert("Por favor seleccione una talla antes de añadir al carrito");
+        return;
+      }
+    }
+
+    // Si se seleccionó una talla o si el producto no es un anillo, agregar al carrito y abrir el modal
+    addToCart();
+
+    modal.classList.remove("hidden");
+
+    const closeButton = document.getElementById("closeModal");
+
+    // Agregar un controlador de eventos al botón de cerrar modal
+    closeButton.addEventListener("click", () => {
+      modal.classList.add("show")
+      modal.classList.remove("hidden");
+      console.log("click", closeButton);
+    });
+
+
+  });
+
+
+  // Obtener el botón "Buy Now"
+  const buyNowButton = document.querySelector(".buttonBuy");
+
+  // Agregar un controlador de eventos al botón "Buy Now"
+  buyNowButton.addEventListener("click", () => {
+    // Verificar si el producto es un anillo y requiere selección de talla
+    if (producto.categoria === "Rings") {
+      // Si es un anillo, verificar si se ha seleccionado una talla
+      const selectedSize = document.querySelector(".talla.selected");
+      if (!selectedSize) {
+        alert("Por favor seleccione una talla antes de proceder al pago");
+        return;
+      }
+    }
+
+    // Si se seleccionó una talla o si el producto no es un anillo, proceder a agregar al carrito y luego a la página de pago
+    addToCart();
+
+  });
+
+  function addToCart() {
+    // Obtener la cantidad seleccionada
+    const quantity = parseInt(document.getElementById("quantity").textContent);
+
+    let selectedSize = null;
+
+    // Verificar si es un producto que requiere selección de talla
+    if (producto.categoria === "Rings" || producto.categoria === "Necklaces" || producto.categoria === "Earrings") {
+      // Obtener la talla seleccionada si es aplicable
+      selectedSize = document.querySelector(".talla.selected");
+      if (selectedSize) {
+        const stockAvailable = producto.stock.find(item => item.talla === selectedSize.textContent);
+        if (!stockAvailable || quantity > stockAvailable.cantidad) {
+          alert("No hay suficiente stock disponible para la cantidad seleccionada");
+          return;
+        }
+      }
+    } else {
+      // Si no es un producto que requiere selección de talla, verificar simplemente la cantidad seleccionada
+      if (quantity > producto.stock[0].cantidad) {
+        alert("No hay suficiente stock disponible para la cantidad seleccionada");
+        return;
+      }
+    }
+
+    // Obtener el carrito de compras del almacenamiento local
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Buscar si el producto ya está en el carrito
+    const existingItemIndex = cartItems.findIndex(item => item.id === idProduct && item.talla === (selectedSize ? selectedSize.textContent : null));
+
+    if (existingItemIndex !== -1) {
+      // Si el producto ya está en el carrito, actualizar la cantidad
+      cartItems[existingItemIndex].cantidad += quantity;
+    } else {
+      // Si el producto no está en el carrito, agregarlo
+      cartItems.push({
+        id: idProduct,
+        nombre: producto.nombre,
+        codigo: producto.codigo,
+        color: colorDisponible,
+        talla: selectedSize ? selectedSize.textContent : null,
+        cantidad: quantity,
+        precioUnitario: producto.precio,
+        precioTotal: producto.precio * quantity,
+        imagenes: producto.imagenes
+      });
+    }
+
+    // Almacenar el carrito actualizado en el almacenamiento local
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    alert("¡Producto añadido al carrito de manera exitosa!");
+
+    // Eliminar la clase "selected" del botón de talla seleccionado
+    if (selectedSize) {
+      selectedSize.classList.remove("selected");
+    }
   }
 
-  // Almacenar el carrito actualizado en el almacenamiento local
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  alert("¡Producto añadido al carrito de manera exitosa!");
 
-  // Eliminar la clase "selected" del botón de talla seleccionado
-  if (selectedSize) {
-    selectedSize.classList.remove("selected");
-  }
-}
 
 
 };

@@ -1,62 +1,78 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtener los datos del localStorage
-  const datosPagoJSON = localStorage.getItem("datosPago");
-  if (datosPagoJSON) {
-    const datosPago = JSON.parse(datosPagoJSON);
+document.addEventListener("DOMContentLoaded", function() {
 
-    // Obtener la fecha actual
-    const fechaActual = new Date().toLocaleDateString();
-
-    // Mostrar los datos generales en la página
-    document.querySelector(".dateContainer").innerText = fechaActual;
-    document.querySelector(".JohnMiller").innerText = datosPago.nombreCompleto;
-    document.querySelector(".visa").innerText = "Tarjeta";
-
-    // Realizar la solicitud a la URL de las órdenes de compras
-    fetch('https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/ordenescompras')
+  const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
+  // Realizar una solicitud para obtener los datos de la última compra
+  fetch(`${URL_BASE}ordenescompras`)
       .then(response => response.json())
       .then(data => {
-        if (data.length > 0) {
-          // Obtener la última orden de compra del arreglo
-          const ultimaOrden = data[data.length - 1];
-          
-          // Actualizar la información en la página
-          document.querySelector(".orderInfo").innerText = `Order Number: ${ultimaOrden.id}`;
-          document.querySelector(".orderDate").innerText = `Date: ${ultimaOrden.fecha}`;
-          document.querySelector(".numbers").innerText = ultimaOrden.id; // Asumiendo que este es el lugar correcto para mostrar el número de orden
-          document.querySelector(".price").innerText = `$${ultimaOrden.total}`; // Asumiendo que la orden tiene una propiedad "total"
-          
-          // Actualizar la información de la orden de compra en la sección "Order Line"
-          const orderLineContainer = document.querySelector(".orderLuxuryImg");
-          orderLineContainer.innerHTML = `
-            <img src="../assets/buySuccessPage/${ultimaOrden.productImage}" class="luxury" alt="${ultimaOrden.productName}">
-            <div class="luxuryOrderDiv">
-              <figcaption class="LuxuryOrder">${ultimaOrden.productName}</figcaption>
-              <p class="code">Code: ${ultimaOrden.productCode}</p>
-              <div class="square">x${ultimaOrden.quantity}</div>
-              <p class="priceOrder">$${ultimaOrden.productPrice}</p>
-            </div>
-          `;
-          
-        } else {
-          console.error('No hay órdenes de compra disponibles.');
-        }
+          // Obtener la última compra
+          const ultimaCompra = data[data.length - 1];
+
+          // Obtener los artículos de la compra
+          const cartItems = ultimaCompra.cartItems;
+
+          const fechaCompra = ultimaCompra.fecha;
+          const nombreCompleto = ultimaCompra.datosPago.nombreCompleto;
+          const numeroOrder = ultimaCompra.numeroOrden
+          const precio= ultimaCompra.cartItems;
+
+          // Calcular el precio total
+          let precioTotal = 0;
+          cartItems.forEach(item => {
+              precioTotal += item.precioTotal;
+          });
+
+          // Mostrar los datos en la página
+          document.querySelector(".dateContainer").innerText = fechaCompra;
+          document.querySelector(".JohnMiller").innerText = nombreCompleto;
+          document.querySelector(".numbers").innerText = numeroOrder;
+
+            // Mostrar el precio total en la página
+          document.querySelector(".price").innerText = "$" + precioTotal.toFixed(2);
+
+          // Obtener el contenedor donde se mostrarán los productos
+          const orderContainer = document.querySelector('.order');
+
+          // Construir el HTML para los productos
+          let productosHTML = '';
+
+          // Iterar sobre los artículos de la compra y construir el HTML para cada uno
+          cartItems.forEach(item => {
+              productosHTML += `
+                  <div class="luxuryItems">
+                  <figure class="orderLuxuryImg">
+                      <img src="${item.imagenes[0]}" class="luxury" alt="${item.nombre}">
+                      <div class="luxuryOrderDiv">
+                          <figcaption class="LuxuryOrder">${item.nombre}</figcaption>
+                          <p class="code">Code: ${item.codigo}</p>
+                          <div class="square">x${item.cantidad}</div>
+                          <p class="priceOrder">$${item.precioTotal}</p>
+                      </div>
+                  </figure>
+                  <div>
+              `;
+          });
+
+          // Agregar el HTML al contenedor
+          orderContainer.innerHTML = productosHTML;
       })
-      .catch(error => console.error('Error al obtener las órdenes de compra:', error));
-  }
+      .catch(error => {
+          console.error('Error al obtener los datos de la última compra:', error);
+      });
 
   // Obtener el botón "Continue shopping"
   const continueShoppingButton = document.querySelector(".continue");
 
   // Agregar un event listener al botón
-  continueShoppingButton.addEventListener("click", function (event) {
-    // Evitar el comportamiento predeterminado del enlace
-    event.preventDefault();
+  continueShoppingButton.addEventListener("click", function(event) {
+      // Evitar el comportamiento predeterminado del enlace
+      event.preventDefault();
 
-    // Borrar los datos del localStorage
-    localStorage.removeItem("datosPago");
+      localStorage.removeItem("idProduct");
 
-    // Redirigir a index.html
-    window.location.href = "../index.html";
+      // Redirigir a index.html
+      window.location.href = "../index.html";
   });
+
+  console.log("hola")
 });

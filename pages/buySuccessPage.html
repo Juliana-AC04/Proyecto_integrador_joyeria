@@ -16,8 +16,10 @@
       <h3 class="darling"><a class="darlingLink" href="../index.html">Darling.</a></h3>
       <div class="navbar">
         <ul class="headerList">
-          <li class="li"><button class="listNavbar active" type="button" onclick="location.href='../index.html'">Home</button></li>
-          <li class="li"><button class="listNavbar" type="button" onclick="location.href='./pages/productListing.html'">Shop</button></li>
+          <li class="li"><button class="listNavbar active" type="button"
+              onclick="location.href='../index.html'">Home</button></li>
+          <li class="li"><button class="listNavbar" type="button"
+              onclick="location.href='./pages/productListing.html'">Shop</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Collections</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">About</button></li>
           <li class="li"><button class="listNavbar" type="button" onclick="location.href='#'">Contact</button></li>
@@ -42,12 +44,12 @@
           <div class="container">
             <img src="../assets/buySuccessPage/Calendar.png" class="calendarImg" alt="calendar">
             <p class="date">Date</p>
-            <p class="dateContainer">27/04/2022</p>
+            <p class="dateContainer"></p>
           </div>
           <div class="container">
             <img src="../assets/buySuccessPage/Profile.png" class="profileImg" alt="profile">
             <p class="customer">Customer</p>
-            <p class="JohnMiller">John Miller</p>
+            <p class="JohnMiller"></p>
           </div>
           <div class="container">
             <img src="../assets/buySuccessPage/Money.png" class="moneyImg" alt="money">
@@ -58,39 +60,20 @@
           <div class="container">
             <img src="../assets/buySuccessPage/Receipt.png" class="receipImg" alt="receip">
             <p class="Order">Order Number</p>
-            <p class="numbers">586789963</p>
+            <p class="numbers"></p>
           </div>
           <div class="container">
             <img src="../assets/buySuccessPage/Dollar.png" class="dollarlImg" alt="dollar">
             <p class="total">Total</p>
-            <p class="price">$1058.72</p>
+            <p class="price"></p>
           </div>
           <hr>
 
 
           <div class="order">
             <h6 class="OrderLine">Order Line</h6>
-            <figure class="orderLuxuryImg">
-              <img src="../assets/buySuccessPage/LuxuryCharmsRing.png" class="luxury" alt="Luxury">
-              <div class="luxuryOrderDiv">
-                <figcaption class="LuxuryOrder">Luxury Charms Ring</figcaption>
-                <p class="code">Code: 78205</p>
-                <div class="square">x1</div>
-                <p class="priceOrder">$620.73</p>
-            </figure>
-            <div class="contenedor"></div>
-            <figure class="orderLuxuryImg">
-              <img src="../assets/buySuccessPage/ExquisiteEarrings.png" class="exquisite" alt="Exquisite">
-              <div class="luxuryOrderDiv">
-                <figcaption class="LuxuryOrder">Exquisite Earrings</figcaption>
-                <p class="code">Code: 92701</p>
-                <div class="square">x1</div>
-                <p class="priceOrder">$125.28</p>
-
-            </figure>
-            <button class="button"><a class="continue">Continue shopping</a></button>
-
           </div>
+          <button class="button"><a class="continue">Continue shopping</a></button>
         </div>
       </div>
 
@@ -105,7 +88,7 @@
     </div>
     <div class="secondItemsFooter">
       <div class="itemsFooter">
-        <p><a href="../pages/productListing.html">Shop</a></p>
+        <p><a href="/productListing.html">Shop</a></p>
         <p><a href="#">Collections</a></p>
         <p><a href="#">About</a></p>
       </div>
@@ -133,24 +116,24 @@
       </div>
     </div>
   </footer>
- <!-- Carrito de compras -->
- <div class="modalCart hidden">
-  <section>
-    <div class="cartHeader">
-      <h2 class="cartTitle">Your cart</h2>
-      <button id="closeModal" class="btnExit">
-        <i class="fa-solid fa-xmark fa-2xl"></i>
-      </button>
-    </div>
-    <div id="cartBody" class="cartBody">
-      <!-- Aquí se agregarán los productos del carrito -->
-    </div>
-    <div id="cartFooter" class="cartFooter">
-      <!-- Aquí se agregará el footer del carrito y el mensaje de carrito vacío -->
-    </div>
-  </section>
-</div>
-<script src="../Scripts/modalCart.js"></script>
+  <!-- Carrito de compras -->
+  <div class="modalCart hidden">
+    <section>
+      <div class="cartHeader">
+        <h2 class="cartTitle">Your cart</h2>
+        <button id="closeModal" class="btnExit">
+          <i class="fa-solid fa-xmark fa-2xl"></i>
+        </button>
+      </div>
+      <div id="cartBody" class="cartBody">
+        <!-- Aquí se agregarán los productos del carrito -->
+      </div>
+      <div id="cartFooter" class="cartFooter">
+        <!-- Aquí se agregará el footer del carrito y el mensaje de carrito vacío -->
+      </div>
+    </section>
+  </div>
+  <script src="../Scripts/modalCart.js"></script>
   <script src="../Scripts/buySuccesPage.js"></script>
 
 </body>
