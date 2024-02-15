@@ -1,30 +1,78 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtener los datos del localStorage
-  const datosPagoJSON = localStorage.getItem("datosPago");
-  if (datosPagoJSON) {
-    const datosPago = JSON.parse(datosPagoJSON);
+document.addEventListener("DOMContentLoaded", function() {
 
-    // Obtener la fecha actual
-    const fechaActual = new Date().toLocaleDateString();
+  const URL_BASE = "https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/";
+  // Realizar una solicitud para obtener los datos de la última compra
+  fetch(`${URL_BASE}ordenescompras`)
+      .then(response => response.json())
+      .then(data => {
+          // Obtener la última compra
+          const ultimaCompra = data[data.length - 1];
 
-    // Mostrar los datos en la página
-    document.querySelector(".dateContainer").innerText = fechaActual;
-    document.querySelector(".JohnMiller").innerText = datosPago.nombreCompleto;
-    document.querySelector(".visa").innerText = "Tarjeta";
-  }
+          // Obtener los artículos de la compra
+          const cartItems = ultimaCompra.cartItems;
+
+          const fechaCompra = ultimaCompra.fecha;
+          const nombreCompleto = ultimaCompra.datosPago.nombreCompleto;
+          const numeroOrder = ultimaCompra.numeroOrden
+          const precio= ultimaCompra.cartItems;
+
+          // Calcular el precio total
+          let precioTotal = 0;
+          cartItems.forEach(item => {
+              precioTotal += item.precioTotal;
+          });
+
+          // Mostrar los datos en la página
+          document.querySelector(".dateContainer").innerText = fechaCompra;
+          document.querySelector(".JohnMiller").innerText = nombreCompleto;
+          document.querySelector(".numbers").innerText = numeroOrder;
+
+            // Mostrar el precio total en la página
+          document.querySelector(".price").innerText = "$" + precioTotal.toFixed(2);
+
+          // Obtener el contenedor donde se mostrarán los productos
+          const orderContainer = document.querySelector('.order');
+
+          // Construir el HTML para los productos
+          let productosHTML = '';
+
+          // Iterar sobre los artículos de la compra y construir el HTML para cada uno
+          cartItems.forEach(item => {
+              productosHTML += `
+                  <div class="luxuryItems">
+                  <figure class="orderLuxuryImg">
+                      <img src="${item.imagenes[0]}" class="luxury" alt="${item.nombre}">
+                      <div class="luxuryOrderDiv">
+                          <figcaption class="LuxuryOrder">${item.nombre}</figcaption>
+                          <p class="code">Code: ${item.codigo}</p>
+                          <div class="square">x${item.cantidad}</div>
+                          <p class="priceOrder">$${item.precioTotal}</p>
+                      </div>
+                  </figure>
+                  <div>
+              `;
+          });
+
+          // Agregar el HTML al contenedor
+          orderContainer.innerHTML = productosHTML;
+      })
+      .catch(error => {
+          console.error('Error al obtener los datos de la última compra:', error);
+      });
 
   // Obtener el botón "Continue shopping"
   const continueShoppingButton = document.querySelector(".continue");
 
   // Agregar un event listener al botón
-  continueShoppingButton.addEventListener("click", function (event) {
-    // Evitar el comportamiento predeterminado del enlace
-    event.preventDefault();
+  continueShoppingButton.addEventListener("click", function(event) {
+      // Evitar el comportamiento predeterminado del enlace
+      event.preventDefault();
 
-    // Borrar los datos del localStorage
-    localStorage.removeItem("datosPago");
+      localStorage.removeItem("idProduct");
 
-    // Redirigir a index.html
-    window.location.href = "../index.html";
+      // Redirigir a index.html
+      window.location.href = "../index.html";
   });
+
+  console.log("hola")
 });

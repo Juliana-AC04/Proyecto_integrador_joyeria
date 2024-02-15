@@ -166,19 +166,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const fechaCaducidad = document.getElementById("fechaCaducidad").value;
     const cvv = document.getElementById("cvv").value;
 
-    // Verificar si todos los campos son válidos antes de continuar
-    if (
-      campos.nombreCompleto &&
-      campos.telefono &&
-      campos.direccion &&
-      campos.correo &&
-      campos.nombreTarjeta &&
-      campos.numeroTarjeta &&
-      campos.fechaCaducidad &&
-      campos.cvv
-    ) {
-      // Crear un objeto con los datos del formulario
-      const datosPago = {
+    // Crear un objeto con los datos del pago
+    const datosPago = {
         nombreCompleto,
         telefono,
         direccion,
@@ -187,15 +176,117 @@ document.addEventListener("DOMContentLoaded", function () {
         numeroTarjeta,
         fechaCaducidad,
         cvv,
-      };
+    };
 
-      // Convertir el objeto a cadena JSON y guardar en localStorage
-      localStorage.setItem("datosPago", JSON.stringify(datosPago));
+    // Obtener información del carrito
+    const cartItems = obtenerInformacionDelCarrito();
 
-      // Redireccionar a la página de éxito
-      location.href = "./buySuccessPage.html";
+    // Crear un objeto con la orden de compra
+    const ordenDeCompra = {
+        id: generateUniqueId(), // Generar un ID único
+        fecha: getCurrentDate(), // Agregar la fecha actual
+        numeroOrden: generateOrderNumber(), // Generar un número de orden al azar
+        datosPago,
+        cartItems,
+    };
+
+    // Enviar la orden de compra a la URL especificada
+    fetch('https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/ordenescompras', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ordenDeCompra),
+    })
+    .then(response => {
+        if (!response.ok && response.status !== 500) {
+            throw new Error('Hubo un problema al procesar la orden de compra.');
+        }
+        // Restar la cantidad de productos comprados del stock en el servidor
+        restarCantidadStock(cartItems);
+    })
+    .then(() => {
+        // Limpiar el localStorage
+        localStorage.removeItem("cartItems");
+        localStorage.removeItem("datosPago");
+        // Redireccionar a la página de éxito
+        location.href = "./buySuccessPage.html";
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al procesar la orden de compra. Por favor, inténtelo de nuevo más tarde.');
+    });
+});
+
+// Función para obtener la fecha actual en formato YYYY-MM-DD
+function getCurrentDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    let month = now.getMonth() + 1;
+    let day = now.getDate();
+
+    if (month < 10) {
+        month = '0' + month;
     }
-  });
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    return `${year}-${month}-${day}`;
+}
+
+// Función para generar un número de orden aleatorio
+function generateOrderNumber() {
+    return Math.floor(Math.random() * 1000000);
+}
+
+// Función para restar la cantidad de productos comprados del stock en el servidor
+// Función para restar la cantidad de productos comprados del stock en el servidor
+function restarCantidadStock(cartItems) {
+  // Obtener la lista de productos del servidor
+  fetch('https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/listadeproductos')
+  .then(response => response.json())
+  .then(productos => {
+      // Iterar sobre los productos en el carrito
+      cartItems.forEach(item => {
+          // Buscar el producto correspondiente en la lista de productos
+          const producto = productos.find(producto => producto.codigo === item.codigo);
+          if (producto) {
+              // Verificar si el producto tiene stock y es de tipo "anillo"
+              if (producto.stock && producto.stock.length > 0 && producto.tipo === 'anillo') {
+                  // Encontrar la talla específica en el stock del producto
+                  const tallaEnStock = producto.stock.find(stockItem => stockItem.talla === item.talla);
+                  // Restar la cantidad comprada del stock de esa talla
+                  if (tallaEnStock && tallaEnStock.cantidad >= item.cantidad) {
+                      tallaEnStock.cantidad -= item.cantidad;
+                  }
+              } else {
+                  // Restar la cantidad del producto si no tiene stock o no es de tipo "anillo"
+                  if (producto.cantidad >= item.cantidad) {
+                      producto.cantidad -= item.cantidad;
+                  }
+              }
+          }
+      });
+      // Enviar los datos actualizados al servidor
+      fetch('https://minibackend-darling-dev-mzdq.2.us-1.fl0.io/listadeproductos', {
+          method: 'PUT',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(productos),
+      });
+  })
+  .catch(error => console.error('Error:', error));
+}
+
+
+
+// Función para generar un ID único (puedes usar un método más robusto en una aplicación real)
+function generateUniqueId() {
+    return Math.random().toString(36).substr(2, 9);
+}
+
 
 
   // Función para obtener la información del carrito desde localStorage
