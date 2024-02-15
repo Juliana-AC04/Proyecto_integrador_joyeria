@@ -78,3 +78,5 @@ Durante el desarrollo del proyecto "Joyería Darling", se utilizaron diversas fu
 3. Google.
 4. Inteligencia Artificial (IA).
 5. Fl0.
+6. Font Awesome.
+7. Material de estudio de MAKAIA.
